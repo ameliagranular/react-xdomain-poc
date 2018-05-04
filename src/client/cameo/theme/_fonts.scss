@@ -1,0 +1,92 @@
+// ==================================================================================================================
+//  FONTS
+//
+//  TODOS:
+//      - reorg typography.scss and fonts.scss
+//      - consolidate @mixin font-siz & $fontSizesMap and @function getFontSize & $fontSizeMap
+//      - fix fontSizeMap rem values, which do not match fontSizesMap value conversions
+// ==================================================================================================================
+
+// =================
+// VARS & PLACEHOLDERS
+// =================
+$whitney-font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
+$vitesse-font-family: 'Vitesse SSm A', 'Vitesse SSm B', sans-serif;
+$base-font-size-px: 16;
+
+$fontSizesMap: (
+  "xs": 10px,
+  "s": 12px,
+  "m": 14px,
+  "l": 16px,
+  "xl": 18px,
+  "xxl": 24px,
+);
+
+$fontSizeMap: (
+  "xs": 0.6rem,
+  "s": 0.8rem,
+  "m": 1rem,
+  "l": 1.2rem,
+  "xl": 1.4rem
+);
+
+@mixin vitesse {
+  font-family: $vitesse-font-family;
+  font-style: normal;
+}
+
+@mixin whitney {
+  font-family: $whitney-font-family;
+  font-style: normal;
+}
+
+// =================
+// MIXINS
+// =================
+@mixin font-size($size) {
+  font-size: #{map-get($fontSizesMap, $size)};
+}
+
+@mixin whitney-light {
+  font-family: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin whitney-medium {
+  font-family: $whitney-font-family;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin whitney-semibold {
+  font-family: $whitney-font-family;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin whitney-bold {
+  font-family: $whitney-font-family;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin vitesse-bold {
+  font-family: $vitesse-font-family;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin vitesse-black {
+  font-family: $vitesse-font-family;
+  font-weight: 800;
+  font-style: normal;
+}
+
+// =================
+// FUNCTIONS
+// =================
+@function getFontSize($name) {
+  @return map-get($fontSizeMap, $name);
+}

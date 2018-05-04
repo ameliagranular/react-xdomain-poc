@@ -1,0 +1,122 @@
+@import 'mixins';
+@import 'color-palette';
+@import 'fonts';
+
+// TODO: remove from app CSS!!!
+
+.analysis-reports {
+    .headerbar {
+        height: auto;
+        .page-title:not .analysis-product-usage {
+            border-bottom: 0;
+        }
+    }
+    .report-title-header {
+        @include whitney-bold;
+        color: $gray1;
+        font-size: 16px;
+        line-height: 20px;
+        padding-top: 20px;
+        background: white;
+        display: block;
+        width: 100%;
+        z-index: 2;
+
+        &:first-of-type {
+            margin-top: 40px;
+        }
+    }
+
+    .analysis-table {
+        @include whitney-medium;
+        color: $gray1;
+
+        th {
+            box-shadow: $gray6 0 1px 0px;
+            padding-bottom: 10px;
+            padding-top: 15px;
+        }
+
+        tbody > tr > td {
+            &:not(:first-child) {
+                padding: 0 5px;
+            }
+            &:first-child {
+                padding: 0 5px 0 0;
+            }
+        }
+
+        th, td {
+            white-space: nowrap;
+        }
+
+        thead > tr > th {
+            &:first-child > span {
+                width: 100%;
+                max-width: 1180px;
+                background: $white;
+            }
+        }
+
+        thead > tr > th > span {
+            margin-top: -35px;
+            z-index: 1;
+        }
+        .task-progress-headers,
+        .product-usage-headers {
+            padding-bottom: 6px;
+            padding-top: 15px;
+            color: $gray1;
+            font-size: 12px;
+            vertical-align: middle;
+        }
+        .column-header {
+            color: $gray1;
+            font-size: 12px;
+            line-height: 40px;
+            vertical-align: bottom;
+
+            &.sort-asc,
+            &.sort-desc {
+                font-weight: bold;
+            }
+
+        }
+        td {
+            font-size: 14px;
+            line-height: 32px;
+
+            &.icon {
+                padding-left: 10px;
+            }
+        }
+        tr:hover > th {
+            background-color: transparent;
+        }
+        tr:hover > td {
+            background-color: $blue6;
+        }
+
+        &.view-mode {
+            tr:hover > td {
+                background-color: transparent;
+            }
+        }
+
+        tr.bold > td {
+            font-weight: bold;
+        }
+        tr.not-started > td {
+            color: $gray5;
+            .aicon {
+                opacity: .5;
+                //        z-index: -1;
+                position: static;
+            }
+        }
+    }
+}
+
+.info-tooltip {
+    max-width: 440px;
+}

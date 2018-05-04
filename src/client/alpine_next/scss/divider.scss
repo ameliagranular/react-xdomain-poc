@@ -1,0 +1,34 @@
+@import "cameo/theme/color-palette";
+
+// divider
+@include component(divider) {
+  border: 0;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+
+  @include option(task) {
+    height: 2px;
+    background-color: $gray0;
+  }
+
+  @include option(dark) {
+    background-color: $gray0;
+  }
+
+  @include option(medium) {
+    background-color: $gray5;
+  }
+
+  @include option(light) {
+    background-color: $gray8;
+  }
+
+  @include option(margin-top) {
+    margin-top: 0.5rem;
+  }
+
+  @include option(margin-bottom) {
+    margin-bottom: 0.5rem;
+  }
+}

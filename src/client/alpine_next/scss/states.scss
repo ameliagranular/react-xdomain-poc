@@ -1,0 +1,13 @@
+@import "cameo/theme/color-palette";
+
+@include tweak(positive) {
+  color: $green;
+}
+
+@include tweak(negative) {
+  color: $red;
+}
+
+@include tweak(clickable) {
+  cursor: pointer;
+}

@@ -1,0 +1,8 @@
+@import 'color-palette';
+@import 'fonts';
+
+@mixin modal-header() {
+    @include vitesse-bold;
+    font-size: 1.286rem; //TODO update to use standard font size
+    color: $blue3;
+}

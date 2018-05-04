@@ -1,0 +1,54 @@
+// START OF BS3 OVERRIDES ///////////////////////////////////////////////////
+@import 'cameo/theme/color-palette';
+@import 'cameo/theme/fonts';
+
+.table-cursor-pointer {
+  > tbody > tr:hover {
+    cursor: pointer;
+  }
+}
+@mixin sort() {
+  cursor: pointer;
+  color: $blue;
+  vertical-align: middle;
+  &.sort-desc, &.sort-asc {
+    @include whitney-semibold;
+    color: $gray1;
+  }
+  &.sort-desc:after {
+    background: {
+      attachment: scroll;
+      image: url('/ui/images/shared/svg/misc/icon_sort.svg');
+      position: center center;
+      repeat: no-repeat;
+      size: 16px 16px;
+    };
+    content: '';
+    display: inline-block;
+    margin: 0 0 0 5px;
+    vertical-align: middle;
+    // Normally we should have the same size as in background-size - but different zoom levels cut the image
+    // The extra pixel is for this particular situation. See CA-9567
+    height: 17px;
+    width: 17px;
+  }
+  &.sort-asc:after {
+    // TODO: remove rotate and replace background image with another svg
+    background: {
+      attachment: scroll;
+      image: url('/ui/images/shared/svg/misc/icon_sort.svg');
+      position: center center;
+      repeat: no-repeat;
+      size: 16px 16px;
+    };
+    content: '';
+    display: inline-block;
+    margin: 0 0 0 5px;
+    vertical-align: middle;
+    -webkit-transform: rotate(180deg);
+    // Normally we should have the same size as in background-size - but different zoom levels cut the image
+    // The extra pixel is for this particular situation. See CA-9567
+    height: 17px;
+    width: 17px;
+  }
+}

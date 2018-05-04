@@ -1,0 +1,718 @@
+@import "color-palette";
+@import "fonts";
+@import "spacing";
+
+@mixin arrow($direction, $size: 5px, $color: $black) {
+    @each $d in top, right, bottom, left {
+        @if $d != $direction {
+            border-#{$d}: $size solid transparent;
+        }
+    }
+    @if $direction == top {
+        border-bottom: $size solid $color;
+    }
+    @if $direction == right {
+        border-left: $size solid $color;
+    }
+    @if $direction == bottom {
+        border-top: $size solid $color;
+    }
+    @if $direction == left {
+        border-right: $size solid $color;
+    }
+    display: inline-block;
+    height: 0;
+    width: 0;
+}
+
+@mixin cross-keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content
+    }
+    @keyframes #{$name} {
+        @content
+    }
+}
+
+@mixin cross-animation($name, $duration, $timing:linear, $delay:0, $fillMode:none) {
+    -webkit-animation-name: $name;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-timing-function: $timing;
+    -webkit-animation-delay: $delay;
+    -webkit-animation-fill-mode: $fillMode;
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-timing-function: $timing;
+    animation-delay: $delay;
+    animation-fill-mode: $fillMode;
+}
+
+@mixin cross-animation-iteration-count($count) {
+    --webkit-animation-iteration-count: $count;
+    animation-iteration-count: $count;
+}
+
+@mixin cross-animation-direction($direction) {
+    --webkit-animation-direction: $direction;
+    animation-direction: $direction;
+}
+
+@mixin cross-transform($transform...) {
+    -webkit-transform: $transform;
+    transform: $transform;
+}
+
+@mixin cross-transition($transition...) {
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+@mixin user-select-none($suffix: null) {
+    -webkit-touch-callout: none $suffix;
+    -webkit-user-select: none $suffix;
+    -khtml-user-select: none $suffix;
+    -moz-user-select: none $suffix;
+    -ms-user-select: none $suffix;
+    user-select: none $suffix;
+}
+
+@mixin text-shadow-xy($from: -1, $to: 1, $size: 0, $color: #fff) {
+    $result: null;
+    @for $x from $from through $to {
+        @for $y from $from through $to {
+            $result: #{$result} #{$x}px #{$y}px #{$size}px $color;
+            // append comma if
+            @if not($x == $to and $y == $to) {
+                $result: #{$result} unquote(',');
+            }
+        }
+    }
+
+    text-shadow: $result;
+}
+
+// https://codepen.io/kirkas/pen/otqyJ
+@mixin arrow_helper($arrowSize, $arrowColor, $margin, $side, $align) {
+    @if $side == "top" {
+        border-bottom-color: $arrowColor;
+        top: calc(-2 * #{$arrowSize});
+    }
+    @if $side == "bottom" {
+        border-top-color: $arrowColor;
+        bottom: calc(-2 * #{$arrowSize});
+    }
+    @if $side == "left" {
+        border-right-color: $arrowColor;
+        left: calc(-2 * #{$arrowSize});
+    }
+    @if $side == "right" {
+        border-left-color: $arrowColor;
+        right: calc(-2 * #{$arrowSize});
+    }
+    @if $side == "right" or $side == "left" {
+        @if $align == "center" {
+            top: 50%;
+            margin-top: -#{$arrowSize};
+        } @else if $align == "top" {
+            top: $margin;
+        } @else if $align == "bottom" {
+            bottom: $margin;
+        }
+    }
+    @if $side == "bottom" or $side == "top" {
+        @if $align == "center" {
+            right: 50%;
+            margin-right: -#{$arrowSize};
+        } @else if $align == "left" {
+            left: $margin;
+        } @else if $align == "right" {
+            right: $margin;
+        }
+    }
+}
+
+/* Generates all arrow classes --left-top */
+@mixin arrows_helper($arrowSize, $arrowColor, $margin) {
+    $sides: ('top', 'bottom', 'left', 'right');
+    $aligns: ('bottom', 'top', 'center');
+    @each $side in $sides {
+        @each $align in $aligns {
+            &.--#{$side}-#{$align} {
+                @include arrows_helper($arrowSize, $arrowColor, $margin, $side, $align);
+            }
+        }
+    }
+}
+
+// use mainly for tooltips
+@mixin arrow_box($side: "right", $align: "center", $size: 20px, $color: #f6f6f6, $borderColor: "none", $borderSize: 3px) {
+    $selector: "&:after, &:before";
+    @if $borderColor == "none" {
+        $selector: "&:after";
+    }
+    #{$selector} {
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        visibility: visible;
+    }
+
+    &:after {
+        border-width: $size;
+        @include arrow_helper($size, $color, $size, $side, $align);
+    }
+
+    @if $borderColor != "none" {
+        &:before {
+            border-width: $borderSize + $size;
+            @include arrow_helper($size + $borderSize, $borderColor, $size - $borderSize, $side, $align);
+        }
+    }
+}
+
+@mixin make-workability($color, $height, $indicatorHeight) {
+    background-color: $color;
+    height: $height;
+
+    .indicator {
+        border: {
+            top: $indicatorHeight solid $color;
+            left: $indicatorHeight solid transparent;
+            right: $indicatorHeight solid transparent;
+        }
+        height: $indicatorHeight;
+        margin: {
+            left: 8px;
+            top: $height;
+        }
+        width: 1px;
+    }
+}
+
+@mixin make-workability-vertical($type) {
+    @if $type == go {
+        background: url('/ui/images/shared/svg/workability/work_go.svg');
+    } @else if $type == warn {
+        background: url('/ui/images/shared/svg/workability/work_maybe.svg');
+    } @else if $type == stop {
+        background: url('/ui/images/shared/svg/workability/work_nogo.svg');
+    } @else {
+        background: url('/ui/images/shared/svg/workability/work_go_nofocus.svg');
+    }
+
+    width: 5px;
+    height: 17px;
+    background-position: bottom left;
+    background-size: 5px 17px;
+    display: inline-block;
+}
+
+@mixin grid-col {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0 $gutterWidth;
+
+    &.no-gutter {
+        padding: 0;
+    }
+}
+
+@mixin sizeless {
+    height: 0;
+    width: 0;
+}
+
+@mixin positionless($type: 0) {
+    position: absolute;
+    /**
+     * TOP - 1
+     * LEFT - 2
+     * BOTTOM - 4
+     * RIGHT - 8
+     * Possible values for $type
+     * 0  - default (top and left)
+     * 1  - only top
+     * 2  - only left
+     * 3  - top and left
+     * 4  - only bottom
+     * 5  - top and bottom
+     * 6  - left and bottom
+     * 7  - top left and bottom
+     * 8  - only right
+     * 9  - top and right
+     * 10 - left and right
+     * 11 - top left right
+     * 12 - bottom right
+     * 13 - top bottom right
+     * 14 - left bottom right
+     * 15 - top left bottom right (all)
+    **/
+
+    @if $type > 0 {
+        // add right
+        @if $type > 8 {
+            right: 0;
+        }
+        // add top
+        @if $type % 2 {
+            top: 0;
+        }
+        @for $inc from 1 through 4 {
+            @if $type == ($inc*$inc + 1) {
+                left: 0;
+            }
+        }
+        @if $type == 4 or $type == 5 or $type == 6 or $type == 7 or $type == 12 or $type == 13 or $type == 14 or $type == 15 {
+            bottom: 0;
+        }
+    } @else {
+        left: 0;
+        top: 0;
+    }
+}
+
+@mixin cross-placeholder {
+    &::-webkit-input-placeholder {
+        @content
+    }
+    &:-moz-placeholder {
+        @content
+    }
+    &::-moz-placeholder {
+        @content
+    }
+    &:-ms-input-placeholder {
+        @content
+    }
+}
+
+@mixin cross-clip-path($property) {
+    clip-path: $property;
+    -webkit-clip-path: $property;
+    -moz-clip-path: $property;
+}
+
+@mixin auto-center {
+    margin: 0 auto;
+}
+
+@mixin min-width {
+    min-width: $minWidth;
+}
+
+@mixin grid($cols, $isTable: false) {
+    min-width: $minWidth;
+    @for $i from 1 through $cols {
+        .col-#{$i} {
+            @include grid-col;
+            margin-left: -4px;
+            width: percentage(1/$cols * $i);
+        }
+        @if $isTable {
+            .table-col-#{$i} {
+                @include grid-col;
+                display: table-cell;
+                width: percentage(1/$cols * $i);
+            }
+        }
+    }
+}
+
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -o-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+@mixin icon($source, $size: 24px, $type: '') {
+    @if $type == '' {
+        background-image: url('/ui/images/shared/svg/' + $source + '.svg');
+    } @else {
+        background-image: url('/ui/images/shared/svg/' + $source + '_' + $type + '.svg');
+    }
+    @if $size {
+        background: {
+            attachment: scroll;
+            size: $size $size;
+            position: center center;
+            repeat: no-repeat;
+        }
+    }
+}
+
+@mixin gradientNoStops($type, $direction, $fromColor, $toColor) {
+    @if $type == linear {
+        @if $direction == vertical {
+            background-color: $toColor; /* Fallback Color */
+            background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor));
+            background-image: -webkit-linear-gradient(top, $fromColor, $toColor);
+            background-image: -moz-linear-gradient(top, $fromColor, $toColor);
+            background-image: -ms-linear-gradient(top, $fromColor, $toColor);
+            background-image: -o-linear-gradient(top, $fromColor, $toColor);
+            background-image: linear-gradient(top, $fromColor, $toColor);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+        }
+        @if $direction == horizontal {
+            background-color: $toColor; /* Fallback Color */
+            background-image: -webkit-gradient(linear, left top, right top, from($fromColor), to($toColor));
+            background-image: -webkit-linear-gradient(left, $fromColor, $toColor);
+            background-image: -moz-linear-gradient(left, $fromColor, $toColor);
+            background-image: -ms-linear-gradient(left, $fromColor, $toColor);
+            background-image: -o-linear-gradient(left, $fromColor, $toColor);
+            background-image: linear-gradient(to right, $fromColor, $toColor);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+            // to be completed with diagonal direction if needed
+        }
+        // to be completed with radial type if needed
+    }
+}
+
+@mixin gradientOneStop($type, $direction, $fromColor, $medianColor, $toColor, $stop) {
+    @if $type == linear {
+        @if $direction == vertical {
+            background-color: $toColor; /* Fallback Color */
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $fromColor), color-stop($stop, $medianColor), color-stop(100%, $toColor));
+            background-image: -webkit-linear-gradient(top, $fromColor 0%, $medianColor $stop, $toColor 100%);
+            background-image: -moz-linear-gradient(top, $fromColor 0%, $medianColor $stop, $toColor 100%);
+            background-image: -ms-linear-gradient(top, $fromColor 0%, $medianColor $stop, $toColor 100%);
+            background-image: -o-linear-gradient(top, $fromColor 0%, $medianColor $stop, $toColor 100%);
+            background-image: linear-gradient(to bottom, $fromColor 0%, $medianColor $stop, $toColor 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+        }
+        @if $direction == horizontal {
+            background-color: $toColor; /* Fallback Color */
+            background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $fromColor), color-stop($stop, $medianColor), color-stop(100%, $toColor));
+            background-image: -webkit-linear-gradient(left, $fromColor 0%, $medianColor $stop, $toColor 100%);
+            background-image: -moz-linear-gradient(left, $fromColor 0%, $medianColor $stop, $toColor 100%);
+            background-image: -ms-linear-gradient(left, $fromColor 0%, $medianColor $stop, $toColor 100%);
+            background-image: -o-linear-gradient(left, $fromColor 0%, $medianColor $stop, $toColor 100%);
+            background-image: linear-gradient(to right, $fromColor 0%, $medianColor $stop, $toColor 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+            // to be completed with diagonal direction if needed
+        }
+        // to be completed with radial type if needed
+    }
+}
+
+@mixin label {
+    @include whitney-semibold;
+    color: $gray4;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+@mixin text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// TODO - next - this has got to die
+@mixin plan-header {
+    padding: 9px 10px;
+
+    .loading {
+
+        background: {
+            size: 24px 24px;
+        }
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        vertical-align: middle;
+    }
+
+    form {
+        display: inline-block;
+        width: 82%;
+    }
+
+    .plan-collapse-icon,
+    .plan-expand-icon {
+        cursor: pointer;
+        margin-right: 15px;
+    }
+
+    .plan-collapse-icon {
+        @include icon('plans/icon_collapse', 12px);
+    }
+
+    .plan-expand-icon {
+        @include icon('plans/icon_expand', 12px);
+    }
+
+    .plan-menu-gear {
+        background: {
+            attachment: scroll;
+            image: url('/ui/images/shared/svg/plans/menu_actions.svg');
+            size: 27px 16px;
+            position: center center;
+            repeat: no-repeat;
+        }
+        cursor: pointer;
+        width: 27px;
+        height: 32px;
+        display: inline-block;
+    }
+
+    .plan-head-action-wrapper {
+        display: inline-block;
+        width: 16%;
+        vertical-align: top;
+    }
+    // for action buttons
+    .plan-head-action-base {
+        &:not(.last) {
+
+            // don't add margin to last item
+            margin-right: 24px;
+        }
+    }
+    .plan-head-action {
+        cursor: pointer;
+        float: right;
+        margin: 10px 10px 0 0;
+        width: 10px;
+        height: 10px;
+        line-height: 10px;
+        text-align: right;
+        font-size: 18px;
+        .dropdown-toggle {
+            text-align: left;
+        }
+    }
+
+    .h4 {
+        @include vitesse-bold;
+        color: $gray1;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 30px;
+        margin: 0 0 0 12px;
+
+        @include text-ellipsis;
+        width: 70%;
+
+        span {
+            cursor: pointer;
+        }
+
+        input {
+            @include whitney;
+
+            font-weight: normal;
+            outline: none;
+        }
+    }
+
+    .maturity-range {
+        @include whitney-medium;
+        cursor: default;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 20px;
+        margin-left: 20px;
+    }
+}
+
+//TODO: consolidate reference in alpine-next/table.scss
+@mixin sort() {
+    cursor: pointer;
+    color: $blue;
+    vertical-align: middle;
+    &.sort-desc, &.sort-asc {
+        @include whitney-semibold;
+        color: $gray1;
+    }
+    &.sort-desc:after {
+        background: {
+            attachment: scroll;
+            image: url('/ui/images/shared/svg/misc/icon_sort.svg');
+            position: center center;
+            repeat: no-repeat;
+            size: 16px 16px;
+        }
+    ;
+        content: '';
+        display: inline-block;
+        margin: 0 0 0 5px;
+        vertical-align: middle;
+        // Normally we should have the same size as in background-size - but different zoom levels cut the image
+        // The extra pixel is for this particular situation. See CA-9567
+        height: 17px;
+        width: 17px;
+    }
+    &.sort-asc:after {
+        // TODO: remove rotate and replace background image with another svg
+        background: {
+            attachment: scroll;
+            image: url('/ui/images/shared/svg/misc/icon_sort.svg');
+            position: center center;
+            repeat: no-repeat;
+            size: 16px 16px;
+        }
+    ;
+        content: '';
+        display: inline-block;
+        margin: 0 0 0 5px;
+        vertical-align: middle;
+        -webkit-transform: rotate(180deg);
+        // Normally we should have the same size as in background-size - but different zoom levels cut the image
+        // The extra pixel is for this particular situation. See CA-9567
+        height: 17px;
+        width: 17px;
+    }
+}
+
+/** The specificy of the CSS rules is usually bigger for elements that already have a border - we need a mixin **/
+@mixin invalid {
+    border: 1px solid red;
+}
+
+/** CSS3 ICONS - Replacement for the UNICODE chars on tablets **/
+@mixin iconTrigramMenuColor($color) {
+    -webkit-box-shadow: 1px 10px 1px 1px $color, 1px 14px 1px 1px $color, 1px 18px 1px 1px $color;
+    box-shadow: 0 10px 0 1px $color, 0 14px 0 1px $color, 0 18px 0 1px $color;
+}
+
+@mixin iconTrigramMenu($width, $color, $top: -1px, $left: 8px) {
+    height: 0px;
+    width: $width;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: $top;
+    left: $left;
+    @include iconTrigramMenuColor($color);
+}
+
+@mixin generic-drag-feedback {
+    @include gradientOneStop(linear, vertical, $gray5, $gray3, $gray3, 12%);
+    box-shadow: 0 1px 6px transparentize($gray1, 0.5);
+    opacity: 1;
+    border: 1px solid $gray1;
+    color: $white;
+    border-radius: 4px;
+}
+
+/* base for all tooltips*/
+@mixin generic-tooltip-base {
+    @include whitney-medium;
+    font-size: 12px;
+    line-height: 1.4;
+    background: $cornLight;
+    border: 1px solid $gray7;
+    border-radius: 4px;
+    color: $gray1;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+@mixin warning-tooltip {
+    @include whitney-medium;
+    font-size: 12px;
+    line-height: 1.4;
+    background: #FFF4D6;
+    border: 1px solid $orange;
+    border-radius: 4px;
+    color: $gray1;
+    padding: 12px;
+    box-shadow: -2px 1px 3px -1px rgba(240, 180, 0, 0.5);
+    box-sizing: border-box;
+}
+
+/**
+    This creates some classes that look like this...
+    .margin-top-half { margin-top: 0.5rem;}
+    .padding-bottom-1 { padding-bottom: 1rem;}
+    .padding-1 {padding: 1rem;}
+    and so on.
+
+    Note: an 0.5 spacer will produce .margin-${whatever}-half
+    while any other spacer (example: 1) will produce .margin-${whatever}-1
+
+    @param $spacers {List} list of spacers to use, defaults to 0.5 and 1.
+ */
+@mixin create-spacers($spacers:(0.5, 1)) {
+    $directions: top right bottom left;
+
+    @each $spacer in $spacers {
+        $name: if($spacer == 0.5, half, $spacer);
+
+        .margin-#{$name} {
+            margin: #{$spacer}rem;
+        }
+
+        .padding-#{$name} {
+            padding: #{$spacer}rem;
+        }
+
+        @each $direction in $directions {
+            .margin-#{$direction}-#{$name} {
+                margin-#{$direction}: #{$spacer}rem;
+            }
+
+            .padding-#{$direction}-#{$name} {
+                padding-#{$direction}: #{$spacer}rem;
+            }
+        }
+    }
+}
+
+/**
+    Scaffolds out a flex-based grid with some courtesy classes.
+    @param columns {Number} - Number of columns in your grid.
+*/
+@mixin flex-grid($columns) {
+    $totalColumns: $columns+1;
+
+    .flex-column-container {
+        display: flex;
+
+        //generate .flex-column-$i
+        @for $i from 1 to $totalColumns {
+            .flex-column-#{$i} {
+                flex: #{$i}
+            }
+        }
+    }
+
+    .flex-horizontal-align-left {
+        justify-content: flex-start;
+    }
+
+    .flex-horizontal-align-right {
+        justify-content: flex-end;
+    }
+
+    .flex-horizontal-align-center {
+        justify-content: center;
+    }
+
+    .flex-vertical-align-top {
+        align-items: flex-start;
+    }
+
+    .flex-vertical-align-bottom {
+        align-items: flex-end;
+    }
+
+    .flex-vertical-align-center {
+        align-items: center;
+    }
+
+}
+
+// =================
+// FUNCTIONS
+// =================
+@function getRemFromPx($px) {
+    $conv: $px / $base-font-size-px;
+    @return #{$conv}rem;
+}

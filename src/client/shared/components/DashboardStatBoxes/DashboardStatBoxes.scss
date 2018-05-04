@@ -1,0 +1,56 @@
+@import 'styles/vars';
+
+@keyframes placeholder-pulse {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+}
+
+.DashboardStatBoxes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .DashboardStatBoxes_StatBox {
+        width: 100%;
+        padding: 20px 0;
+        margin: 0 3px;
+        background: $white;
+        border: 1px solid $gray-light;
+        text-align: center;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    .DashboardStatBoxes_StatBox_Value {
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: $gray-darker;
+    }
+
+    .DashboardStatBoxes_StatBox_Label {
+        color: $gray-dark;
+        font-size: 0.8rem;
+    }
+}
+
+.DashboardStatBoxesPending {
+    animation-name: placeholder-pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    .DashboardStatBoxes_StatBox_Value {
+        opacity: 0;
+    }
+
+    .DashboardStatBoxes_StatBox_Label {
+        opacity: 0;
+    }
+}

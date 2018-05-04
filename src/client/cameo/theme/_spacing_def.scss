@@ -1,0 +1,32 @@
+@import "csstyle";
+@import "spacing";
+
+// Generate global spacing classes
+@each $size, $space in $spacingMapUtilities {
+  @each $type in $types {
+    .#{$size}-#{$type} {
+      #{$type}: $space;
+    }
+
+    @each $dir in $directions {
+      // lg-margin-right
+      .#{$size}-#{$type}-#{$dir} {
+        #{$type}-#{$dir}: $space;
+      }
+
+      @include tweak(#{$size}-#{$type}-#{$dir}) {
+        #{$type}-#{$dir}: $space;
+      }
+    }
+
+    .#{$size}-#{$type}-vertical {
+      #{$type}-top: $space;
+      #{$type}-bottom: $space;
+    }
+
+    .#{$size}-#{$type}-horizontal {
+      #{$type}-left: $space;
+      #{$type}-right: $space;
+    }
+  }
+}

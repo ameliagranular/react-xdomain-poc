@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainNav renders expected markup 1`] = `
+<MainNav>
+  <div
+    className="MainNav text-center"
+  >
+    <div
+      className="MainNav_Title"
+    >
+      Granular
+    </div>
+  </div>
+</MainNav>
+`;

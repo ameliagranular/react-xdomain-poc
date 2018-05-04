@@ -1,0 +1,89 @@
+@import "csstyle";
+@import "fonts";
+@import "color-palette";
+@import "mixins";
+
+@include component (body-default) {
+    @include whitney-medium;
+    @include font-size("s");
+    color: $black;
+}
+
+@include component (main-page-title) {
+    @include vitesse-black;
+    @include font-size("xxl");
+    color: $gray4;
+}
+
+@include component (secondary-page-title) {
+    @include vitesse-bold;
+    @include font-size("xl");
+    color: $gray1;
+
+    @include option (alert-title) {
+        color: $lime;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+@include component (default-body-copy) {
+    @include whitney-medium;
+    @include font-size("m");
+    color: $gray1;
+}
+
+@include component (medium-body-copy) {
+    @include whitney-medium;
+    @include font-size("l");
+    color: $gray4;
+}
+
+@include component (active-body-copy) {
+    @include whitney-bold;
+    @include font-size("m");
+    color: $gray1;
+}
+
+/////////////////////////////////////////////////////
+@include component(title) {
+    @include vitesse;
+
+    @include option(page) {
+        font-weight: 800;
+        font-size: getFontSize('xl');
+        color: $gray4;
+    }
+
+    @include option(nav-column) {
+        font-weight: 700;
+        font-size: getFontSize('l');
+        color: $gray1;
+    }
+}
+
+@include component(body-copy) {
+    @include whitney;
+    @include font-size('s');
+    color: $gray1;
+
+    @include option(x-large) {
+        @include font-size('xl');
+    }
+
+    @include option(medium) {
+        @include font-size('m');
+    }
+
+    @include option(x-small) {
+        @include font-size('xs');
+    }
+
+    @include option(active) {
+        font-weight: 700;
+    }
+
+    @include option(info-text) {
+        color: $gray18;
+    }
+}

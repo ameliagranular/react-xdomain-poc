@@ -1,0 +1,298 @@
+@import 'extendable';
+
+.clear {
+    clear: both;
+}
+
+// BS4 compatible
+$alignmens: (baseline, top, middle, bottom, text-top, text-bottom);
+@each $alignment in $alignmens {
+    .align-#{$alignment} {
+        vertical-align: #{$alignment};
+    }
+}
+
+.word-break {
+    word-break: break-word;
+}
+
+.trim-string {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.isHidden {
+    display: none;
+}
+
+.middle {
+    vertical-align: middle;
+}
+
+.top {
+    vertical-align: top;
+}
+
+.deco-none {
+    text-decoration: none;
+}
+
+.deco-under {
+    text-decoration: underline;
+}
+
+.borderless {
+    border: 0 !important;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.block {
+    display: block;
+}
+
+.modal-header-h1 {
+    @extend %modal-header-h1;
+}
+
+.cap-first-letter:first-letter {
+    text-transform: capitalize;
+}
+
+.lower-case {
+    text-transform: lowercase;
+}
+
+.cursor-default {
+    cursor: default;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+// TODO move when color palette helper created for text color, bg color, etc
+.error {
+    color: red;
+}
+
+
+// TODO - remove this and update markup ( yet another app pass :( )
+// ------------------------------------------------------ //
+// ----------------------- LEGACY ----------------------- //
+// ------------------------------------------------------ //
+@import 'cameo/theme/vars';
+
+.pointer-events-none { pointer-events: none; }
+
+.auto-margin { margin: auto; }
+.auto-top-margin { margin-top: auto; }
+.auto-right-margin { margin-right: auto; }
+.auto-bottom-margin { margin-bottom: auto; }
+.auto-left-margin { margin-left: auto; }
+.auto-horizontal-margin { margin-right: auto; margin-left: auto; }
+.auto-vertical-margin { margin-top: auto; margin-bottom: auto; }
+
+.no-margin { margin: 0 !important; }
+.no-top-margin { margin-top: 0; }
+.no-right-margin { margin-right: 0; }
+.no-bottom-margin { margin-bottom: 0; }
+.no-left-margin { margin-left: 0; }
+.no-vertical-margin { margin-top: 0; margin-bottom: 0; }
+.no-horizontal-margin { margin-right: 0; margin-left: 0; }
+
+.xs-margin { margin: $xs; }
+.xs-top-margin { margin-top: $xs; }
+.xs-right-margin { margin-right: $xs; }
+.xs-bottom-margin { margin-bottom: $xs; }
+.xs-left-margin { margin-left: $xs; }
+.xs-vertical-margin { margin-top: $xs; margin-bottom: $xs; }
+.xs-horizontal-margin { margin-right: $xs; margin-left: $xs; }
+
+.small-margin { margin: $small; }
+.small-top-margin { margin-top: $small; }
+.small-right-margin { margin-right: $small; }
+.small-bottom-margin { margin-bottom: $small; }
+.small-left-margin { margin-left: $small; }
+.small-vertical-margin { margin-top: $small; margin-bottom: $small; }
+.small-horizontal-margin { margin-right: $small; margin-left: $small; }
+
+.medium-margin { margin: $medium; }
+.medium-top-margin { margin-top: $medium; }
+.medium-right-margin { margin-right: $medium; }
+.medium-bottom-margin { margin-bottom: $medium; }
+.medium-left-margin { margin-left: $medium; }
+.medium-vertical-margin { margin-top: $medium; margin-bottom: $medium; }
+.medium-horizontal-margin { margin-right: $medium; margin-left: $medium; }
+
+.large-margin { margin: $large; }
+.large-top-margin { margin-top: $large; }
+.large-right-margin { margin-right: $large; }
+.large-bottom-margin { margin-bottom: $large; }
+.large-left-margin { margin-left: $large; }
+.large-vertical-margin { margin-top: $large; margin-bottom: $large; }
+.large-horizontal-margin { margin-right: $large; margin-left: $large; }
+
+.xl-margin { margin: $xl; }
+.xl-top-margin { margin-top: $xl; }
+.xl-right-margin { margin-right: $xl; }
+.xl-bottom-margin { margin-bottom: $xl; }
+.xl-left-margin { margin-left: $xl; }
+.xl-vertical-margin { margin-top: $xl; margin-bottom: $xl; }
+.xl-horizontal-margin { margin-right: $xl; margin-left: $xl; }
+
+.xxl-margin { margin: $xxl; }
+.xxl-top-margin { margin-top: $xxl; }
+.xxl-right-margin { margin-right: $xxl; }
+.xxl-bottom-margin { margin-bottom: $xxl; }
+.xxl-left-margin { margin-left: $xxl; }
+.xxl-vertical-margin { margin-top: $xxl; margin-bottom: $xxl; }
+.xxl-horizontal-margin { margin-right: $xxl; margin-left: $xxl; }
+
+.no-padding { padding: 0 !important; }
+.no-top-padding { padding-top: 0; }
+.no-right-padding { padding-right: 0; }
+.no-bottom-padding { padding-bottom: 0; }
+.no-left-padding { padding-left: 0; }
+.no-vertical-padding { padding-top: 0; padding-bottom: 0; }
+.no-horizontal-padding { padding-right: 0; padding-left: 0; }
+
+.xs-padding { padding: $xs; }
+.xs-top-padding { padding-top: $xs; }
+.xs-right-padding { padding-right: $xs; }
+.xs-bottom-padding { padding-bottom: $xs; }
+.xs-left-padding { padding-left: $xs; }
+.xs-vertical-padding { padding-top: $xs; padding-bottom: $xs; }
+.xs-horizontal-padding { padding-right: $xs; padding-left: $xs; }
+
+.small-padding { padding: $small; }
+.small-top-padding { padding-top: $small; }
+.small-right-padding { padding-right: $small; }
+.small-bottom-padding { padding-bottom: $small; }
+.small-left-padding { padding-left: $small; }
+.small-vertical-padding { padding-top: $small; padding-bottom: $small; }
+.small-horizontal-padding { padding-right: $small; padding-left: $small; }
+
+.medium-padding { padding: $medium; }
+.medium-top-padding { padding-top: $medium; }
+.medium-right-padding { padding-right: $medium; }
+.medium-bottom-padding { padding-bottom: $medium; }
+.medium-left-padding { padding-left: $medium; }
+.medium-vertical-padding { padding-top: $medium; padding-bottom: $medium; }
+.medium-horizontal-padding { padding-right: $medium; padding-left: $medium; }
+
+.large-padding { padding: $large; }
+.large-top-padding { padding-top: $large; }
+.large-right-padding { padding-right: $large; }
+.large-bottom-padding { padding-bottom: $large; }
+.large-left-padding { padding-left: $large; }
+.large-vertical-padding { padding-top: $large; padding-bottom: $large; }
+.large-horizontal-padding { padding-right: $large; padding-left: $large; }
+
+.xl-padding { padding: $xl; }
+.xl-top-padding { padding-top: $xl; }
+.xl-right-padding { padding-right: $xl; }
+.xl-bottom-padding { padding-bottom: $xl; }
+.xl-left-padding { padding-left: $xl; }
+.xl-vertical-padding { padding-top: $xl; padding-bottom: $xl; }
+.xl-horizontal-padding { padding-right: $xl; padding-left: $xl; }
+
+.xxl-padding { padding: $xxl; }
+.xxl-top-padding { padding-top: $xxl; }
+.xxl-right-padding { padding-right: $xxl; }
+.xxl-bottom-padding { padding-bottom: $xxl; }
+.xxl-left-padding { padding-left: $xxl; }
+.xxl-vertical-padding { padding-top: $xxl; padding-bottom: $xxl; }
+.xxl-horizontal-padding { padding-right: $xxl; padding-left: $xxl; }
+
+.no-border { border: none; }
+
+.no-top-border { border-top: none; }
+.no-bottom-border { border-bottom: none; }
+.no-left-border { border-left: none; }
+.no-right-border { border-right: none; }
+
+.bold { font-weight: bold; }
+
+.vertical-align-top { vertical-align: top; }
+.vertical-align-middle { vertical-align: middle; }
+.vertical-align-bottom { vertical-align: bottom; }
+
+.overflow-scroll { overflow: scroll; }
+.overflow-hidden { overflow: hidden; }
+.overflow-x-scroll { overflow-x: scroll; }
+.overflow-x-hidden { overflow-x: hidden; }
+.overflow-y-scroll { overflow-y: scroll; }
+.overflow-y-hidden { overflow-y: hidden; }
+
+.no-list-styling { list-style: none; }
+.no-background-color { background-color: transparent !important; }
+.no-min-width { min-width: initial !important; }
+
+$cursors: (
+  alias,
+  all-scroll,
+  auto,
+  cell,
+  context-menu,
+  col-resize,
+  copy,
+  crosshair,
+  default,
+  e-resize,
+  ew-resize,
+  grab,
+  grabbing,
+  help,
+  move,
+  n-resize,
+  ne-resize,
+  nesw-resize,
+  ns-resize,
+  nw-resize,
+  nwse-resize,
+  no-drop,
+  none,
+  not-allowed,
+  pointer,
+  progress,
+  row-resize,
+  s-resize,
+  se-resize,
+  sw-resize,
+  text,
+  vertical-text,
+  w-resize,
+  wait,
+  zoom-in,
+  zoom-out,
+  initial,
+  inherit
+);
+
+@each $cursorType in $cursors {
+
+  .cursor-#{$cursorType} {
+    cursor: #{$cursorType};
+  }
+
+}

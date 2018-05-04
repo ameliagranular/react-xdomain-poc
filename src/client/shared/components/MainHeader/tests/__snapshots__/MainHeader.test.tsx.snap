@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainHeader renders expected markup 1`] = `
+<MainHeader>
+  <div
+    className="MainHeader"
+  >
+    <MainNav>
+      <div
+        className="MainNav text-center"
+      >
+        <div
+          className="MainNav_Title"
+        >
+          Granular
+        </div>
+      </div>
+    </MainNav>
+  </div>
+</MainHeader>
+`;

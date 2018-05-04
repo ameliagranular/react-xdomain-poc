@@ -1,0 +1,49 @@
+// page dimensions & grid
+$minBodyWidth: 980px !global;
+$minWidth: 960px !global;
+$maxWidth: 1200px !global;
+$gutterWidth: 10px !global;
+$colNr: 12 !global;
+$minColWidth: $minWidth / $colNr - $gutterWidth * 2 !global;
+$maxColWidth: $maxWidth / $colNr - $gutterWidth * 2 !global;
+$navHeight: 40px !global;
+$headerbarHeight: 110px !global;
+$headerbarSlimHeight: $headerbarHeight - 60px !global;
+$headerbarLongHeight: 230px !global;
+
+// bootstrap 2.3.2 variables.less
+$zindexDropdown:          1000 !global;
+$zindexPopover:           1030 !global;
+$zindexTooltip:           1030 !global;
+$zindexFixedNavbar:       1030 !global;
+$zindexModalBackdrop:     1040 !global;
+$zindexModal:             1060 !global;
+
+// alpine z-index
+$zindexFixedHeaderbar: $zindexFixedNavbar - 5 !global;
+// Each popup adds 5 to $zindexModal when is opened. 3 popups opened means 1015. Added a 20 popup child limit - should be ok.
+$zindexMessages: $zindexModal + 100 !global;
+$zindexLeafletControl:     199 !global;
+
+// people avatar
+$smallAvatarSize: 24px !global;
+$mediumAvatarSize: 36px !global;
+$largeAvatarSize: 80px !global;
+
+$cropIconSize: 14px !global;
+
+// Standardized sizes for spacing
+$xxs: 2px !global;
+$xs: 4px !global;
+$small: 8px !global;
+$medium: 16px !global;
+$large: 32px !global;
+$xl: 64px !global;
+$xxl: 128px !global;
+
+// Standardized sizes for touch devices
+$touchSize: 42px !global;
+
+// input heights
+$inputHeight: 32px;
+$inputHeightSmall: 24px;

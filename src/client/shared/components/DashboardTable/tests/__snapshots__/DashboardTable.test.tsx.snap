@@ -1,0 +1,419 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardTable renders expected markup with no props 1`] = `
+<DashboardTable
+  colCount={3}
+  emptyMessage={null}
+  headerRow={null}
+  pending={false}
+  rowCount={5}
+  rows={null}
+  title={null}
+>
+  <div
+    className="DashboardTable DashboardTableReady"
+  >
+    <div
+      className="DashboardTable_LoneMessage"
+    />
+  </div>
+</DashboardTable>
+`;
+
+exports[`DashboardTable renders expected markup with no rows 1`] = `
+<DashboardTable
+  colCount={3}
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  headerRow={null}
+  pending={false}
+  rowCount={5}
+  rows={Array []}
+  title={null}
+>
+  <div
+    className="DashboardTable DashboardTableReady"
+  >
+    <div
+      className="DashboardTable_LoneMessage"
+    >
+      <span>
+        No Data
+      </span>
+    </div>
+  </div>
+</DashboardTable>
+`;
+
+exports[`DashboardTable renders expected markup with pending 1`] = `
+<DashboardTable
+  colCount={3}
+  emptyMessage={null}
+  headerRow={null}
+  pending={true}
+  rowCount={5}
+  rows={null}
+  title={null}
+>
+  <div
+    className="DashboardTable DashboardTablePending"
+  >
+    <table
+      className="DashboardTable_Table table"
+    >
+      <tbody>
+        <tr
+          key="00-0"
+        >
+          <td
+            key="00-0"
+          >
+             
+          </td>
+          <td
+            key="00-1"
+          >
+             
+          </td>
+          <td
+            key="00-2"
+          >
+             
+          </td>
+        </tr>
+        <tr
+          key="00-1"
+        >
+          <td
+            key="00-0"
+          >
+             
+          </td>
+          <td
+            key="00-1"
+          >
+             
+          </td>
+          <td
+            key="00-2"
+          >
+             
+          </td>
+        </tr>
+        <tr
+          key="00-2"
+        >
+          <td
+            key="00-0"
+          >
+             
+          </td>
+          <td
+            key="00-1"
+          >
+             
+          </td>
+          <td
+            key="00-2"
+          >
+             
+          </td>
+        </tr>
+        <tr
+          key="00-3"
+        >
+          <td
+            key="00-0"
+          >
+             
+          </td>
+          <td
+            key="00-1"
+          >
+             
+          </td>
+          <td
+            key="00-2"
+          >
+             
+          </td>
+        </tr>
+        <tr
+          key="00-4"
+        >
+          <td
+            key="00-0"
+          >
+             
+          </td>
+          <td
+            key="00-1"
+          >
+             
+          </td>
+          <td
+            key="00-2"
+          >
+             
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DashboardTable>
+`;
+
+exports[`DashboardTable renders expected markup with pending and counts 1`] = `
+<DashboardTable
+  colCount={2}
+  emptyMessage={null}
+  headerRow={null}
+  pending={true}
+  rowCount={2}
+  rows={null}
+  title={null}
+>
+  <div
+    className="DashboardTable DashboardTablePending"
+  >
+    <table
+      className="DashboardTable_Table table"
+    >
+      <tbody>
+        <tr
+          key="00-0"
+        >
+          <td
+            key="00-0"
+          >
+             
+          </td>
+          <td
+            key="00-1"
+          >
+             
+          </td>
+        </tr>
+        <tr
+          key="00-1"
+        >
+          <td
+            key="00-0"
+          >
+             
+          </td>
+          <td
+            key="00-1"
+          >
+             
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DashboardTable>
+`;
+
+exports[`DashboardTable renders expected markup with rows 1`] = `
+<DashboardTable
+  colCount={3}
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  headerRow={null}
+  pending={false}
+  rowCount={5}
+  rows={
+    Array [
+      <tr>
+        <td>
+            Name 1
+        </td>
+        <td>
+            Val 1
+        </td>
+    </tr>,
+      <tr>
+        <td>
+            Name 2
+        </td>
+        <td>
+            Val 2
+        </td>
+    </tr>,
+    ]
+  }
+  title={null}
+>
+  <div
+    className="DashboardTable DashboardTableReady"
+  >
+    <table
+      className="DashboardTable_Table table"
+    >
+      <tbody>
+        <tr
+          key="1"
+        >
+          <td>
+            Name 1
+          </td>
+          <td>
+            Val 1
+          </td>
+        </tr>
+        <tr
+          key="2"
+        >
+          <td>
+            Name 2
+          </td>
+          <td>
+            Val 2
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DashboardTable>
+`;
+
+exports[`DashboardTable renders expected markup with rows, header row, and title 1`] = `
+<DashboardTable
+  colCount={3}
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  headerRow={
+    <tr>
+      <th>
+        Col 1
+      </th>
+      <th>
+        Col 2
+      </th>
+    </tr>
+  }
+  pending={false}
+  rowCount={5}
+  rows={
+    Array [
+      <tr>
+        <td>
+            Name 1
+        </td>
+        <td>
+            Val 1
+        </td>
+    </tr>,
+      <tr>
+        <td>
+            Name 2
+        </td>
+        <td>
+            Val 2
+        </td>
+    </tr>,
+    ]
+  }
+  title={
+    <span>
+      'Dashboard Table'
+    </span>
+  }
+>
+  <div
+    className="DashboardTable DashboardTableReady"
+  >
+    <h2
+      className="DashboardTable_Title"
+    >
+      <span>
+        'Dashboard Table'
+      </span>
+    </h2>
+    <table
+      className="DashboardTable_Table table"
+    >
+      <thead>
+        <tr>
+          <th>
+            Col 1
+          </th>
+          <th>
+            Col 2
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          key="1"
+        >
+          <td>
+            Name 1
+          </td>
+          <td>
+            Val 1
+          </td>
+        </tr>
+        <tr
+          key="2"
+        >
+          <td>
+            Name 2
+          </td>
+          <td>
+            Val 2
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DashboardTable>
+`;
+
+exports[`DashboardTable renders expected markup with title and no rows 1`] = `
+<DashboardTable
+  colCount={3}
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  headerRow={null}
+  pending={false}
+  rowCount={5}
+  rows={Array []}
+  title={
+    <span>
+      'Dashboard Table'
+    </span>
+  }
+>
+  <div
+    className="DashboardTable DashboardTableReady"
+  >
+    <h2
+      className="DashboardTable_Title"
+    >
+      <span>
+        'Dashboard Table'
+      </span>
+    </h2>
+    <div
+      className="DashboardTable_LoneMessage"
+    >
+      <span>
+        No Data
+      </span>
+    </div>
+  </div>
+</DashboardTable>
+`;

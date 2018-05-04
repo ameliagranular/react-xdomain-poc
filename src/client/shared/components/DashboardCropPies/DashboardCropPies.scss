@@ -1,0 +1,149 @@
+@import 'styles/vars';
+
+@keyframes placeholder-pulse {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+}
+
+.DashboardCropPies {
+    width: 100%;
+    background: $white;
+    padding: 0 20px;
+    border: 1px solid $gray-light;
+
+    .DashboardCropPies_TitleBar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .DashboardCropPies_Title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: $gray-darker;
+        margin-bottom: 0.2rem;
+    }
+
+    .DashboardCropPies_Description {
+        font-weight: 600;
+        color: $gray;
+    }
+
+    .DashboardCropPies_Link {
+        margin-top: 20px;
+
+        a,
+        a:link,
+        a:visited {
+            color: $gray-darker;
+        }
+
+        a:hover,
+        a:active {
+            color: $link-hover-color
+        }
+    }
+
+    .DashboardCropPies_Tabs {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+
+        .btn-default.focus,
+        .btn-default:focus,
+        .btn-default.active.hover,
+        .btn-default.active:hover,
+        .btn-default.hover:active,
+        .btn-default:active:hover
+         {
+            color: $white;
+            background-color: #666666;
+            border-color: $btn-default-color;
+        }
+
+        .btn-default.active.hover, .btn-default:active:hover {
+            color: $white;
+            background-color: #666666;
+            border-color: $btn-default-color;
+        }
+    }
+
+    .DashboardCropPies_TabContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    .DashboardCropPies_LoneMessage {
+        width: 100%;
+        text-align: center;
+        color: $gray-light;
+        padding: 50px 0 0 0;
+    }
+
+    .DashboardCropPies_Chart {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1 1 50%;
+    }
+
+    .DashboardCropPies_Chart_Chart {
+        position: relative;
+
+        .DashboardCropPies_Chart_ZingChart > div {
+            width: 140px;
+            height: 140px;
+        }
+
+        .DashboardCropPies_Chart_Crop {
+            position: absolute;
+            top: 110px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+        }
+    }
+
+    .DashboardCropPies_Chart_Numbers {
+        position: relative;
+        z-index: 5;
+        margin-left: -10px;
+        padding-top: 20px;
+
+        .DashboardCropPies_Chart_Percentage {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: $gray-darker;
+        }
+
+        .DashboardCropPies_Chart_Amount {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: $gray;
+        }
+    }
+}
+
+.DashboardCropPiesPending {
+    animation-name: placeholder-pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    .DashboardCropPies_Title {
+        opacity: 0;
+    }
+
+    .DashboardCropPies_Description {
+        opacity: 0;
+    }
+
+    .DashboardCropPies_Link {
+        opacity: 0;
+    }
+
+    .DashboardCropPies_Main {
+        opacity: 0;
+    }
+}

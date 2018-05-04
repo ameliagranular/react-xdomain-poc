@@ -1,0 +1,1527 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardCropPie renders expected markup with emptyMessage and dataset 1`] = `
+<DashboardCropPie
+  count={5}
+  dataset={
+    Array [
+      Object {
+        "amount": <span>
+          Crop Amount 1
+    </span>,
+        "cropTypes": Array [
+          Object {
+            "cropTypeColor": "#CCCCCC",
+            "cropTypeElement": <span>
+              Crop 1
+    </span>,
+            "cropTypeId": "1",
+          },
+        ],
+        "percentage": 50,
+      },
+      Object {
+        "amount": <span>
+          Crop Amount 2
+    </span>,
+        "cropTypes": Array [
+          Object {
+            "cropTypeColor": "#CCCCCC",
+            "cropTypeElement": <span>
+              Crop 2
+    </span>,
+            "cropTypeId": "2",
+          },
+        ],
+        "percentage": 75,
+      },
+    ]
+  }
+  emptyMessage={
+    <span>
+      No Data Found
+    </span>
+  }
+  pending={false}
+  title={null}
+>
+  <div
+    className="DashboardCropPie DashboardCropPieReady"
+  >
+    <div
+      className="DashboardCropPie_Main"
+    >
+      <div
+        className="DashboardCropPie_Chart"
+      >
+        <Component
+          dataset={
+            Array [
+              Object {
+                "amount": <span>
+                  Crop Amount 1
+            </span>,
+                "cropTypes": Array [
+                  Object {
+                    "cropTypeColor": "#CCCCCC",
+                    "cropTypeElement": <span>
+                      Crop 1
+            </span>,
+                    "cropTypeId": "1",
+                  },
+                ],
+                "percentage": 50,
+              },
+              Object {
+                "amount": <span>
+                  Crop Amount 2
+            </span>,
+                "cropTypes": Array [
+                  Object {
+                    "cropTypeColor": "#CCCCCC",
+                    "cropTypeElement": <span>
+                      Crop 2
+            </span>,
+                    "cropTypeId": "2",
+                  },
+                ],
+                "percentage": 75,
+              },
+            ]
+          }
+        >
+          <div
+            className="DashboardCropPie_Chart"
+          >
+            <div
+              className="DashboardCropPie_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPie_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "offset-r": "3%",
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#CCCCCC",
+                          "values": Array [
+                            50,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#CCCCCC",
+                          "values": Array [
+                            75,
+                          ],
+                        },
+                        0,
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+            </div>
+          </div>
+        </Component>
+      </div>
+      <div
+        className="DashboardCropPie_Legend"
+      >
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="1"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={null}
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeColor": "#CCCCCC",
+                    "cropTypeElement": <span>
+                      Crop 1
+                </span>,
+                    "cropTypeId": "1",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="1"
+                  style={
+                    Object {
+                      "background": "#CCCCCC",
+                    }
+                  }
+                >
+                  <span>
+                    Crop 1
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              50
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                Crop Amount 1
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="2"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={null}
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeColor": "#CCCCCC",
+                    "cropTypeElement": <span>
+                      Crop 2
+                </span>,
+                    "cropTypeId": "2",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="2"
+                  style={
+                    Object {
+                      "background": "#CCCCCC",
+                    }
+                  }
+                >
+                  <span>
+                    Crop 2
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              75
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                Crop Amount 2
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DashboardCropPie>
+`;
+
+exports[`DashboardCropPie renders expected markup with no props 1`] = `
+<DashboardCropPie
+  count={5}
+  dataset={null}
+  emptyMessage={null}
+  pending={false}
+  title={null}
+>
+  <div
+    className="DashboardCropPie DashboardCropPieReady"
+  >
+    <div
+      className="DashboardCropPie_LoneMessage"
+    />
+  </div>
+</DashboardCropPie>
+`;
+
+exports[`DashboardCropPie renders expected markup with pending 1`] = `
+<DashboardCropPie
+  count={5}
+  dataset={null}
+  emptyMessage={null}
+  pending={true}
+  title={null}
+>
+  <div
+    className="DashboardCropPie DashboardCropPiePending"
+  >
+    <div
+      className="DashboardCropPie_Main"
+    >
+      <div
+        className="DashboardCropPie_Chart"
+      >
+        <Component
+          dataset={Array []}
+          key="00"
+        >
+          <div
+            className="DashboardCropPie_Chart"
+          >
+            <div
+              className="DashboardCropPie_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPie_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "offset-r": "3%",
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+            </div>
+          </div>
+        </Component>
+      </div>
+      <div
+        className="DashboardCropPie_Legend"
+      >
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="0"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={
+                Array [
+                  Object {
+                    "cropProductElement": <span>
+                       
+                </span>,
+                    "cropProductId": "0",
+                  },
+                ]
+              }
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeElement": <span>
+                       
+                </span>,
+                    "cropTypeId": "0",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="0"
+                  style={
+                    Object {
+                      "background": "#F2F2F2",
+                    }
+                  }
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+                <div
+                  className="CropLabel_CropProduct"
+                  key="0"
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              <span>
+                 
+              </span>
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="1"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={
+                Array [
+                  Object {
+                    "cropProductElement": <span>
+                       
+                </span>,
+                    "cropProductId": "0",
+                  },
+                ]
+              }
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeElement": <span>
+                       
+                </span>,
+                    "cropTypeId": "0",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="0"
+                  style={
+                    Object {
+                      "background": "#F2F2F2",
+                    }
+                  }
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+                <div
+                  className="CropLabel_CropProduct"
+                  key="0"
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              <span>
+                 
+              </span>
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="2"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={
+                Array [
+                  Object {
+                    "cropProductElement": <span>
+                       
+                </span>,
+                    "cropProductId": "0",
+                  },
+                ]
+              }
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeElement": <span>
+                       
+                </span>,
+                    "cropTypeId": "0",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="0"
+                  style={
+                    Object {
+                      "background": "#F2F2F2",
+                    }
+                  }
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+                <div
+                  className="CropLabel_CropProduct"
+                  key="0"
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              <span>
+                 
+              </span>
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="3"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={
+                Array [
+                  Object {
+                    "cropProductElement": <span>
+                       
+                </span>,
+                    "cropProductId": "0",
+                  },
+                ]
+              }
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeElement": <span>
+                       
+                </span>,
+                    "cropTypeId": "0",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="0"
+                  style={
+                    Object {
+                      "background": "#F2F2F2",
+                    }
+                  }
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+                <div
+                  className="CropLabel_CropProduct"
+                  key="0"
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              <span>
+                 
+              </span>
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="4"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={
+                Array [
+                  Object {
+                    "cropProductElement": <span>
+                       
+                </span>,
+                    "cropProductId": "0",
+                  },
+                ]
+              }
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeElement": <span>
+                       
+                </span>,
+                    "cropTypeId": "0",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="0"
+                  style={
+                    Object {
+                      "background": "#F2F2F2",
+                    }
+                  }
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+                <div
+                  className="CropLabel_CropProduct"
+                  key="0"
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              <span>
+                 
+              </span>
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DashboardCropPie>
+`;
+
+exports[`DashboardCropPie renders expected markup with pending and count 1`] = `
+<DashboardCropPie
+  count={5}
+  dataset={null}
+  emptyMessage={null}
+  pending={true}
+  title={null}
+>
+  <div
+    className="DashboardCropPie DashboardCropPiePending"
+  >
+    <div
+      className="DashboardCropPie_Main"
+    >
+      <div
+        className="DashboardCropPie_Chart"
+      >
+        <Component
+          dataset={Array []}
+          key="00"
+        >
+          <div
+            className="DashboardCropPie_Chart"
+          >
+            <div
+              className="DashboardCropPie_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPie_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "offset-r": "3%",
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+            </div>
+          </div>
+        </Component>
+      </div>
+      <div
+        className="DashboardCropPie_Legend"
+      >
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="0"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={
+                Array [
+                  Object {
+                    "cropProductElement": <span>
+                       
+                </span>,
+                    "cropProductId": "0",
+                  },
+                ]
+              }
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeElement": <span>
+                       
+                </span>,
+                    "cropTypeId": "0",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="0"
+                  style={
+                    Object {
+                      "background": "#F2F2F2",
+                    }
+                  }
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+                <div
+                  className="CropLabel_CropProduct"
+                  key="0"
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              <span>
+                 
+              </span>
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="1"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={
+                Array [
+                  Object {
+                    "cropProductElement": <span>
+                       
+                </span>,
+                    "cropProductId": "0",
+                  },
+                ]
+              }
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeElement": <span>
+                       
+                </span>,
+                    "cropTypeId": "0",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="0"
+                  style={
+                    Object {
+                      "background": "#F2F2F2",
+                    }
+                  }
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+                <div
+                  className="CropLabel_CropProduct"
+                  key="0"
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              <span>
+                 
+              </span>
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="2"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={
+                Array [
+                  Object {
+                    "cropProductElement": <span>
+                       
+                </span>,
+                    "cropProductId": "0",
+                  },
+                ]
+              }
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeElement": <span>
+                       
+                </span>,
+                    "cropTypeId": "0",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="0"
+                  style={
+                    Object {
+                      "background": "#F2F2F2",
+                    }
+                  }
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+                <div
+                  className="CropLabel_CropProduct"
+                  key="0"
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              <span>
+                 
+              </span>
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="3"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={
+                Array [
+                  Object {
+                    "cropProductElement": <span>
+                       
+                </span>,
+                    "cropProductId": "0",
+                  },
+                ]
+              }
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeElement": <span>
+                       
+                </span>,
+                    "cropTypeId": "0",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="0"
+                  style={
+                    Object {
+                      "background": "#F2F2F2",
+                    }
+                  }
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+                <div
+                  className="CropLabel_CropProduct"
+                  key="0"
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              <span>
+                 
+              </span>
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="4"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={
+                Array [
+                  Object {
+                    "cropProductElement": <span>
+                       
+                </span>,
+                    "cropProductId": "0",
+                  },
+                ]
+              }
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeElement": <span>
+                       
+                </span>,
+                    "cropTypeId": "0",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="0"
+                  style={
+                    Object {
+                      "background": "#F2F2F2",
+                    }
+                  }
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+                <div
+                  className="CropLabel_CropProduct"
+                  key="0"
+                >
+                  <span>
+                     
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              <span>
+                 
+              </span>
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                 
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DashboardCropPie>
+`;
+
+exports[`DashboardCropPie renders expected markup with title, emptyMessage, and dataset 1`] = `
+<DashboardCropPie
+  count={5}
+  dataset={
+    Array [
+      Object {
+        "amount": <span>
+          Crop Amount 1
+    </span>,
+        "cropTypes": Array [
+          Object {
+            "cropTypeColor": "#CCCCCC",
+            "cropTypeElement": <span>
+              Crop 1
+    </span>,
+            "cropTypeId": "1",
+          },
+        ],
+        "percentage": 50,
+      },
+      Object {
+        "amount": <span>
+          Crop Amount 2
+    </span>,
+        "cropTypes": Array [
+          Object {
+            "cropTypeColor": "#CCCCCC",
+            "cropTypeElement": <span>
+              Crop 2
+    </span>,
+            "cropTypeId": "2",
+          },
+        ],
+        "percentage": 75,
+      },
+    ]
+  }
+  emptyMessage={
+    <span>
+      No Data Found
+    </span>
+  }
+  pending={false}
+  title={
+    <span>
+      Title
+    </span>
+  }
+>
+  <div
+    className="DashboardCropPie DashboardCropPieReady"
+  >
+    <h2
+      className="DashboardCropPie_Title"
+    >
+      <span>
+        Title
+      </span>
+    </h2>
+    <div
+      className="DashboardCropPie_Main"
+    >
+      <div
+        className="DashboardCropPie_Chart"
+      >
+        <Component
+          dataset={
+            Array [
+              Object {
+                "amount": <span>
+                  Crop Amount 1
+            </span>,
+                "cropTypes": Array [
+                  Object {
+                    "cropTypeColor": "#CCCCCC",
+                    "cropTypeElement": <span>
+                      Crop 1
+            </span>,
+                    "cropTypeId": "1",
+                  },
+                ],
+                "percentage": 50,
+              },
+              Object {
+                "amount": <span>
+                  Crop Amount 2
+            </span>,
+                "cropTypes": Array [
+                  Object {
+                    "cropTypeColor": "#CCCCCC",
+                    "cropTypeElement": <span>
+                      Crop 2
+            </span>,
+                    "cropTypeId": "2",
+                  },
+                ],
+                "percentage": 75,
+              },
+            ]
+          }
+        >
+          <div
+            className="DashboardCropPie_Chart"
+          >
+            <div
+              className="DashboardCropPie_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPie_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "offset-r": "3%",
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#CCCCCC",
+                          "values": Array [
+                            50,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#CCCCCC",
+                          "values": Array [
+                            75,
+                          ],
+                        },
+                        0,
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+            </div>
+          </div>
+        </Component>
+      </div>
+      <div
+        className="DashboardCropPie_Legend"
+      >
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="1"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={null}
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeColor": "#CCCCCC",
+                    "cropTypeElement": <span>
+                      Crop 1
+                </span>,
+                    "cropTypeId": "1",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="1"
+                  style={
+                    Object {
+                      "background": "#CCCCCC",
+                    }
+                  }
+                >
+                  <span>
+                    Crop 1
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              50
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                Crop Amount 1
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="DashboardCropPie_Legend_Crop"
+          key="2"
+        >
+          <div
+            className="DashboardCropPie_Legend_CropLabel"
+          >
+            <Component
+              cropProducts={null}
+              cropTypes={
+                Array [
+                  Object {
+                    "cropTypeColor": "#CCCCCC",
+                    "cropTypeElement": <span>
+                      Crop 2
+                </span>,
+                    "cropTypeId": "2",
+                  },
+                ]
+              }
+            >
+              <div
+                className="CropLabel"
+              >
+                <div
+                  className="CropLabel_CropType"
+                  key="2"
+                  style={
+                    Object {
+                      "background": "#CCCCCC",
+                    }
+                  }
+                >
+                  <span>
+                    Crop 2
+                  </span>
+                </div>
+              </div>
+            </Component>
+          </div>
+          <div
+            className="DashboardCropPie_Legend_CropValue"
+          >
+            <div
+              className="DashboardCropPie_Legend_CropValue_Percentage"
+            >
+              75
+              %
+            </div>
+            <div
+              className="DashboardCropPie_Legend_CropValue_Amount"
+            >
+              <span>
+                Crop Amount 2
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DashboardCropPie>
+`;
+
+exports[`DashboardCropPie renders expected markup with title, emptyMessage, and empty dataset 1`] = `
+<DashboardCropPie
+  count={5}
+  dataset={Array []}
+  emptyMessage={
+    <span>
+      No Data Found
+    </span>
+  }
+  pending={false}
+  title={
+    <span>
+      Title
+    </span>
+  }
+>
+  <div
+    className="DashboardCropPie DashboardCropPieReady"
+  >
+    <h2
+      className="DashboardCropPie_Title"
+    >
+      <span>
+        Title
+      </span>
+    </h2>
+    <div
+      className="DashboardCropPie_LoneMessage"
+    >
+      <span>
+        No Data Found
+      </span>
+    </div>
+  </div>
+</DashboardCropPie>
+`;

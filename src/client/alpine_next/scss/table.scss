@@ -1,0 +1,230 @@
+@import "cameo/theme/color-palette";
+
+table {
+    width: 100%;
+}
+
+// START OF BS3 OVERRIDES ///////////////////////////////////////////////////
+@mixin sort() {
+  cursor: pointer;
+  color: $blue;
+  vertical-align: middle;
+  &.sort-desc, &.sort-asc {
+    @include whitney-semibold;
+    color: $gray1;
+  }
+  &.sort-desc:after {
+    background: {
+      attachment: scroll;
+      image: url('/ui/images/shared/svg/misc/icon_sort.svg');
+      position: center center;
+      repeat: no-repeat;
+      size: 16px 16px;
+    };
+    content: '';
+    display: inline-block;
+    margin: 0 0 0 5px;
+    vertical-align: middle;
+    // Normally we should have the same size as in background-size - but different zoom levels cut the image
+    // The extra pixel is for this particular situation. See CA-9567
+    height: 17px;
+    width: 17px;
+  }
+  &.sort-asc:after {
+    // TODO: remove rotate and replace background image with another svg
+    background: {
+      attachment: scroll;
+      image: url('/ui/images/shared/svg/misc/icon_sort.svg');
+      position: center center;
+      repeat: no-repeat;
+      size: 16px 16px;
+    };
+    content: '';
+    display: inline-block;
+    margin: 0 0 0 5px;
+    vertical-align: middle;
+    -webkit-transform: rotate(180deg);
+    // Normally we should have the same size as in background-size - but different zoom levels cut the image
+    // The extra pixel is for this particular situation. See CA-9567
+    height: 17px;
+    width: 17px;
+  }
+}
+
+
+
+
+.table {
+  // Override bottom border with box shadow only when "table-header-scroll" directive is used
+  thead[table-header-scroll] {
+    box-shadow: $gray8 0 2px 0;
+    tr {
+      th {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  thead {
+    tr {
+      th {
+        font-size: 0.75rem;
+        font-weight: normal;
+
+        &.sorted {
+          a {
+            color: $text-color;
+          }
+        }
+
+        &.sort {
+          @include sort();
+        }
+
+        // vertical align info icon element used in th
+        i {
+          &.aicon-generic-info {
+            vertical-align: middle;
+          }
+        }
+
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:hover {
+        // TODO - next - why cursor pointer ?
+        //cursor: pointer;
+      }
+
+      td {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  tbody.no-pointer {
+    tr {
+      &:hover {
+        cursor: default;
+      }
+    }
+  }
+
+
+  th, td {
+    &.right-aligned {
+      text-align: right;
+    }
+  }
+}
+// END OF BS3 OVERRIDES ///////////////////////////////////////////////////
+
+
+
+
+/*
+table {
+  thead, tbody, tfoot, th, td {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 0.75rem;
+  }
+}
+
+// table
+@include component(table) {
+  width: 100%;
+  border-collapse: collapse;
+
+  // needed to override lagacy table styles
+  th, td {
+    line-height: normal;
+    border: 0;
+  }
+
+  @include part(row) {
+    @include option(no-top-border) {
+      td {
+        border-top: 0;
+      }
+    }
+
+    @include option(no-bottom-border) {
+      td {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  @include part(cell) {
+    // padding: 0.5rem 1rem;
+    padding: 0.5rem;
+    vertical-align: bottom;
+    text-align: right;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    @include option(column-header) {
+      @extend %h4;
+      font-weight: 600;
+      height: 3rem;
+      line-height: 1;
+      padding: 0.3rem 0.5rem;
+      white-space: normal;
+    }
+
+    @include option(unit) {
+      padding-left: 0;
+      padding-right: 0;
+      width: 1px;
+      text-align: left;
+      // white-space: nowrap;
+    }
+
+    @include option(no-padding-left-right) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include option(min-width) {
+      width: 1px;
+    }
+
+    @include option(max-width) {
+      width: 99%;
+    }
+
+    @include option(top-aligned) {
+      vertical-align: top;
+    }
+
+    @include option(left-aligned) {
+      text-align: left;
+    }
+
+    @include option(border) {
+      border: 1px solid $gray8;
+    }
+
+    @include option(border-left) {
+      border-left: 1px solid $gray8;
+    }
+
+    @include option(border-right) {
+      border-right: 1px solid $gray8;
+    }
+
+    @include option(border-top) {
+      border-top: 1px solid $gray8;
+    }
+
+    @include option(border-bottom) {
+      border-bottom: 1px solid $gray8;
+    }
+  }
+}
+*/

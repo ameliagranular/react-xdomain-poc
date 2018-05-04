@@ -1,0 +1,8 @@
+@import '../alpine_next/scss/variables';
+
+$navbar_bg_color: #273A46;
+$navbar_height: 40px;
+
+%page {
+    padding-top: $navbar_height;
+}

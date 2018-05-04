@@ -1,0 +1,96 @@
+$inputs: "text", "date", "email", "tel", "password", "button", "number";
+
+@mixin input-override {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+
+  &:focus { /** TODO: check if the generic rule above covers this too and remove **/
+    border: 1px solid #CCC;
+    box-shadow: none;
+  }
+}
+
+@mixin input-override-invalid {
+  border-color: red;
+  background-color: #fff;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+//
+//@each $type in $inputs {
+//input[type="#{$type}"]:not(.disabled):not([disabled]),
+//  input[type="#{$type}"].ng-dirty.ng-invalid:not(.disabled):not([disabled]) {
+//    &.ng-invalid {
+//      @include input-override-invalid;
+//    }
+//}
+//
+//  input[type="#{$type}"]:not(.disabled):not([disabled]):not(.ng-invalid),
+//  input[type="#{$type}"].ng-dirty.ng-invalid:not(.disabled):not([disabled]):not(.ng-invalid) {
+//    @include input-override;
+//
+//    &:focus {
+//      @include input-override;
+//    }
+//  }
+//}
+
+*[al-dirty],
+form {
+
+  &.al-form-not-validated {
+
+    @each $type in $inputs {
+      input[type="#{$type}"]:not(.disabled):not([disabled]),
+      input[type="#{$type}"].ng-dirty.ng-invalid:not(.disabled):not([disabled]) {
+        @include input-override;
+
+        &:focus,
+        &:focus:invalid {
+          @include input-override;
+          color: inherit;
+        }
+      }
+    }
+
+    .invalid-label {
+      color: inherit;
+    }
+  }
+
+  &.al-form-validated {
+    @each $type in $inputs {
+      input[type="#{$type}"].ng-invalid:not(.disabled):not([disabled]):not(.select-box-new),
+      input[type="#{$type}"].invalid-field:not(.disabled):not([disabled]):not(.select-box-new) {
+        @include input-override-invalid;
+
+        &:focus {
+          @include input-override-invalid;
+        }
+      }
+    }
+
+    // date time picker
+    .date-time-picker.ng-invalid .ssb:not(.disabled):not(.ng-invalid) {
+      @include input-override-invalid;
+
+      &:focus {
+        @include input-override-invalid;
+      }
+    }
+
+    .inline-edit {
+      &.ng-invalid {
+        .inline-label {
+          border: 1px solid $red;
+        }
+      }
+    }
+    .invalid-label {
+      color: $red;
+    }
+  }
+}

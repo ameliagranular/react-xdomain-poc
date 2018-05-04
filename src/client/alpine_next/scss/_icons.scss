@@ -1,0 +1,527 @@
+// Use this for icons. This is the latest selection of icons for alpine-next.
+
+@import "generated/icons/icon_sprites";
+@import "cameo/theme/fonts";
+
+$icons: (
+
+    // *** EQUIPMENT
+    "equipment-combine": (
+        "states": (),
+        "variants": ()
+    ),
+    "equipment-implement": (
+        "states": (),
+        "variants": ()
+    ),
+    "equipment-other": (
+        "states": (),
+        "variants": ()
+    ),
+    "equipment-sprayer": (
+        "states": (),
+        "variants": ()
+    ),
+    "equipment-tractor": (
+        "states": (),
+        "variants": ()
+    ),
+    "equipment-truck": (
+        "states": (),
+        "variants": ()
+    ),
+
+
+    // *** MAP
+    "map-boundary-add": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "map-boundary-delete": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "map-boundary-subtract": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "map-boundary-vertexprimary": (
+        "states": (),
+        "variants": ()
+    ),
+    "map-boundary-vertexsecondary": (
+        "states": (),
+        "variants": ()
+    ),
+    "map-home": (
+        "states": (),
+        "variants": ()
+    ),
+    "map-location": (
+        "states": (),
+        "variants": ()
+    ),
+    "map-menu": (
+        "states": (),
+        "variants": ()
+    ),
+    "map-zoomin": (
+        "states": (),
+        "variants": ()
+    ),
+    "map-zoomout": (
+        "states": (),
+        "variants": ()
+    ),
+
+    // *** MISC
+    "add": (
+        "states": (
+            "hover",
+            "active"
+        ),
+        "variants": ()
+    ),
+    "alert": (
+        "states": (),
+        "variants": ()
+    ),
+    "arrow-left": (
+        "states": (),
+        "variants": ()
+    ),
+    "arrow-right": (
+        "states": (),
+        "variants": ()
+    ),
+    "calendar": (
+        "states": (),
+        "variants": ()
+    ),
+    "check": (
+        "states": (
+            "disabled"
+        ),
+        "variants": ()
+    ),
+    "checkbox": (
+        "states": (
+            "hover"
+        ),
+        "variants": ()
+    ),
+    "close": (
+        "states": (),
+        "variants": ()
+    ),
+    "collapse": (
+        "states": (),
+        "variants": ()
+    ),
+    "delete": (
+        "states": (
+            "hover"
+        ),
+        "variants": ()
+    ),
+    "download": (
+        "states": (
+            "hover"
+        ),
+        "variants": ()
+    ),
+    "edit": (
+        "states": (),
+        "variants": ()
+    ),
+    "granular": (
+        "states": (),
+        "variants": ()
+    ),
+    "grip": (
+        "states": (),
+        "variants": ()
+    ),
+    "info": (
+        "states": (),
+        "variants": ()
+    ),
+    "link": (
+        "states": (
+            "hover",
+            "disabled"
+        ),
+        "variants": ()
+    ),
+    "lock": (
+        "states": (),
+        "variants": ()
+    ),
+    "minus": (
+        "states": (
+            "hover"
+        ),
+        "variants": ()
+    ),
+    "next": (
+        "states": (),
+        "variants": ()
+    ),
+    "pointer-left": (
+        "states": (),
+        "variants": ()
+    ),
+    "pointer-right": (
+        "states": (),
+        "variants": ()
+    ),
+    "previous": (
+        "states": (),
+        "variants": ()
+    ),
+    "print": (
+        "states": (),
+        "variants": ()
+    ),
+    "radio-selected": (
+        "states": (),
+        "variants": ()
+    ),
+    "radio-unselected": (
+        "states": (),
+        "variants": ()
+    ),
+    "search": (
+        "states": (),
+        "variants": ()
+    ),
+    "sort": (
+        "states": (),
+        "variants": ()
+    ),
+    "spin": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "spinner": (
+        "states": (),
+        "variants": ()
+    ),
+    "split": (
+        "states": (),
+        "variants": ()
+    ),
+    "storage": (
+        "states": (),
+        "variants": ()
+    ),
+    "ticket": (
+        "states": (),
+        "variants": ()
+    ),
+    "unlink": (
+        "states": (
+            "hover",
+            "disabled"
+        ),
+        "variants": ()
+    ),
+    "unlock": (
+        "states": (),
+        "variants": ()
+    ),
+
+    // *** STATUS
+    "status-complete": (
+        "states": (),
+        "variants": ()
+    ),
+    "status-inprogress": (
+        "states": (),
+        "variants": ()
+    ),
+    "status-notstarted": (
+        "states": (),
+        "variants": ()
+    ),
+    "status-overdue": (
+        "states": (),
+        "variants": ()
+    ),
+    "status-paused": (
+        "states": (),
+        "variants": ()
+    ),
+    "status-unassigned": (
+        "states": (),
+        "variants": ()
+    ),
+    "status-warning": (
+        "states": (),
+        "variants": ()
+    ),
+
+    // *** TASK
+    "task-general": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "task-groundspray": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "task-harvest": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "task-inject": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "task-irrigation": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "task-other": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "task-planting": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "task-productapp": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "task-scout": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "task-soilsampling": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "task-spraying": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "task-spread": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+    "task-tillage": (
+        "states": (),
+        "variants": (
+            "reverse"
+        )
+    ),
+
+    // *** WORK ORDER
+    "note": (
+        "states": (),
+        "variants": ()
+    ),
+    "photo": (
+        "states": (),
+        "variants": ()
+    ),
+    "speech": (
+        "states": (),
+        "variants": ()
+    ),
+    "workorder-priority": (
+        "states": (),
+        "variants": ()
+    ),
+    "workorder": (
+        "states": (),
+        "variants": ()
+    ),
+);
+
+$states: (
+    "hover",
+    "active",
+    "disabled"
+);
+
+$variants: (
+    "reverse",
+);
+
+
+.icn {
+    border-radius: 5px;
+    display: inline-block;
+    vertical-align: middle;
+
+    &.icn-bg-dark {
+        background-color: #000000;
+    }
+};
+
+@each $icon, $data in $icons {
+
+    // *** Create icon classes that pick up states
+    .icn-#{$icon} {
+        @extend .svg-icn-#{$icon};
+
+        @each $state in $states {
+            @if index((map-get($data, states)), $state) != null {
+                &:#{$state} {
+                    @extend .svg-icn-#{$icon}-#{$state};
+                }
+
+                // extend hover for focus state
+                @if $state == "hover" {
+                    &:focus {
+                        @extend .svg-icn-#{$icon}-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    // *** Create classes that force the default state
+    .icn-#{$icon}-default {
+        @extend .svg-icn-#{$icon};
+
+        // force any event states to behave as default for this icon
+        @each $state in $states {
+            @if index((map-get($data, states)), $state) != null {
+                &:#{$state} {
+                    @extend .svg-icn-#{$icon};
+                }
+
+                // extend hover for focus state (override)
+                @if $state == "hover" {
+                    &:focus {
+                        @extend .svg-icn-#{$icon};
+                    }
+                }
+            }
+        }
+    }
+
+    // *** Create classes that pick up the disabled state
+    @if index((map-get($data, states)), disabled) != null {
+        [disabled] .icn-#{$icon} {
+            @extend .svg-icn-#{$icon}-disabled;
+
+            // force any event states to behave as disabled for this icon
+            @each $state in $states {
+                @if index((map-get($data, states)), $state) != null {
+                    &:#{$state} {
+                        @extend .svg-icn-#{$icon}-disabled;
+                    }
+
+                    // extend hover for focus state (override)
+                    @if $state == "hover" {
+                        &:focus {
+                            @extend .svg-icn-#{$icon}-disabled;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // *** Create classes that force the icon state
+    @each $forceState in $states {
+        @if index((map-get($data, states)), $forceState) != null {
+            .icn-#{$icon}-#{$forceState} {
+                @extend .svg-icn-#{$icon}-#{$forceState};
+
+                // force any event states to behave as this state for this icon
+                @each $eventState in $states {
+                    @if index((map-get($data, states)), $eventState) != null {
+                        &:#{$eventState} {
+                            @extend .svg-icn-#{$icon}-#{$forceState};
+                        }
+
+                        // extend hover for focus state (override)
+                        @if $eventState == "hover" {
+                            &:focus {
+                                @extend .svg-icn-#{$icon}-hover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // *** Create classes that force the icon variant
+    @each $variant in $variants {
+        @if index((map-get($data, variants)), $variant) != null {
+            .icn-#{$icon}-#{$variant} {
+                @extend .svg-icn-#{$icon}-#{$variant};
+
+                // force any event states to behave as this variant for this icon
+                @each $state in $states {
+                    @if index((map-get($data, states)), $state) != null {
+                        &:#{$state} {
+                            @extend .svg-icn-#{$icon}-#{$variant};
+                        }
+
+                        // extend hover for focus state (override)
+                        @if $state == "hover" {
+                            &:focus {
+                                @extend .svg-icn-#{$icon}-#{$variant};
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.icn-xs {
+    transform: scale(0.6);
+}
+.icn-s {
+    transform: scale(0.8);
+}
+.icn-m {
+    transform: scale(1);
+}
+.icn-l {
+    transform: scale(1.2);
+}
+.icn-xl {
+    transform: scale(1.4);
+}

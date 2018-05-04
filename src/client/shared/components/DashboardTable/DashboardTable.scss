@@ -1,0 +1,54 @@
+@import 'styles/vars';
+
+@keyframes placeholder-pulse {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+}
+
+.DashboardTable {
+    width: 100%;
+    background: $white;
+    padding: 0 20px;
+    border: 1px solid $gray-light;
+
+    .DashboardTable_Title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: $gray-darker;
+    }
+
+    .DashboardTable_LoneMessage {
+        text-align: center;
+        color: $gray-light;
+        padding: 50px 0;
+    }
+
+    .DashboardTable_Table {
+
+        thead th {
+            font-weight: 600;
+            color: $gray;
+        }
+
+        tbody td {
+            font-weight: 600;
+            color: $gray-dark;
+            font-size: $font-size-small;
+        }
+    }
+}
+
+.DashboardTablePending {
+    animation-name: placeholder-pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    .DashboardTable_Title {
+        opacity: 0;
+    }
+
+    .DashboardTable_Table {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,166 @@
+@import "cameo/theme/mixins";
+@import 'cameo/theme/typography_mixins';
+
+// BS3 modal overrides
+$modal-alpine-lg: 992px !default;
+$modal-alpine-md: 800px !default;
+$modal-alpine-sm: 608px !default;
+
+$alpine-popup-dialog-width: 420px !default;
+
+$modal-content-padding: 1rem;
+$modal-border-radius: 0;
+
+.modal {
+    // Use flex box to center the modal
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    &.alpine-popup-dialog {
+        .modal-dialog {
+            width: $alpine-popup-dialog-width;
+
+            .modal-content {
+                padding: 1rem;
+                border-radius: 0.25rem;
+                background-color: $gray1;
+                color: $white;
+
+                .popup-dialog-body {
+                    display: flex;
+
+                    .icon-container {
+                        margin-right: 0.5rem;
+                    }
+
+                    .main-container {
+                        .dialog-title {
+                            color: $lime;
+                            @include vitesse-bold;
+                            font-size: 1.125rem;
+                            margin-bottom: 1rem;
+                        }
+
+                        .dialog-body {
+                            @include whitney-medium;
+                            font-size: 0.875rem;
+                        }
+                    }
+                }
+
+                .modal-footer .btn + .btn {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+
+    .modal-dialog {
+        margin: 0;
+        max-width: 1408px; // max width for modal
+
+        max-height: 100%;
+
+        &.modal-lg,
+        &.modal-alpine-lg {
+            width: $modal-al-lg;
+        }
+
+        &.modal-alpine-md {
+            width: $modal-al-md;
+        }
+
+        &.modal-alpine-sm {
+            width: $modal-al-sm;
+        }
+
+        &.modal-alpine-lg, &.modal-alpine-md, &.modal-alpine-sm {
+            .modal-content {
+                border-radius: 0;
+            }
+        }
+
+        // Additional modal size value to be used in modal config object.
+        &.modal-xlg {
+            width: 90vw;
+            max-height: none;
+        }
+
+        .modal-content {
+            // border-radius: 0; // remove modal popup border radius
+            padding: $modal-content-padding;
+            border-radius: $modal-border-radius;
+
+            // from legacy
+            box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+
+            .modal-body {
+                max-height: 600px; // set max height for modal body container
+                overflow-y: auto; // show vertical scroll bar if content in modal body is too long
+                @include font-size('s');
+                color: $gray1;
+
+                &.full-height-visible {
+                    max-height: none;
+                    overflow-y: visible;
+                }
+            }
+
+            .modal-header {
+                padding-bottom: $modal-content-padding;
+                border-bottom: none;
+
+                @include modal-header();
+            }
+
+            .modal-footer {
+                padding-top: $modal-content-padding;
+                border-top: none;
+
+                .btn + .btn {
+                    margin-left: 0;
+                }
+            }
+
+        }
+
+        .section-footnote {
+            border-bottom: 1px solid $gray6;
+            line-height: 35px;
+            margin: 0 getSpacing('xl');
+            text-indent: getSpacing('m');
+
+            @include font-size('s');
+        }
+    }
+
+    // disable animations - mixins from BS3
+    &.fade .modal-dialog {
+        @include cross-transform(none);
+        @include transition-transform(none);
+    }
+    &.in .modal-dialog {
+        @include cross-transform(none);
+    }
+}
+
+// fix for modal open body
+body.modal-open {
+    // make the scrollbar (if any) the same color as background
+    &::-webkit-resizer,
+    &::-webkit-scrollbar-corner,
+    &::-webkit-scrollbar {
+        // same background as modal overlay
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    &::-webkit-scrollbar-button {
+        visibility: hidden;
+    }
+}
+
+// TODO - next
+// $uibModal adds the scrollbar padding when a modal is open
+// this is so dumb ...
+// try to fix it in another PR
+// at this point i'm so close to writing our own modal framework

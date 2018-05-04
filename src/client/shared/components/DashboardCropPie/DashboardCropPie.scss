@@ -1,0 +1,103 @@
+@import 'styles/vars';
+
+@keyframes placeholder-pulse {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+}
+
+.DashboardCropPie {
+    width: 100%;
+    background: $white;
+    padding: 0 20px;
+    border: 1px solid $gray-light;
+
+    .DashboardCropPie_Title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: $gray-darker;
+        margin-bottom: 0.2rem;
+    }
+
+    .DashboardCropPie_LoneMessage {
+        text-align: center;
+        color: $gray-light;
+        padding: 50px 0;
+    }
+
+    .DashboardCropPie_Main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .DashboardCropPie_Chart {
+        flex: 0 0 200px;
+        margin-right: 10px;
+
+        .DashboardCropPie_Chart_ZingChart > div {
+            width: 200px;
+            height: 200px;
+        }
+
+        .DashboardCropPie_Chart_Crop {
+            position: absolute;
+            top: 110px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+        }
+    }
+
+    .DashboardCropPie_Legend {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex: 1 1;
+
+        .DashboardCropPie_Legend_Crop {
+            display: flex;
+            flex: 0 1 50%;
+            padding-top: 30px;
+            padding-right: 20px;
+
+            .DashboardCropPie_Legend_CropLabel {
+                flex: 1 1;
+            }
+
+            .DashboardCropPie_Legend_CropValue {
+                flex: 1 1 100%;
+                padding-left: 10px;
+
+                .DashboardCropPie_Legend_CropValue_Percentage {
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    color: $gray-darker;
+                }
+
+                .DashboardCropPie_Legend_CropValue_Amount {
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    color: $gray;
+                }
+            }
+        }
+    }
+}
+
+.DashboardCropPiePending {
+    animation-name: placeholder-pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    .DashboardCropPie_Title {
+        opacity: 0;
+    }
+
+    .DashboardCropPie_Main {
+        opacity: 0;
+    }
+}

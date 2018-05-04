@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardStatBoxes renders expected markup with data 1`] = `
+<DashboardStatBoxes
+  count={1}
+  elements={
+    Array [
+      Object {
+        "label": <span>
+          Amount Lost
+    </span>,
+        "val": <span>
+          $1,000
+    </span>,
+      },
+      Object {
+        "label": <span>
+          Amount Gained
+    </span>,
+        "val": <span>
+          $4,000
+    </span>,
+      },
+    ]
+  }
+  pending={false}
+>
+  <div
+    className="DashboardStatBoxes DashboardStatBoxesReady"
+  >
+    <StatBox
+      key="0"
+      label={
+        <span>
+          Amount Lost
+        </span>
+      }
+      val={
+        <span>
+          $1,000
+        </span>
+      }
+    >
+      <div
+        className="DashboardStatBoxes_StatBox"
+      >
+        <div
+          className="DashboardStatBoxes_StatBox_Value"
+        >
+          <span>
+            $1,000
+          </span>
+        </div>
+        <div
+          className="DashboardStatBoxes_StatBox_Label"
+        >
+          <span>
+            Amount Lost
+          </span>
+        </div>
+      </div>
+    </StatBox>
+    <StatBox
+      key="1"
+      label={
+        <span>
+          Amount Gained
+        </span>
+      }
+      val={
+        <span>
+          $4,000
+        </span>
+      }
+    >
+      <div
+        className="DashboardStatBoxes_StatBox"
+      >
+        <div
+          className="DashboardStatBoxes_StatBox_Value"
+        >
+          <span>
+            $4,000
+          </span>
+        </div>
+        <div
+          className="DashboardStatBoxes_StatBox_Label"
+        >
+          <span>
+            Amount Gained
+          </span>
+        </div>
+      </div>
+    </StatBox>
+  </div>
+</DashboardStatBoxes>
+`;
+
+exports[`DashboardStatBoxes renders expected markup with no props 1`] = `
+<DashboardStatBoxes
+  count={1}
+  elements={null}
+  pending={false}
+>
+  <div
+    className="DashboardStatBoxes DashboardStatBoxesPending"
+  >
+    <StatBox
+      key="0"
+      label={
+        <span>
+          --
+        </span>
+      }
+      val={
+        <span>
+          --
+        </span>
+      }
+    >
+      <div
+        className="DashboardStatBoxes_StatBox"
+      >
+        <div
+          className="DashboardStatBoxes_StatBox_Value"
+        >
+          <span>
+            --
+          </span>
+        </div>
+        <div
+          className="DashboardStatBoxes_StatBox_Label"
+        >
+          <span>
+            --
+          </span>
+        </div>
+      </div>
+    </StatBox>
+  </div>
+</DashboardStatBoxes>
+`;
+
+exports[`DashboardStatBoxes renders expected markup with pending 1`] = `
+<DashboardStatBoxes
+  count={1}
+  elements={null}
+  pending={true}
+>
+  <div
+    className="DashboardStatBoxes DashboardStatBoxesPending"
+  >
+    <StatBox
+      key="0"
+      label={
+        <span>
+          --
+        </span>
+      }
+      val={
+        <span>
+          --
+        </span>
+      }
+    >
+      <div
+        className="DashboardStatBoxes_StatBox"
+      >
+        <div
+          className="DashboardStatBoxes_StatBox_Value"
+        >
+          <span>
+            --
+          </span>
+        </div>
+        <div
+          className="DashboardStatBoxes_StatBox_Label"
+        >
+          <span>
+            --
+          </span>
+        </div>
+      </div>
+    </StatBox>
+  </div>
+</DashboardStatBoxes>
+`;
+
+exports[`DashboardStatBoxes renders expected markup with pending and count 1`] = `
+<DashboardStatBoxes
+  count={2}
+  elements={null}
+  pending={true}
+>
+  <div
+    className="DashboardStatBoxes DashboardStatBoxesPending"
+  >
+    <StatBox
+      key="0"
+      label={
+        <span>
+          --
+        </span>
+      }
+      val={
+        <span>
+          --
+        </span>
+      }
+    >
+      <div
+        className="DashboardStatBoxes_StatBox"
+      >
+        <div
+          className="DashboardStatBoxes_StatBox_Value"
+        >
+          <span>
+            --
+          </span>
+        </div>
+        <div
+          className="DashboardStatBoxes_StatBox_Label"
+        >
+          <span>
+            --
+          </span>
+        </div>
+      </div>
+    </StatBox>
+    <StatBox
+      key="1"
+      label={
+        <span>
+          --
+        </span>
+      }
+      val={
+        <span>
+          --
+        </span>
+      }
+    >
+      <div
+        className="DashboardStatBoxes_StatBox"
+      >
+        <div
+          className="DashboardStatBoxes_StatBox_Value"
+        >
+          <span>
+            --
+          </span>
+        </div>
+        <div
+          className="DashboardStatBoxes_StatBox_Label"
+        >
+          <span>
+            --
+          </span>
+        </div>
+      </div>
+    </StatBox>
+  </div>
+</DashboardStatBoxes>
+`;

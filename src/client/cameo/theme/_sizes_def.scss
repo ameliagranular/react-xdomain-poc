@@ -1,0 +1,29 @@
+@import "sizes";
+
+// Generate global sizes classes
+@each $sizeName, $sizeVal in $sizesMap {
+  @each $type in $types {
+    .#{$sizeName}-#{$type} {
+      #{$type}: $sizeVal;
+    }
+
+  }
+}
+
+////////////////////////////
+@for $i from 1 through 24 {
+  @include tweak(u-width-#{$i}) {
+    width: #{$i}rem;
+  }
+  @include tweak(u-height-#{$i}) {
+    height: #{$i}rem;
+  }
+}
+
+@include tweak(u-width-full) {
+  width: 100%;
+}
+
+@include tweak(u-width-flexi) {
+  width: calc(100% - 1rem);
+}

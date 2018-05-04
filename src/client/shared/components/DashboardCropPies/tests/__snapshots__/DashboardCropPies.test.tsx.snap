@@ -1,0 +1,5422 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardCropPies renders expected markup with datasets 1`] = `
+<DashboardCropPies
+  dataset={null}
+  datasets={
+    Array [
+      Object {
+        "dataset": Array [
+          Object {
+            "amount": <span>
+              Crop Amount 1
+    </span>,
+            "color": "#CCCCCC",
+            "crop": Object {
+              "cropProductElement": <span>
+                Crop Product 1
+    </span>,
+              "cropProductId": "1",
+              "cropTypeColor": "#CCCCCC",
+              "cropTypeElement": <span>
+                Crop 1
+    </span>,
+              "cropTypeId": "1",
+            },
+            "percentage": 50,
+          },
+          Object {
+            "amount": <span>
+              Crop Amount 2
+    </span>,
+            "color": "#CCCCCC",
+            "crop": Object {
+              "cropTypeColor": "#CCCCCC",
+              "cropTypeElement": <span>
+                Crop 2
+    </span>,
+              "cropTypeId": "2",
+            },
+            "percentage": 75,
+          },
+        ],
+        "onTabClick": [Function],
+        "tab": <span>
+          Tab 1
+    </span>,
+      },
+      Object {
+        "dataset": Array [
+          Object {
+            "amount": <span>
+              Crop Amount 3
+    </span>,
+            "color": "#CCCCCC",
+            "crop": Object {
+              "cropTypeColor": "#CCCCCC",
+              "cropTypeElement": <span>
+                Crop 3
+    </span>,
+              "cropTypeId": "3",
+            },
+            "percentage": 30,
+          },
+          Object {
+            "amount": <span>
+              Crop Amount 4
+    </span>,
+            "color": "#CCCCCC",
+            "crop": Object {
+              "cropProductElement": <span>
+                Crop Product 4
+    </span>,
+              "cropProductId": "4",
+              "cropTypeColor": "#CCCCCC",
+              "cropTypeElement": <span>
+                Crop 4
+    </span>,
+              "cropTypeId": "4",
+            },
+            "percentage": 60,
+          },
+        ],
+        "onTabClick": [Function],
+        "tab": <span>
+          Tab 2
+    </span>,
+      },
+    ]
+  }
+  description={null}
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  link={null}
+  pending={false}
+  pieCount={5}
+  selectedTabIdx={0}
+  tabCount={0}
+  title={null}
+>
+  <div
+    className="DashboardCropPies DashboardCropPiesReady"
+  >
+    <div
+      className="DashboardCropPies_TitleBar"
+    />
+    <div
+      className="DashboardCropPies_Main"
+    >
+      <div
+        className="DashboardCropPies_Tabs"
+      >
+        <div
+          className="btn-group"
+        >
+          <button
+            className="btn btn-sm btn-default active"
+            key="0"
+            onClick={[Function]}
+            type="button"
+          >
+            <span>
+              Tab 1
+            </span>
+          </button>
+          <button
+            className="btn btn-sm btn-default"
+            key="1"
+            onClick={[Function]}
+            type="button"
+          >
+            <span>
+              Tab 2
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        className="DashboardCropPies_TabContents"
+      >
+        <div
+          className="DashboardCropPies_TabContent"
+          key="0"
+        >
+          <Component
+            amount={
+              <span>
+                Crop Amount 1
+              </span>
+            }
+            color="#CCCCCC"
+            crop={
+              Object {
+                "cropProductElement": <span>
+                  Crop Product 1
+              </span>,
+                "cropProductId": "1",
+                "cropTypeColor": "#CCCCCC",
+                "cropTypeElement": <span>
+                  Crop 1
+              </span>,
+                "cropTypeId": "1",
+              }
+            }
+            key="1--1"
+            percentage={50}
+          >
+            <div
+              className="DashboardCropPies_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_Chart"
+              >
+                <div
+                  className="DashboardCropPies_Chart_ZingChart"
+                >
+                  <Component
+                    data={
+                      Object {
+                        "plot": Object {
+                          "detach": false,
+                          "tooltip": Object {
+                            "visible": false,
+                          },
+                          "value-box": Object {
+                            "visible": false,
+                          },
+                        },
+                        "scale-r": Object {
+                          "ref-angle": 270,
+                        },
+                        "series": Array [
+                          Object {
+                            "background-color": "#CCCCCC",
+                            "values": Array [
+                              50,
+                            ],
+                          },
+                          Object {
+                            "background-color": "#D6D6D6",
+                            "values": Array [
+                              50,
+                            ],
+                          },
+                        ],
+                        "type": "pie",
+                      }
+                    }
+                    height="100%"
+                    id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                    width="100%"
+                  >
+                    <div
+                      className="MOCK_ZINGCHART"
+                    />
+                  </Component>
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Crop"
+                >
+                  <Component
+                    cropProducts={
+                      Array [
+                        Object {
+                          "cropProductElement": <span>
+                            Crop Product 1
+                      </span>,
+                          "cropProductId": "1",
+                        },
+                      ]
+                    }
+                    cropTypes={
+                      Array [
+                        Object {
+                          "cropTypeColor": "#CCCCCC",
+                          "cropTypeElement": <span>
+                            Crop 1
+                      </span>,
+                          "cropTypeId": "1",
+                        },
+                      ]
+                    }
+                  >
+                    <div
+                      className="CropLabel"
+                    >
+                      <div
+                        className="CropLabel_CropType"
+                        key="1"
+                        style={
+                          Object {
+                            "background": "#CCCCCC",
+                          }
+                        }
+                      >
+                        <span>
+                          Crop 1
+                        </span>
+                      </div>
+                      <div
+                        className="CropLabel_CropProduct"
+                        key="1"
+                      >
+                        <span>
+                          Crop Product 1
+                        </span>
+                      </div>
+                    </div>
+                  </Component>
+                </div>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Numbers"
+              >
+                <div
+                  className="DashboardCropPies_Chart_Percentage"
+                >
+                  50
+                  %
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Amount"
+                >
+                  <span>
+                    Crop Amount 1
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Component>
+          <Component
+            amount={
+              <span>
+                Crop Amount 2
+              </span>
+            }
+            color="#CCCCCC"
+            crop={
+              Object {
+                "cropTypeColor": "#CCCCCC",
+                "cropTypeElement": <span>
+                  Crop 2
+              </span>,
+                "cropTypeId": "2",
+              }
+            }
+            key="2"
+            percentage={75}
+          >
+            <div
+              className="DashboardCropPies_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_Chart"
+              >
+                <div
+                  className="DashboardCropPies_Chart_ZingChart"
+                >
+                  <Component
+                    data={
+                      Object {
+                        "plot": Object {
+                          "detach": false,
+                          "tooltip": Object {
+                            "visible": false,
+                          },
+                          "value-box": Object {
+                            "visible": false,
+                          },
+                        },
+                        "scale-r": Object {
+                          "ref-angle": 270,
+                        },
+                        "series": Array [
+                          Object {
+                            "background-color": "#CCCCCC",
+                            "values": Array [
+                              75,
+                            ],
+                          },
+                          Object {
+                            "background-color": "#D6D6D6",
+                            "values": Array [
+                              25,
+                            ],
+                          },
+                        ],
+                        "type": "pie",
+                      }
+                    }
+                    height="100%"
+                    id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                    width="100%"
+                  >
+                    <div
+                      className="MOCK_ZINGCHART"
+                    />
+                  </Component>
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Crop"
+                >
+                  <Component
+                    cropProducts={null}
+                    cropTypes={
+                      Array [
+                        Object {
+                          "cropTypeColor": "#CCCCCC",
+                          "cropTypeElement": <span>
+                            Crop 2
+                      </span>,
+                          "cropTypeId": "2",
+                        },
+                      ]
+                    }
+                  >
+                    <div
+                      className="CropLabel"
+                    >
+                      <div
+                        className="CropLabel_CropType"
+                        key="2"
+                        style={
+                          Object {
+                            "background": "#CCCCCC",
+                          }
+                        }
+                      >
+                        <span>
+                          Crop 2
+                        </span>
+                      </div>
+                    </div>
+                  </Component>
+                </div>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Numbers"
+              >
+                <div
+                  className="DashboardCropPies_Chart_Percentage"
+                >
+                  75
+                  %
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Amount"
+                >
+                  <span>
+                    Crop Amount 2
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Component>
+        </div>
+        <div
+          className="DashboardCropPies_TabContent hidden"
+          key="1"
+        >
+          <Component
+            amount={
+              <span>
+                Crop Amount 3
+              </span>
+            }
+            color="#CCCCCC"
+            crop={
+              Object {
+                "cropTypeColor": "#CCCCCC",
+                "cropTypeElement": <span>
+                  Crop 3
+              </span>,
+                "cropTypeId": "3",
+              }
+            }
+            key="3"
+            percentage={30}
+          >
+            <div
+              className="DashboardCropPies_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_Chart"
+              >
+                <div
+                  className="DashboardCropPies_Chart_ZingChart"
+                >
+                  <Component
+                    data={
+                      Object {
+                        "plot": Object {
+                          "detach": false,
+                          "tooltip": Object {
+                            "visible": false,
+                          },
+                          "value-box": Object {
+                            "visible": false,
+                          },
+                        },
+                        "scale-r": Object {
+                          "ref-angle": 270,
+                        },
+                        "series": Array [
+                          Object {
+                            "background-color": "#CCCCCC",
+                            "values": Array [
+                              30,
+                            ],
+                          },
+                          Object {
+                            "background-color": "#D6D6D6",
+                            "values": Array [
+                              70,
+                            ],
+                          },
+                        ],
+                        "type": "pie",
+                      }
+                    }
+                    height="100%"
+                    id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                    width="100%"
+                  >
+                    <div
+                      className="MOCK_ZINGCHART"
+                    />
+                  </Component>
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Crop"
+                >
+                  <Component
+                    cropProducts={null}
+                    cropTypes={
+                      Array [
+                        Object {
+                          "cropTypeColor": "#CCCCCC",
+                          "cropTypeElement": <span>
+                            Crop 3
+                      </span>,
+                          "cropTypeId": "3",
+                        },
+                      ]
+                    }
+                  >
+                    <div
+                      className="CropLabel"
+                    >
+                      <div
+                        className="CropLabel_CropType"
+                        key="3"
+                        style={
+                          Object {
+                            "background": "#CCCCCC",
+                          }
+                        }
+                      >
+                        <span>
+                          Crop 3
+                        </span>
+                      </div>
+                    </div>
+                  </Component>
+                </div>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Numbers"
+              >
+                <div
+                  className="DashboardCropPies_Chart_Percentage"
+                >
+                  30
+                  %
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Amount"
+                >
+                  <span>
+                    Crop Amount 3
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Component>
+          <Component
+            amount={
+              <span>
+                Crop Amount 4
+              </span>
+            }
+            color="#CCCCCC"
+            crop={
+              Object {
+                "cropProductElement": <span>
+                  Crop Product 4
+              </span>,
+                "cropProductId": "4",
+                "cropTypeColor": "#CCCCCC",
+                "cropTypeElement": <span>
+                  Crop 4
+              </span>,
+                "cropTypeId": "4",
+              }
+            }
+            key="4--4"
+            percentage={60}
+          >
+            <div
+              className="DashboardCropPies_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_Chart"
+              >
+                <div
+                  className="DashboardCropPies_Chart_ZingChart"
+                >
+                  <Component
+                    data={
+                      Object {
+                        "plot": Object {
+                          "detach": false,
+                          "tooltip": Object {
+                            "visible": false,
+                          },
+                          "value-box": Object {
+                            "visible": false,
+                          },
+                        },
+                        "scale-r": Object {
+                          "ref-angle": 270,
+                        },
+                        "series": Array [
+                          Object {
+                            "background-color": "#CCCCCC",
+                            "values": Array [
+                              60,
+                            ],
+                          },
+                          Object {
+                            "background-color": "#D6D6D6",
+                            "values": Array [
+                              40,
+                            ],
+                          },
+                        ],
+                        "type": "pie",
+                      }
+                    }
+                    height="100%"
+                    id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                    width="100%"
+                  >
+                    <div
+                      className="MOCK_ZINGCHART"
+                    />
+                  </Component>
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Crop"
+                >
+                  <Component
+                    cropProducts={
+                      Array [
+                        Object {
+                          "cropProductElement": <span>
+                            Crop Product 4
+                      </span>,
+                          "cropProductId": "4",
+                        },
+                      ]
+                    }
+                    cropTypes={
+                      Array [
+                        Object {
+                          "cropTypeColor": "#CCCCCC",
+                          "cropTypeElement": <span>
+                            Crop 4
+                      </span>,
+                          "cropTypeId": "4",
+                        },
+                      ]
+                    }
+                  >
+                    <div
+                      className="CropLabel"
+                    >
+                      <div
+                        className="CropLabel_CropType"
+                        key="4"
+                        style={
+                          Object {
+                            "background": "#CCCCCC",
+                          }
+                        }
+                      >
+                        <span>
+                          Crop 4
+                        </span>
+                      </div>
+                      <div
+                        className="CropLabel_CropProduct"
+                        key="4"
+                      >
+                        <span>
+                          Crop Product 4
+                        </span>
+                      </div>
+                    </div>
+                  </Component>
+                </div>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Numbers"
+              >
+                <div
+                  className="DashboardCropPies_Chart_Percentage"
+                >
+                  60
+                  %
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Amount"
+                >
+                  <span>
+                    Crop Amount 4
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Component>
+        </div>
+      </div>
+    </div>
+  </div>
+</DashboardCropPies>
+`;
+
+exports[`DashboardCropPies renders expected markup with empty datasets 1`] = `
+<DashboardCropPies
+  dataset={null}
+  datasets={Array []}
+  description={null}
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  link={null}
+  pending={false}
+  pieCount={5}
+  selectedTabIdx={0}
+  tabCount={0}
+  title={null}
+>
+  <div
+    className="DashboardCropPies DashboardCropPiesReady"
+  >
+    <div
+      className="DashboardCropPies_TitleBar"
+    />
+    <div
+      className="DashboardCropPies_Main"
+    >
+      <div
+        className="DashboardCropPies_Tabs"
+      >
+        <div
+          className="btn-group"
+        />
+      </div>
+      <div
+        className="DashboardCropPies_TabContents"
+      />
+    </div>
+  </div>
+</DashboardCropPies>
+`;
+
+exports[`DashboardCropPies renders expected markup with emptyMessage and dataset 1`] = `
+<DashboardCropPies
+  dataset={
+    Array [
+      Object {
+        "amount": <span>
+          Crop Amount 1
+    </span>,
+        "color": "#CCCCCC",
+        "crop": Object {
+          "cropProductElement": <span>
+            Crop Product 1
+    </span>,
+          "cropProductId": "1",
+          "cropTypeColor": "#CCCCCC",
+          "cropTypeElement": <span>
+            Crop 1
+    </span>,
+          "cropTypeId": "1",
+        },
+        "percentage": 50,
+      },
+      Object {
+        "amount": <span>
+          Crop Amount 2
+    </span>,
+        "color": "#CCCCCC",
+        "crop": Object {
+          "cropProductElement": <span>
+            Crop Product 2
+    </span>,
+          "cropProductId": "2",
+          "cropTypeColor": "#CCCCCC",
+          "cropTypeElement": <span>
+            Crop 2
+    </span>,
+          "cropTypeId": "2",
+        },
+        "percentage": 75,
+      },
+    ]
+  }
+  datasets={null}
+  description={null}
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  link={null}
+  pending={false}
+  pieCount={5}
+  selectedTabIdx={0}
+  tabCount={0}
+  title={null}
+>
+  <div
+    className="DashboardCropPies DashboardCropPiesReady"
+  >
+    <div
+      className="DashboardCropPies_TitleBar"
+    />
+    <div
+      className="DashboardCropPies_Main"
+    >
+      <div
+        className="DashboardCropPies_TabContents"
+      >
+        <Component
+          amount={
+            <span>
+              Crop Amount 1
+            </span>
+          }
+          color="#CCCCCC"
+          crop={
+            Object {
+              "cropProductElement": <span>
+                Crop Product 1
+            </span>,
+              "cropProductId": "1",
+              "cropTypeColor": "#CCCCCC",
+              "cropTypeElement": <span>
+                Crop 1
+            </span>,
+              "cropTypeId": "1",
+            }
+          }
+          key="1--1"
+          percentage={50}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#CCCCCC",
+                          "values": Array [
+                            50,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            50,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={
+                    Array [
+                      Object {
+                        "cropProductElement": <span>
+                          Crop Product 1
+                    </span>,
+                        "cropProductId": "1",
+                      },
+                    ]
+                  }
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#CCCCCC",
+                        "cropTypeElement": <span>
+                          Crop 1
+                    </span>,
+                        "cropTypeId": "1",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="1"
+                      style={
+                        Object {
+                          "background": "#CCCCCC",
+                        }
+                      }
+                    >
+                      <span>
+                        Crop 1
+                      </span>
+                    </div>
+                    <div
+                      className="CropLabel_CropProduct"
+                      key="1"
+                    >
+                      <span>
+                        Crop Product 1
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                50
+                %
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Amount"
+              >
+                <span>
+                  Crop Amount 1
+                </span>
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          amount={
+            <span>
+              Crop Amount 2
+            </span>
+          }
+          color="#CCCCCC"
+          crop={
+            Object {
+              "cropProductElement": <span>
+                Crop Product 2
+            </span>,
+              "cropProductId": "2",
+              "cropTypeColor": "#CCCCCC",
+              "cropTypeElement": <span>
+                Crop 2
+            </span>,
+              "cropTypeId": "2",
+            }
+          }
+          key="2--2"
+          percentage={75}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#CCCCCC",
+                          "values": Array [
+                            75,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            25,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={
+                    Array [
+                      Object {
+                        "cropProductElement": <span>
+                          Crop Product 2
+                    </span>,
+                        "cropProductId": "2",
+                      },
+                    ]
+                  }
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#CCCCCC",
+                        "cropTypeElement": <span>
+                          Crop 2
+                    </span>,
+                        "cropTypeId": "2",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="2"
+                      style={
+                        Object {
+                          "background": "#CCCCCC",
+                        }
+                      }
+                    >
+                      <span>
+                        Crop 2
+                      </span>
+                    </div>
+                    <div
+                      className="CropLabel_CropProduct"
+                      key="2"
+                    >
+                      <span>
+                        Crop Product 2
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                75
+                %
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Amount"
+              >
+                <span>
+                  Crop Amount 2
+                </span>
+              </div>
+            </div>
+          </div>
+        </Component>
+      </div>
+    </div>
+  </div>
+</DashboardCropPies>
+`;
+
+exports[`DashboardCropPies renders expected markup with no props 1`] = `
+<DashboardCropPies
+  dataset={null}
+  datasets={null}
+  description={null}
+  emptyMessage={null}
+  link={null}
+  pending={false}
+  pieCount={5}
+  selectedTabIdx={0}
+  tabCount={0}
+  title={null}
+>
+  <div
+    className="DashboardCropPies DashboardCropPiesReady"
+  >
+    <div
+      className="DashboardCropPies_TitleBar"
+    />
+    <div
+      className="DashboardCropPies_Main"
+    >
+      <div
+        className="DashboardCropPies_TabContents"
+      >
+        <div
+          className="DashboardCropPies_LoneMessage"
+        />
+      </div>
+    </div>
+  </div>
+</DashboardCropPies>
+`;
+
+exports[`DashboardCropPies renders expected markup with pending 1`] = `
+<DashboardCropPies
+  dataset={null}
+  datasets={null}
+  description={null}
+  emptyMessage={null}
+  link={null}
+  pending={true}
+  pieCount={5}
+  selectedTabIdx={0}
+  tabCount={0}
+  title={null}
+>
+  <div
+    className="DashboardCropPies DashboardCropPiesPending"
+  >
+    <div
+      className="DashboardCropPies_TitleBar"
+    />
+    <div
+      className="DashboardCropPies_Main"
+    >
+      <div
+        className="DashboardCropPies_TabContents"
+      >
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-0"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-1"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-2"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-3"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-4"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+      </div>
+    </div>
+  </div>
+</DashboardCropPies>
+`;
+
+exports[`DashboardCropPies renders expected markup with pending and pieCount 1`] = `
+<DashboardCropPies
+  dataset={null}
+  datasets={null}
+  description={null}
+  emptyMessage={null}
+  link={null}
+  pending={true}
+  pieCount={5}
+  selectedTabIdx={0}
+  tabCount={0}
+  title={null}
+>
+  <div
+    className="DashboardCropPies DashboardCropPiesPending"
+  >
+    <div
+      className="DashboardCropPies_TitleBar"
+    />
+    <div
+      className="DashboardCropPies_Main"
+    >
+      <div
+        className="DashboardCropPies_TabContents"
+      >
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-0"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-1"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-2"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-3"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-4"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+      </div>
+    </div>
+  </div>
+</DashboardCropPies>
+`;
+
+exports[`DashboardCropPies renders expected markup with pending, pieCount, and tabCount 1`] = `
+<DashboardCropPies
+  dataset={null}
+  datasets={null}
+  description={null}
+  emptyMessage={null}
+  link={null}
+  pending={true}
+  pieCount={5}
+  selectedTabIdx={0}
+  tabCount={3}
+  title={null}
+>
+  <div
+    className="DashboardCropPies DashboardCropPiesPending"
+  >
+    <div
+      className="DashboardCropPies_TitleBar"
+    />
+    <div
+      className="DashboardCropPies_Main"
+    >
+      <div
+        className="DashboardCropPies_Tabs"
+      >
+        <div
+          className="btn-group"
+        >
+          <button
+            className="btn btn-sm btn-default"
+            key="00-0"
+            type="button"
+          >
+             
+          </button>
+          <button
+            className="btn btn-sm btn-default"
+            key="00-1"
+            type="button"
+          >
+             
+          </button>
+          <button
+            className="btn btn-sm btn-default"
+            key="00-2"
+            type="button"
+          >
+             
+          </button>
+        </div>
+      </div>
+      <div
+        className="DashboardCropPies_TabContent"
+      >
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-0"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-1"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-2"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-3"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-4"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+      </div>
+    </div>
+  </div>
+</DashboardCropPies>
+`;
+
+exports[`DashboardCropPies renders expected markup with pending, pieCount, tabCount, title, description, and link 1`] = `
+<DashboardCropPies
+  dataset={null}
+  datasets={null}
+  description={
+    <span>
+      Description
+    </span>
+  }
+  emptyMessage={null}
+  link={
+    <span>
+      Link
+    </span>
+  }
+  pending={true}
+  pieCount={5}
+  selectedTabIdx={0}
+  tabCount={2}
+  title={
+    <span>
+      Title
+    </span>
+  }
+>
+  <div
+    className="DashboardCropPies DashboardCropPiesPending"
+  >
+    <div
+      className="DashboardCropPies_TitleBar"
+    >
+      <h2
+        className="DashboardCropPies_Title"
+      >
+        <span>
+          Title
+        </span>
+      </h2>
+      <span
+        className="DashboardCropPies_Link"
+      >
+        <span>
+          Link
+        </span>
+      </span>
+    </div>
+    <p
+      className="DashboardCropPies_Description"
+    >
+      <span>
+        Description
+      </span>
+    </p>
+    <div
+      className="DashboardCropPies_Main"
+    >
+      <div
+        className="DashboardCropPies_Tabs"
+      >
+        <div
+          className="btn-group"
+        >
+          <button
+            className="btn btn-sm btn-default"
+            key="00-0"
+            type="button"
+          >
+             
+          </button>
+          <button
+            className="btn btn-sm btn-default"
+            key="00-1"
+            type="button"
+          >
+             
+          </button>
+        </div>
+      </div>
+      <div
+        className="DashboardCropPies_TabContent"
+      >
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-0"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-1"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-2"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-3"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-4"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+      </div>
+    </div>
+  </div>
+</DashboardCropPies>
+`;
+
+exports[`DashboardCropPies renders expected markup with pending, pieCount, title, description, and link 1`] = `
+<DashboardCropPies
+  dataset={null}
+  datasets={null}
+  description={
+    <span>
+      Description
+    </span>
+  }
+  emptyMessage={null}
+  link={
+    <span>
+      Link
+    </span>
+  }
+  pending={true}
+  pieCount={5}
+  selectedTabIdx={0}
+  tabCount={0}
+  title={
+    <span>
+      Title
+    </span>
+  }
+>
+  <div
+    className="DashboardCropPies DashboardCropPiesPending"
+  >
+    <div
+      className="DashboardCropPies_TitleBar"
+    >
+      <h2
+        className="DashboardCropPies_Title"
+      >
+        <span>
+          Title
+        </span>
+      </h2>
+      <span
+        className="DashboardCropPies_Link"
+      >
+        <span>
+          Link
+        </span>
+      </span>
+    </div>
+    <p
+      className="DashboardCropPies_Description"
+    >
+      <span>
+        Description
+      </span>
+    </p>
+    <div
+      className="DashboardCropPies_Main"
+    >
+      <div
+        className="DashboardCropPies_TabContents"
+      >
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-0"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-1"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-2"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-3"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          color="#FFFFFF"
+          crop={
+            Object {
+              "cropTypeElement": <span>
+                 
+            </span>,
+              "cropTypeId": "0",
+            }
+          }
+          key="00-4"
+          percentage={0}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#FFFFFF",
+                          "values": Array [
+                            0,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            100,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={null}
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#FFFFFF",
+                        "cropTypeElement": <span>
+                           
+                    </span>,
+                        "cropTypeId": "0",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="0"
+                      style={
+                        Object {
+                          "background": "#FFFFFF",
+                        }
+                      }
+                    >
+                      <span>
+                         
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                0
+                %
+              </div>
+            </div>
+          </div>
+        </Component>
+      </div>
+    </div>
+  </div>
+</DashboardCropPies>
+`;
+
+exports[`DashboardCropPies renders expected markup with title, description, link, and dataset 1`] = `
+<DashboardCropPies
+  dataset={
+    Array [
+      Object {
+        "amount": <span>
+          Crop Amount 1
+    </span>,
+        "color": "#CCCCCC",
+        "crop": Object {
+          "cropProductElement": <span>
+            Crop Product 1
+    </span>,
+          "cropProductId": "1",
+          "cropTypeColor": "#CCCCCC",
+          "cropTypeElement": <span>
+            Crop 1
+    </span>,
+          "cropTypeId": "1",
+        },
+        "percentage": 50,
+      },
+      Object {
+        "amount": <span>
+          Crop Amount 2
+    </span>,
+        "color": "#CCCCCC",
+        "crop": Object {
+          "cropProductElement": <span>
+            Crop Product 2
+    </span>,
+          "cropProductId": "2",
+          "cropTypeColor": "#CCCCCC",
+          "cropTypeElement": <span>
+            Crop 2
+    </span>,
+          "cropTypeId": "2",
+        },
+        "percentage": 75,
+      },
+    ]
+  }
+  datasets={null}
+  description={
+    <span>
+      Description
+    </span>
+  }
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  link={
+    <span>
+      Link
+    </span>
+  }
+  pending={false}
+  pieCount={5}
+  selectedTabIdx={0}
+  tabCount={0}
+  title={
+    <span>
+      Title
+    </span>
+  }
+>
+  <div
+    className="DashboardCropPies DashboardCropPiesReady"
+  >
+    <div
+      className="DashboardCropPies_TitleBar"
+    >
+      <h2
+        className="DashboardCropPies_Title"
+      >
+        <span>
+          Title
+        </span>
+      </h2>
+      <span
+        className="DashboardCropPies_Link"
+      >
+        <span>
+          Link
+        </span>
+      </span>
+    </div>
+    <p
+      className="DashboardCropPies_Description"
+    >
+      <span>
+        Description
+      </span>
+    </p>
+    <div
+      className="DashboardCropPies_Main"
+    >
+      <div
+        className="DashboardCropPies_TabContents"
+      >
+        <Component
+          amount={
+            <span>
+              Crop Amount 1
+            </span>
+          }
+          color="#CCCCCC"
+          crop={
+            Object {
+              "cropProductElement": <span>
+                Crop Product 1
+            </span>,
+              "cropProductId": "1",
+              "cropTypeColor": "#CCCCCC",
+              "cropTypeElement": <span>
+                Crop 1
+            </span>,
+              "cropTypeId": "1",
+            }
+          }
+          key="1--1"
+          percentage={50}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#CCCCCC",
+                          "values": Array [
+                            50,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            50,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={
+                    Array [
+                      Object {
+                        "cropProductElement": <span>
+                          Crop Product 1
+                    </span>,
+                        "cropProductId": "1",
+                      },
+                    ]
+                  }
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#CCCCCC",
+                        "cropTypeElement": <span>
+                          Crop 1
+                    </span>,
+                        "cropTypeId": "1",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="1"
+                      style={
+                        Object {
+                          "background": "#CCCCCC",
+                        }
+                      }
+                    >
+                      <span>
+                        Crop 1
+                      </span>
+                    </div>
+                    <div
+                      className="CropLabel_CropProduct"
+                      key="1"
+                    >
+                      <span>
+                        Crop Product 1
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                50
+                %
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Amount"
+              >
+                <span>
+                  Crop Amount 1
+                </span>
+              </div>
+            </div>
+          </div>
+        </Component>
+        <Component
+          amount={
+            <span>
+              Crop Amount 2
+            </span>
+          }
+          color="#CCCCCC"
+          crop={
+            Object {
+              "cropProductElement": <span>
+                Crop Product 2
+            </span>,
+              "cropProductId": "2",
+              "cropTypeColor": "#CCCCCC",
+              "cropTypeElement": <span>
+                Crop 2
+            </span>,
+              "cropTypeId": "2",
+            }
+          }
+          key="2--2"
+          percentage={75}
+        >
+          <div
+            className="DashboardCropPies_Chart"
+          >
+            <div
+              className="DashboardCropPies_Chart_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_ZingChart"
+              >
+                <Component
+                  data={
+                    Object {
+                      "plot": Object {
+                        "detach": false,
+                        "tooltip": Object {
+                          "visible": false,
+                        },
+                        "value-box": Object {
+                          "visible": false,
+                        },
+                      },
+                      "scale-r": Object {
+                        "ref-angle": 270,
+                      },
+                      "series": Array [
+                        Object {
+                          "background-color": "#CCCCCC",
+                          "values": Array [
+                            75,
+                          ],
+                        },
+                        Object {
+                          "background-color": "#D6D6D6",
+                          "values": Array [
+                            25,
+                          ],
+                        },
+                      ],
+                      "type": "pie",
+                    }
+                  }
+                  height="100%"
+                  id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                  width="100%"
+                >
+                  <div
+                    className="MOCK_ZINGCHART"
+                  />
+                </Component>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Crop"
+              >
+                <Component
+                  cropProducts={
+                    Array [
+                      Object {
+                        "cropProductElement": <span>
+                          Crop Product 2
+                    </span>,
+                        "cropProductId": "2",
+                      },
+                    ]
+                  }
+                  cropTypes={
+                    Array [
+                      Object {
+                        "cropTypeColor": "#CCCCCC",
+                        "cropTypeElement": <span>
+                          Crop 2
+                    </span>,
+                        "cropTypeId": "2",
+                      },
+                    ]
+                  }
+                >
+                  <div
+                    className="CropLabel"
+                  >
+                    <div
+                      className="CropLabel_CropType"
+                      key="2"
+                      style={
+                        Object {
+                          "background": "#CCCCCC",
+                        }
+                      }
+                    >
+                      <span>
+                        Crop 2
+                      </span>
+                    </div>
+                    <div
+                      className="CropLabel_CropProduct"
+                      key="2"
+                    >
+                      <span>
+                        Crop Product 2
+                      </span>
+                    </div>
+                  </div>
+                </Component>
+              </div>
+            </div>
+            <div
+              className="DashboardCropPies_Chart_Numbers"
+            >
+              <div
+                className="DashboardCropPies_Chart_Percentage"
+              >
+                75
+                %
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Amount"
+              >
+                <span>
+                  Crop Amount 2
+                </span>
+              </div>
+            </div>
+          </div>
+        </Component>
+      </div>
+    </div>
+  </div>
+</DashboardCropPies>
+`;
+
+exports[`DashboardCropPies renders expected markup with title, description, link, and empty dataset 1`] = `
+<DashboardCropPies
+  dataset={Array []}
+  datasets={null}
+  description={
+    <span>
+      Description
+    </span>
+  }
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  link={
+    <span>
+      Link
+    </span>
+  }
+  pending={false}
+  pieCount={5}
+  selectedTabIdx={0}
+  tabCount={0}
+  title={
+    <span>
+      Title
+    </span>
+  }
+>
+  <div
+    className="DashboardCropPies DashboardCropPiesReady"
+  >
+    <div
+      className="DashboardCropPies_TitleBar"
+    >
+      <h2
+        className="DashboardCropPies_Title"
+      >
+        <span>
+          Title
+        </span>
+      </h2>
+      <span
+        className="DashboardCropPies_Link"
+      >
+        <span>
+          Link
+        </span>
+      </span>
+    </div>
+    <p
+      className="DashboardCropPies_Description"
+    >
+      <span>
+        Description
+      </span>
+    </p>
+    <div
+      className="DashboardCropPies_Main"
+    >
+      <div
+        className="DashboardCropPies_TabContents"
+      >
+        <div
+          className="DashboardCropPies_LoneMessage"
+        >
+          <span>
+            No Data
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DashboardCropPies>
+`;
+
+exports[`DashboardCropPies renders expected markup with title, description, link, selectedTabIdx, and datasets 1`] = `
+<DashboardCropPies
+  dataset={null}
+  datasets={
+    Array [
+      Object {
+        "dataset": Array [
+          Object {
+            "amount": <span>
+              Crop Amount 1
+    </span>,
+            "color": "#CCCCCC",
+            "crop": Object {
+              "cropProductElement": <span>
+                Crop Product 1
+    </span>,
+              "cropProductId": "1",
+              "cropTypeColor": "#CCCCCC",
+              "cropTypeElement": <span>
+                Crop 1
+    </span>,
+              "cropTypeId": "1",
+            },
+            "percentage": 50,
+          },
+          Object {
+            "amount": <span>
+              Crop Amount 2
+    </span>,
+            "color": "#CCCCCC",
+            "crop": Object {
+              "cropTypeColor": "#CCCCCC",
+              "cropTypeElement": <span>
+                Crop 2
+    </span>,
+              "cropTypeId": "2",
+            },
+            "percentage": 75,
+          },
+        ],
+        "onTabClick": [Function],
+        "tab": <span>
+          Tab 1
+    </span>,
+      },
+      Object {
+        "dataset": Array [
+          Object {
+            "amount": <span>
+              Crop Amount 3
+    </span>,
+            "color": "#CCCCCC",
+            "crop": Object {
+              "cropTypeColor": "#CCCCCC",
+              "cropTypeElement": <span>
+                Crop 3
+    </span>,
+              "cropTypeId": "3",
+            },
+            "percentage": 30,
+          },
+          Object {
+            "amount": <span>
+              Crop Amount 4
+    </span>,
+            "color": "#CCCCCC",
+            "crop": Object {
+              "cropProductElement": <span>
+                Crop Product 4
+    </span>,
+              "cropProductId": "4",
+              "cropTypeColor": "#CCCCCC",
+              "cropTypeElement": <span>
+                Crop 4
+    </span>,
+              "cropTypeId": "4",
+            },
+            "percentage": 60,
+          },
+        ],
+        "onTabClick": [Function],
+        "tab": <span>
+          Tab 2
+    </span>,
+      },
+    ]
+  }
+  description={
+    <span>
+      Description
+    </span>
+  }
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  link={
+    <span>
+      Link
+    </span>
+  }
+  pending={false}
+  pieCount={5}
+  selectedTabIdx={1}
+  tabCount={0}
+  title={
+    <span>
+      Title
+    </span>
+  }
+>
+  <div
+    className="DashboardCropPies DashboardCropPiesReady"
+  >
+    <div
+      className="DashboardCropPies_TitleBar"
+    >
+      <h2
+        className="DashboardCropPies_Title"
+      >
+        <span>
+          Title
+        </span>
+      </h2>
+      <span
+        className="DashboardCropPies_Link"
+      >
+        <span>
+          Link
+        </span>
+      </span>
+    </div>
+    <p
+      className="DashboardCropPies_Description"
+    >
+      <span>
+        Description
+      </span>
+    </p>
+    <div
+      className="DashboardCropPies_Main"
+    >
+      <div
+        className="DashboardCropPies_Tabs"
+      >
+        <div
+          className="btn-group"
+        >
+          <button
+            className="btn btn-sm btn-default"
+            key="0"
+            onClick={[Function]}
+            type="button"
+          >
+            <span>
+              Tab 1
+            </span>
+          </button>
+          <button
+            className="btn btn-sm btn-default active"
+            key="1"
+            onClick={[Function]}
+            type="button"
+          >
+            <span>
+              Tab 2
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        className="DashboardCropPies_TabContents"
+      >
+        <div
+          className="DashboardCropPies_TabContent hidden"
+          key="0"
+        >
+          <Component
+            amount={
+              <span>
+                Crop Amount 1
+              </span>
+            }
+            color="#CCCCCC"
+            crop={
+              Object {
+                "cropProductElement": <span>
+                  Crop Product 1
+              </span>,
+                "cropProductId": "1",
+                "cropTypeColor": "#CCCCCC",
+                "cropTypeElement": <span>
+                  Crop 1
+              </span>,
+                "cropTypeId": "1",
+              }
+            }
+            key="1--1"
+            percentage={50}
+          >
+            <div
+              className="DashboardCropPies_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_Chart"
+              >
+                <div
+                  className="DashboardCropPies_Chart_ZingChart"
+                >
+                  <Component
+                    data={
+                      Object {
+                        "plot": Object {
+                          "detach": false,
+                          "tooltip": Object {
+                            "visible": false,
+                          },
+                          "value-box": Object {
+                            "visible": false,
+                          },
+                        },
+                        "scale-r": Object {
+                          "ref-angle": 270,
+                        },
+                        "series": Array [
+                          Object {
+                            "background-color": "#CCCCCC",
+                            "values": Array [
+                              50,
+                            ],
+                          },
+                          Object {
+                            "background-color": "#D6D6D6",
+                            "values": Array [
+                              50,
+                            ],
+                          },
+                        ],
+                        "type": "pie",
+                      }
+                    }
+                    height="100%"
+                    id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                    width="100%"
+                  >
+                    <div
+                      className="MOCK_ZINGCHART"
+                    />
+                  </Component>
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Crop"
+                >
+                  <Component
+                    cropProducts={
+                      Array [
+                        Object {
+                          "cropProductElement": <span>
+                            Crop Product 1
+                      </span>,
+                          "cropProductId": "1",
+                        },
+                      ]
+                    }
+                    cropTypes={
+                      Array [
+                        Object {
+                          "cropTypeColor": "#CCCCCC",
+                          "cropTypeElement": <span>
+                            Crop 1
+                      </span>,
+                          "cropTypeId": "1",
+                        },
+                      ]
+                    }
+                  >
+                    <div
+                      className="CropLabel"
+                    >
+                      <div
+                        className="CropLabel_CropType"
+                        key="1"
+                        style={
+                          Object {
+                            "background": "#CCCCCC",
+                          }
+                        }
+                      >
+                        <span>
+                          Crop 1
+                        </span>
+                      </div>
+                      <div
+                        className="CropLabel_CropProduct"
+                        key="1"
+                      >
+                        <span>
+                          Crop Product 1
+                        </span>
+                      </div>
+                    </div>
+                  </Component>
+                </div>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Numbers"
+              >
+                <div
+                  className="DashboardCropPies_Chart_Percentage"
+                >
+                  50
+                  %
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Amount"
+                >
+                  <span>
+                    Crop Amount 1
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Component>
+          <Component
+            amount={
+              <span>
+                Crop Amount 2
+              </span>
+            }
+            color="#CCCCCC"
+            crop={
+              Object {
+                "cropTypeColor": "#CCCCCC",
+                "cropTypeElement": <span>
+                  Crop 2
+              </span>,
+                "cropTypeId": "2",
+              }
+            }
+            key="2"
+            percentage={75}
+          >
+            <div
+              className="DashboardCropPies_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_Chart"
+              >
+                <div
+                  className="DashboardCropPies_Chart_ZingChart"
+                >
+                  <Component
+                    data={
+                      Object {
+                        "plot": Object {
+                          "detach": false,
+                          "tooltip": Object {
+                            "visible": false,
+                          },
+                          "value-box": Object {
+                            "visible": false,
+                          },
+                        },
+                        "scale-r": Object {
+                          "ref-angle": 270,
+                        },
+                        "series": Array [
+                          Object {
+                            "background-color": "#CCCCCC",
+                            "values": Array [
+                              75,
+                            ],
+                          },
+                          Object {
+                            "background-color": "#D6D6D6",
+                            "values": Array [
+                              25,
+                            ],
+                          },
+                        ],
+                        "type": "pie",
+                      }
+                    }
+                    height="100%"
+                    id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                    width="100%"
+                  >
+                    <div
+                      className="MOCK_ZINGCHART"
+                    />
+                  </Component>
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Crop"
+                >
+                  <Component
+                    cropProducts={null}
+                    cropTypes={
+                      Array [
+                        Object {
+                          "cropTypeColor": "#CCCCCC",
+                          "cropTypeElement": <span>
+                            Crop 2
+                      </span>,
+                          "cropTypeId": "2",
+                        },
+                      ]
+                    }
+                  >
+                    <div
+                      className="CropLabel"
+                    >
+                      <div
+                        className="CropLabel_CropType"
+                        key="2"
+                        style={
+                          Object {
+                            "background": "#CCCCCC",
+                          }
+                        }
+                      >
+                        <span>
+                          Crop 2
+                        </span>
+                      </div>
+                    </div>
+                  </Component>
+                </div>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Numbers"
+              >
+                <div
+                  className="DashboardCropPies_Chart_Percentage"
+                >
+                  75
+                  %
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Amount"
+                >
+                  <span>
+                    Crop Amount 2
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Component>
+        </div>
+        <div
+          className="DashboardCropPies_TabContent"
+          key="1"
+        >
+          <Component
+            amount={
+              <span>
+                Crop Amount 3
+              </span>
+            }
+            color="#CCCCCC"
+            crop={
+              Object {
+                "cropTypeColor": "#CCCCCC",
+                "cropTypeElement": <span>
+                  Crop 3
+              </span>,
+                "cropTypeId": "3",
+              }
+            }
+            key="3"
+            percentage={30}
+          >
+            <div
+              className="DashboardCropPies_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_Chart"
+              >
+                <div
+                  className="DashboardCropPies_Chart_ZingChart"
+                >
+                  <Component
+                    data={
+                      Object {
+                        "plot": Object {
+                          "detach": false,
+                          "tooltip": Object {
+                            "visible": false,
+                          },
+                          "value-box": Object {
+                            "visible": false,
+                          },
+                        },
+                        "scale-r": Object {
+                          "ref-angle": 270,
+                        },
+                        "series": Array [
+                          Object {
+                            "background-color": "#CCCCCC",
+                            "values": Array [
+                              30,
+                            ],
+                          },
+                          Object {
+                            "background-color": "#D6D6D6",
+                            "values": Array [
+                              70,
+                            ],
+                          },
+                        ],
+                        "type": "pie",
+                      }
+                    }
+                    height="100%"
+                    id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                    width="100%"
+                  >
+                    <div
+                      className="MOCK_ZINGCHART"
+                    />
+                  </Component>
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Crop"
+                >
+                  <Component
+                    cropProducts={null}
+                    cropTypes={
+                      Array [
+                        Object {
+                          "cropTypeColor": "#CCCCCC",
+                          "cropTypeElement": <span>
+                            Crop 3
+                      </span>,
+                          "cropTypeId": "3",
+                        },
+                      ]
+                    }
+                  >
+                    <div
+                      className="CropLabel"
+                    >
+                      <div
+                        className="CropLabel_CropType"
+                        key="3"
+                        style={
+                          Object {
+                            "background": "#CCCCCC",
+                          }
+                        }
+                      >
+                        <span>
+                          Crop 3
+                        </span>
+                      </div>
+                    </div>
+                  </Component>
+                </div>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Numbers"
+              >
+                <div
+                  className="DashboardCropPies_Chart_Percentage"
+                >
+                  30
+                  %
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Amount"
+                >
+                  <span>
+                    Crop Amount 3
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Component>
+          <Component
+            amount={
+              <span>
+                Crop Amount 4
+              </span>
+            }
+            color="#CCCCCC"
+            crop={
+              Object {
+                "cropProductElement": <span>
+                  Crop Product 4
+              </span>,
+                "cropProductId": "4",
+                "cropTypeColor": "#CCCCCC",
+                "cropTypeElement": <span>
+                  Crop 4
+              </span>,
+                "cropTypeId": "4",
+              }
+            }
+            key="4--4"
+            percentage={60}
+          >
+            <div
+              className="DashboardCropPies_Chart"
+            >
+              <div
+                className="DashboardCropPies_Chart_Chart"
+              >
+                <div
+                  className="DashboardCropPies_Chart_ZingChart"
+                >
+                  <Component
+                    data={
+                      Object {
+                        "plot": Object {
+                          "detach": false,
+                          "tooltip": Object {
+                            "visible": false,
+                          },
+                          "value-box": Object {
+                            "visible": false,
+                          },
+                        },
+                        "scale-r": Object {
+                          "ref-angle": 270,
+                        },
+                        "series": Array [
+                          Object {
+                            "background-color": "#CCCCCC",
+                            "values": Array [
+                              60,
+                            ],
+                          },
+                          Object {
+                            "background-color": "#D6D6D6",
+                            "values": Array [
+                              40,
+                            ],
+                          },
+                        ],
+                        "type": "pie",
+                      }
+                    }
+                    height="100%"
+                    id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+                    width="100%"
+                  >
+                    <div
+                      className="MOCK_ZINGCHART"
+                    />
+                  </Component>
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Crop"
+                >
+                  <Component
+                    cropProducts={
+                      Array [
+                        Object {
+                          "cropProductElement": <span>
+                            Crop Product 4
+                      </span>,
+                          "cropProductId": "4",
+                        },
+                      ]
+                    }
+                    cropTypes={
+                      Array [
+                        Object {
+                          "cropTypeColor": "#CCCCCC",
+                          "cropTypeElement": <span>
+                            Crop 4
+                      </span>,
+                          "cropTypeId": "4",
+                        },
+                      ]
+                    }
+                  >
+                    <div
+                      className="CropLabel"
+                    >
+                      <div
+                        className="CropLabel_CropType"
+                        key="4"
+                        style={
+                          Object {
+                            "background": "#CCCCCC",
+                          }
+                        }
+                      >
+                        <span>
+                          Crop 4
+                        </span>
+                      </div>
+                      <div
+                        className="CropLabel_CropProduct"
+                        key="4"
+                      >
+                        <span>
+                          Crop Product 4
+                        </span>
+                      </div>
+                    </div>
+                  </Component>
+                </div>
+              </div>
+              <div
+                className="DashboardCropPies_Chart_Numbers"
+              >
+                <div
+                  className="DashboardCropPies_Chart_Percentage"
+                >
+                  60
+                  %
+                </div>
+                <div
+                  className="DashboardCropPies_Chart_Amount"
+                >
+                  <span>
+                    Crop Amount 4
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Component>
+        </div>
+      </div>
+    </div>
+  </div>
+</DashboardCropPies>
+`;

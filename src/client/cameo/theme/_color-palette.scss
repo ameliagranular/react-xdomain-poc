@@ -1,0 +1,188 @@
+// ==================================================================================================================
+//  COLOR PALETTE
+//  TODO: convert prim|sec|tert base color groups to maps and create util classnames
+// ==================================================================================================================
+
+// =================
+// BASIC
+// =================
+// GRAY
+$gray0: #262626;
+$gray1: #333;
+$gray2: #4D4D4D;
+$gray3: #666;
+$gray4: #808080;
+$gray5: #999;
+$gray6: #B3B3B3;
+$gray7: #CCC;
+$gray8: #E6E6E6;
+$gray9: #F2F2F2;
+$gray10: #F2F2DE;
+$gray11: #8A8A8A;
+$gray12: #1A1A1A;
+$gray13: #FFF;
+$gray14: #F4F4F4;
+$gray15: #CACACA;
+$gray16: #777;
+$gray17: #ECECEC;
+$gray18: #A4A4A4;
+
+// BLUE
+$blue0: #0072B2;
+$blue1: #2C4350;
+$blue2: #334D5C;
+$blue3: #57849E;
+$blue4: #97A1A8;
+$blue5: #D8E3E9;
+$blue6: #E5ECF1;
+$blue7: #EDF5FA;
+$blue8: #CADBE4;
+$blue9: #C2E9FF;
+$blue10: #0086C0;
+$blue11: #003452;
+$blue12: #004E7A;
+$blue13: #33B4FF;
+
+// RED
+$red0: #FF0000;
+$red1: #EE3124;
+$red2: #FCDBD9;
+$red3: #F9DBD9;
+$red4: #ED3124;
+$red5: #FF7E79;
+
+// GREEN
+$green0: #339900;
+$green1: #E4FFD6;
+$green2: #F3F9EB;
+$green3: #658F7C;
+$green4: #386351;
+$green5: #8BB44F;
+$green6: #729B36;
+$green7: #B1DA75;
+$green8: #D4FB79;
+$green9: #73FCD6;
+$green10: #00FA92;
+$green11: #2CB51A;
+$green12: #75D010;
+
+// ORANGE
+$orange0: #F4B400;
+$orange1: #E7A700;
+$orange2: #FFEFC2;
+$orange3: #FF9300;
+$orange4: #FFD479;
+$orange5: #F3B400;
+$orange6: #FCE8B2;
+
+
+// YELLOW
+$yellow0: #FBEC5D;
+$yellow1: #DBC506;
+$yellow2: #FFFFC3;
+$yellow3: #D7DF23;
+$yellow4: #FFF4D6;
+$yellow5: #FFDC12;
+
+// BROWN
+$brown0: #594A42;
+$brown1: #A8948A;
+$brown2: #C2B4AD;
+$brown3: #DCD4D0;
+
+// =================
+// ALIAS
+// =================
+$black: $gray12;
+$blue: $blue0;
+$blueDark: $blue11;
+$blueLight: $blue9;
+$blueMedium: $blue12;
+$red: $red1;
+$redLight: $red2;
+$orange: $orange0;
+$orangeDark: $orange1;
+$orangeLight: $orange2;
+$green: $green0;
+$yellowLight: $yellow4;
+$white: $gray13;
+$backgroundColor: $white;
+$borderGray: $gray15;
+$borderNavy: $blue8;
+$cerulean: $blue13;
+$greenLight: $green1;
+$lightGray: $gray17;
+$lime: $yellow3;
+$linkBlue: $blue10;
+$mint: $green3;
+$mint2: $green4;
+$rowStripe: $green2;
+$textGray: $gray11;
+$textLightGray: $gray18;
+$warmGray: $gray10;
+
+// WORKABILITY
+$wkNoneColor: transparent;
+$wkStopColor: $red4;
+$wkWarnColor: $orange5;
+$wkGoColor: $green0;
+
+$soil: $brown0;
+$soil2: $brown0;
+$soil5: $brown1;
+$soil6: $brown2;
+$soil8: $brown3;
+
+// BEAN
+$bean: $green5;
+$beanDark: $green6;
+$beanLight: $green7;
+
+// CORN
+$corn: $yellow0;
+$cornDark: $yellow1;
+$cornLight: $yellow2;
+$cornColor: #FFFC79; // TODO: consolidate CORN COLOR with design
+$cornHoverColor: $yellow5;
+
+// SOY
+$soyColor: $green8;
+$soyHoverColor: $green12;
+
+$csColor: $green8;
+$sdsColor: $green9;
+$fgsColor: $green10;
+$fcColor: #FFFC78; // TODO: consolidate CORN COLOR with design
+$pcColor: $orange3;
+$sdcColor: $orange4;
+$swcColor: $red5;
+
+// CROP ICON
+$lavender: #7C5085;
+$lily: #B39CB8;
+$oldCopper: #7A5743;
+$thatch: #B3A096;
+$persianGreen: #00AE81;
+$bermuda: #82D9C2;
+$fruitSalad: #58A148;
+$chinook: #98D499;
+$rouge: #B3446C;
+$puce: #CF8AA3;
+$tango: #CC7029;
+$manhattan: #F2BB91;
+$tawny: #A87000;
+$putty: #CCA578;
+$acapulco: #87B09F;
+$easternBlue: #008F9C;
+$morningGlory: #92CCD1;
+$poloBlue: #88B6D1;
+$olive: #8F7C00;
+$ecru: #C2B180;
+$hampton: #E8D4A2;
+$barberry: #D4C224;
+$carmine: #B33B3B;
+$rose: #E6B8B8;
+$oldGold: #CCAB3D;
+$dandelion: #FFDB66;
+$swirl: #D9D2CC;
+$geyser: #DAE1E6;

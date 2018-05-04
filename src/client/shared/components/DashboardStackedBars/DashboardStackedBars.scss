@@ -1,0 +1,102 @@
+@import 'styles/vars';
+
+@keyframes placeholder-pulse {
+    from { opacity: 0; }
+    to { opacity: 0.5; }
+}
+
+.DashboardStackedBars {
+    width: 100%;
+    background: $white;
+    padding: 0 20px;
+    border: 1px solid $gray-light;
+
+    .DashboardStackedBars_TitleBar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .DashboardStackedBars_Title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: $gray-darker;
+        margin-bottom: 0.2rem;
+    }
+
+    .DashboardStackedBars_Description {
+        font-weight: 600;
+        color: $gray;
+    }
+
+    .DashboardStackedBars_Link {
+        margin-top: 20px;
+
+        a,
+        a:link,
+        a:visited {
+            color: $gray-darker;
+        }
+
+        a:hover,
+        a:active {
+            color: $link-hover-color
+        }
+    }
+
+    .DashboardStackedBars_LoneMessage {
+        width: 100%;
+        text-align: center;
+        color: $gray-light;
+        padding: 50px 0;
+    }
+
+    .DashboardStackedBars_Main {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .DashboardStackedBars_Chart {
+        width: 95%;
+        margin: auto;
+        margin-bottom: 20px;
+
+        .DashboardStackedBars_Chart_ZingChart > div {
+            height: 30px;
+        }
+
+        .DashboardStackedBars_Chart_Name {
+            font-weight: 600;
+            color: $gray-darker;
+        }
+
+        .DashboardStackedBars_Chart_Amount {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: $gray;
+            text-align: right;
+        }
+    }
+}
+
+.DashboardStackedBarsPending {
+    animation-name: placeholder-pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    .DashboardStackedBars_Title {
+        opacity: 0;
+    }
+
+    .DashboardStackedBars_Description {
+        opacity: 0;
+    }
+
+    .DashboardStackedBars_Link {
+        opacity: 0;
+    }
+
+    .DashboardStackedBars_Main {
+        opacity: 0;
+    }
+}

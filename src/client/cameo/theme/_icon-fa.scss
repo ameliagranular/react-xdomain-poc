@@ -1,0 +1,70 @@
+// ==================================================================================================================
+//  Styles for Font Awesome iconography
+// ==================================================================================================================
+@import "color-palette";
+@import "spacing";
+
+// =====
+// @mixin
+// @purpose FontAwesome provides minimal resize styles. Extend
+//=====
+@mixin generateSteppedFa() {
+    $selPrefix: "fa";
+    $dec: ".";
+
+    @for $i from 1 to 9 {
+        &.#{$selPrefix}-1-#{$i}x {
+            font-size: 1#{$dec}#{$i}rem;
+        }
+    }
+}
+
+@include component(fa) {
+    // =====
+    // @map/each
+    // @purpose Generate tinted FA icons against white BG
+    // =====
+    $faMap: (
+        blue: (
+            faColor: $blue,
+            bgColor: $white,
+            hoverColor: $blue
+        ),
+        red: (
+            faColor: $red,
+            bgColor: $white,
+            hoverColor: $red
+        ),
+        remove: (
+            faColor: $black,
+            bgColor: $white,
+            hoverColor: $red,
+            cursor: 'pointer'
+        ),
+        gray: ( // TODO: rename
+            faColor: $gray5,
+            bgColor: $white,
+            hoverColor: $gray5,
+            cursor: 'pointer'
+        )
+    );
+    @each $k, $v in $faMap {
+        &.#{$k} {
+            color: #{map-get($v,faColor)};
+
+            @if map-get($v,faColor) {
+                cursor: #{map-get($v,cursor)};
+            }
+
+            &:hover, &:active {
+                color: #{map-get($v,hoverColor)};
+            }
+        }
+    }
+
+    & + span {
+        margin-left: getSpacing("xs");
+    }
+
+    @include generateSteppedFa();
+}

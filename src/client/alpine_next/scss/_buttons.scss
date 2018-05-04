@@ -1,0 +1,359 @@
+@import 'csstyle';
+@import "cameo/theme/sizes";
+@import "cameo/theme/spacing";
+@import "cameo/theme/fonts";
+@import "cameo/theme/icon-fa";
+@import "cameo/theme/color-palette";
+@import "cameo/theme/vars";
+@import "mixins/buttons";
+
+// Default button properties
+$buttonJumboHeight: 32px;
+$buttonMediumHeight: 32px;
+$buttonSmallHeight: 24px;
+$buttonDefaultBorder: none;
+$buttonDefaultPadding: 0 1em;
+$buttonDefaultMargin: 0px;
+$buttonDefaultBoxSizing: border-box;
+$buttonDefaultBorderRadius: 4px;
+
+///////////////////////////////
+// Bootstrap overrides
+.btn {
+    @include whitney-semibold;
+    font-size: 1rem;
+    height: $inputHeight;
+    outline: 0 !important;
+    line-height: 1;
+}
+
+.btn-default {
+    @include al-button-variant(
+            $gray1,
+            $white,
+            $gray7,
+            $white,
+            $gray3,
+            $gray1,
+            $gray1,
+            $white,
+            $gray1
+    );
+}
+
+.btn-transparent {
+    @include al-button-variant(
+            $gray5,
+            $gray1,
+            $gray5,
+            $gray5,
+            $black,
+            $black,
+            $gray5,
+            $gray0,
+            $black
+    );
+}
+
+.btn-sm {
+    font-size: 0.75rem;
+    height: $inputHeightSmall;
+}
+
+.btn-icon {
+    @extend .btn-default;
+    @extend .btn-sm;
+    display: inline-flex;
+    padding: 0 3px 0 10px;
+    align-items: center;
+
+    > .icn {
+        margin-left: 3px;
+    }
+}
+
+.btn-file {
+    input[type="file"] {
+        width: 0.1px;
+        height: 0.1px;
+        opacity: 0.1;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+.close-btn {
+    @include whitney-medium;
+    line-height: 0;
+    height: getHeight('secondary');
+    padding: 0 getSpacing('xs');
+    font-size: 2rem;
+    color: $gray6;
+    outline: none;
+    &:hover {
+        color: $gray4;
+    }
+}
+
+label.btn-file {
+    text-transform: none;
+    letter-spacing: 0;
+    &.btn-default,
+    &.btn-primary {
+        line-height: $inputHeight;
+    }
+
+    &.btn-sm {
+        line-height: 1;
+    }
+}
+
+@each $name, $sz in $sizesMap {
+    .btn-#{$name}-padding {
+        padding: 0 getSpacing($name);
+    }
+}
+
+a.btn {
+    line-height: $inputHeight;
+}
+
+a.btn-sm {
+    line-height: 1;
+}
+
+/******************************************************************************
+* Legacy
+*/
+
+// button base style
+%baseButtonStyle {
+    color: $black;
+    border: {
+        style: solid;
+        width: 1px;
+    }
+}
+
+// Buttons states
+// If button states are added/removed, please update the styles below!
+$buttonsStates: (
+    "default", // %default
+    "primary", // %primary
+    "secondary", // %secondary --> TODO: Audit to remove/rename this style
+    "important", // %important
+    "link", // %link
+    "jumbo", // %jumbo
+    "cancel-clear" // %clear
+);
+
+// Style-specific properties
+%default {
+    color: $gray1;
+    background-color: $white;
+    border: {
+        color: #333333;
+    }
+}
+
+%primary {
+    color: $white;
+    background-color: $blue;
+    border: {
+        color: $blueMedium;
+    }
+
+    @include ctaStates();
+}
+
+%secondary {
+    color: $gray5;
+    background-color: inherit;
+    border: 1px $gray2 solid;
+}
+
+%important {
+    color: $white;
+    background-color: $red;
+    border: {
+        color: $gray1;
+    }
+}
+
+%link {
+    color: $blue;
+    background-color: transparent;
+    border: none;
+    &:active {
+        background-color: transparent;
+        color: $blue;
+    }
+}
+
+%jumbo {
+    color: $white;
+    background-color: $blue;
+    border: none;
+    outline: none;
+    &:hover {
+        background-color: $blueMedium;
+    }
+}
+
+%cancel-clear {
+    background-color: transparent;
+    border-color: $gray5;
+    color: $gray6;
+
+    &:hover {
+        background-color: $gray3;
+        color: $gray5;
+    }
+
+    &:active {
+        background-color: $gray5;
+        color: $gray7;
+    }
+}
+
+// Buttons sizes
+$buttonsSizeMap: (
+    "medium": "m-width",
+    "small": "s-width",
+    "jumbo": "jumbo-width"
+);
+
+// Size-specific properties
+%medium {
+    @include font-size("m");
+    height: $buttonMediumHeight;
+}
+
+%small {
+    @include font-size("s");
+    height: $buttonSmallHeight;
+}
+
+%jumbo {
+    @include font-size("xl");
+    height: $buttonJumboHeight;
+}
+
+button {
+    @include whitney-semibold;
+
+    line-height: 1;
+    border: $buttonDefaultBorder;
+    border-radius: $buttonDefaultBorderRadius;
+    box-sizing: $buttonDefaultBoxSizing;
+    margin: $buttonDefaultMargin;
+    padding: $buttonDefaultPadding;
+    cursor: pointer;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+@include component(button) {
+    border: $borderWidth solid $gray7;
+    border-radius: $borderRadius;
+    padding: 0;
+    outline: none;
+
+    // The following options (default, cta, and important) might be
+    // converted to tweaks in the future if the styles are used in
+    // more places.
+    @include option(default) {
+        background-color: $white;
+        color: $black;
+    }
+
+    @include option(cta) {
+        background-color: $blue;
+        color: $white;
+        border-color: $blueMedium;
+
+        @include ctaStates();
+    }
+
+    @include option(important) {
+        background-color: $red;
+        color: $white;
+    }
+
+    @include option(link) {
+        background-color: $white;
+        color: $blue;
+        border: none;
+    }
+
+    @include option(medium) {
+        width: getWidth("m");
+        height: getHeight("primary");
+        font-size: getFontSize("m");
+    }
+
+    @include option(small) {
+        width: getWidth("s");
+        height: getHeight("secondary");
+        font-size: getFontSize("s");
+    }
+
+    @include option(jumbo) {
+        width: getWidth("jumbo");
+        height: getHeight("primary");
+        font-size: getFontSize("l");
+        font-weight: bold;
+        &:hover {
+            background-color: $blueMedium;
+        }
+    }
+
+    @include part(icon) {
+        width: 1rem;
+        height: 1rem;
+
+        @include option(printer) {
+            background-image: url('/ui/images/shared/svg/misc/icon_print.svg');
+        }
+
+        @include option(export) {
+            background-image: url('/ui/images/shared/svg/misc/icon_download.svg');
+        }
+    }
+
+}
+
+// button group
+%button-state-active {
+    background-color: $gray3;
+    color: $white;
+}
+
+@include component(button-group) {
+    display: flex;
+
+    @include part(button) {
+        border: 1px solid $gray7;
+        background-color: transparent;
+        padding: 0.5rem;
+        color: $gray4;
+        cursor: pointer;
+        outline: none;
+
+        @include option(active) {
+            @extend %button-state-active;
+        }
+
+        &:active {
+            @extend %button-state-active;
+        }
+
+        &:first-child {
+            border-radius: 5px 0 0 5px;
+        }
+
+        &:last-child {
+            border-radius: 0 5px 5px 0;
+        }
+    }
+}

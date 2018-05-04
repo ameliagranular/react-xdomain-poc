@@ -1,0 +1,1525 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardStackedBars renders expected markup with data 1`] = `
+<DashboardStackedBars
+  chartHasAmount={true}
+  chartHasName={true}
+  count={5}
+  dataset={
+    Array [
+      Object {
+        "amount": <span>
+          Entry Amount 1
+    </span>,
+        "color": "#CCCCCC",
+        "key": "1",
+        "name": <span>
+          Entry Name 1
+    </span>,
+        "percentage": 50,
+      },
+      Object {
+        "amount": <span>
+          Entry Amount 2
+    </span>,
+        "color": "#CCCCCC",
+        "key": "2",
+        "name": <span>
+          Entry Name 2
+    </span>,
+        "percentage": 75,
+      },
+    ]
+  }
+  description={null}
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  link={null}
+  pending={false}
+  title={null}
+>
+  <div
+    className="DashboardStackedBars DashboardStackedBarsReady"
+  >
+    <div
+      className="DashboardStackedBars_TitleBar"
+    />
+    <div
+      className="DashboardStackedBars_Main"
+    >
+      <Component
+        amount={
+          <span>
+            Entry Amount 1
+          </span>
+        }
+        color="#CCCCCC"
+        key="1"
+        name={
+          <span>
+            Entry Name 1
+          </span>
+        }
+        percentage={50}
+        textColor="#414141"
+      >
+        <div
+          className="DashboardStackedBars_Chart"
+        >
+          <div
+            className="DashboardStackedBars_Chart_Name"
+          >
+            <span>
+              Entry Name 1
+            </span>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_ZingChart"
+          >
+            <Component
+              data={
+                Object {
+                  "plot": Object {
+                    "data-perc": 50,
+                    "data-rest": 50,
+                    "stacked": true,
+                    "tooltip": Object {
+                      "visible": false,
+                      "y": "200%",
+                    },
+                    "value-box": Object {
+                      "font-color": "#414141",
+                      "font-family": "Roboto",
+                      "font-size": "13px",
+                    },
+                  },
+                  "plotarea": Object {
+                    "margin": "0 0",
+                  },
+                  "scale-x": Object {
+                    "visible": false,
+                  },
+                  "scale-y": Object {
+                    "visible": false,
+                  },
+                  "series": Array [
+                    Object {
+                      "background-color": "#CCCCCC",
+                      "value-box": Object {
+                        "placement": "top-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc < 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        50,
+                      ],
+                    },
+                    Object {
+                      "background-color": "#D6D6D6",
+                      "value-box": Object {
+                        "placement": "bottom-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc >= 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        50,
+                      ],
+                    },
+                  ],
+                  "type": "hbar",
+                }
+              }
+              height="100%"
+              id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+              width="100%"
+            >
+              <div
+                className="MOCK_ZINGCHART"
+              />
+            </Component>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_Amount"
+          >
+            <span>
+              Entry Amount 1
+            </span>
+          </div>
+        </div>
+      </Component>
+      <Component
+        amount={
+          <span>
+            Entry Amount 2
+          </span>
+        }
+        color="#CCCCCC"
+        key="2"
+        name={
+          <span>
+            Entry Name 2
+          </span>
+        }
+        percentage={75}
+        textColor="#414141"
+      >
+        <div
+          className="DashboardStackedBars_Chart"
+        >
+          <div
+            className="DashboardStackedBars_Chart_Name"
+          >
+            <span>
+              Entry Name 2
+            </span>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_ZingChart"
+          >
+            <Component
+              data={
+                Object {
+                  "plot": Object {
+                    "data-perc": 75,
+                    "data-rest": 25,
+                    "stacked": true,
+                    "tooltip": Object {
+                      "visible": false,
+                      "y": "200%",
+                    },
+                    "value-box": Object {
+                      "font-color": "#414141",
+                      "font-family": "Roboto",
+                      "font-size": "13px",
+                    },
+                  },
+                  "plotarea": Object {
+                    "margin": "0 0",
+                  },
+                  "scale-x": Object {
+                    "visible": false,
+                  },
+                  "scale-y": Object {
+                    "visible": false,
+                  },
+                  "series": Array [
+                    Object {
+                      "background-color": "#CCCCCC",
+                      "value-box": Object {
+                        "placement": "top-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc < 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        75,
+                      ],
+                    },
+                    Object {
+                      "background-color": "#D6D6D6",
+                      "value-box": Object {
+                        "placement": "bottom-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc >= 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        25,
+                      ],
+                    },
+                  ],
+                  "type": "hbar",
+                }
+              }
+              height="100%"
+              id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+              width="100%"
+            >
+              <div
+                className="MOCK_ZINGCHART"
+              />
+            </Component>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_Amount"
+          >
+            <span>
+              Entry Amount 2
+            </span>
+          </div>
+        </div>
+      </Component>
+    </div>
+  </div>
+</DashboardStackedBars>
+`;
+
+exports[`DashboardStackedBars renders expected markup with empty data 1`] = `
+<DashboardStackedBars
+  chartHasAmount={true}
+  chartHasName={true}
+  count={5}
+  dataset={Array []}
+  description={null}
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  link={null}
+  pending={false}
+  title={null}
+>
+  <div
+    className="DashboardStackedBars DashboardStackedBarsReady"
+  >
+    <div
+      className="DashboardStackedBars_TitleBar"
+    />
+    <div
+      className="DashboardStackedBars_LoneMessage"
+    >
+      <span>
+        No Data
+      </span>
+    </div>
+  </div>
+</DashboardStackedBars>
+`;
+
+exports[`DashboardStackedBars renders expected markup with no props 1`] = `
+<DashboardStackedBars
+  chartHasAmount={true}
+  chartHasName={true}
+  count={5}
+  dataset={null}
+  description={null}
+  emptyMessage={null}
+  link={null}
+  pending={false}
+  title={null}
+>
+  <div
+    className="DashboardStackedBars DashboardStackedBarsReady"
+  >
+    <div
+      className="DashboardStackedBars_TitleBar"
+    />
+    <div
+      className="DashboardStackedBars_LoneMessage"
+    />
+  </div>
+</DashboardStackedBars>
+`;
+
+exports[`DashboardStackedBars renders expected markup with pending 1`] = `
+<DashboardStackedBars
+  chartHasAmount={true}
+  chartHasName={true}
+  count={5}
+  dataset={null}
+  description={null}
+  emptyMessage={null}
+  link={null}
+  pending={true}
+  title={null}
+>
+  <div
+    className="DashboardStackedBars DashboardStackedBarsPending"
+  >
+    <div
+      className="DashboardStackedBars_TitleBar"
+    />
+    <div
+      className="DashboardStackedBars_Main"
+    >
+      <Component
+        amount={
+          <span>
+             
+          </span>
+        }
+        color="#FFFFFF"
+        key="00-0"
+        name={
+          <span>
+             
+          </span>
+        }
+        percentage={0}
+        textColor="#414141"
+      >
+        <div
+          className="DashboardStackedBars_Chart"
+        >
+          <div
+            className="DashboardStackedBars_Chart_Name"
+          >
+            <span>
+               
+            </span>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_ZingChart"
+          >
+            <Component
+              data={
+                Object {
+                  "plot": Object {
+                    "data-perc": 0,
+                    "data-rest": 100,
+                    "stacked": true,
+                    "tooltip": Object {
+                      "visible": false,
+                      "y": "200%",
+                    },
+                    "value-box": Object {
+                      "font-color": "#414141",
+                      "font-family": "Roboto",
+                      "font-size": "13px",
+                    },
+                  },
+                  "plotarea": Object {
+                    "margin": "0 0",
+                  },
+                  "scale-x": Object {
+                    "visible": false,
+                  },
+                  "scale-y": Object {
+                    "visible": false,
+                  },
+                  "series": Array [
+                    Object {
+                      "background-color": "#FFFFFF",
+                      "value-box": Object {
+                        "placement": "top-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc < 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        0,
+                      ],
+                    },
+                    Object {
+                      "background-color": "#D6D6D6",
+                      "value-box": Object {
+                        "placement": "bottom-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc >= 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        100,
+                      ],
+                    },
+                  ],
+                  "type": "hbar",
+                }
+              }
+              height="100%"
+              id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+              width="100%"
+            >
+              <div
+                className="MOCK_ZINGCHART"
+              />
+            </Component>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_Amount"
+          >
+            <span>
+               
+            </span>
+          </div>
+        </div>
+      </Component>
+      <Component
+        amount={
+          <span>
+             
+          </span>
+        }
+        color="#FFFFFF"
+        key="00-1"
+        name={
+          <span>
+             
+          </span>
+        }
+        percentage={0}
+        textColor="#414141"
+      >
+        <div
+          className="DashboardStackedBars_Chart"
+        >
+          <div
+            className="DashboardStackedBars_Chart_Name"
+          >
+            <span>
+               
+            </span>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_ZingChart"
+          >
+            <Component
+              data={
+                Object {
+                  "plot": Object {
+                    "data-perc": 0,
+                    "data-rest": 100,
+                    "stacked": true,
+                    "tooltip": Object {
+                      "visible": false,
+                      "y": "200%",
+                    },
+                    "value-box": Object {
+                      "font-color": "#414141",
+                      "font-family": "Roboto",
+                      "font-size": "13px",
+                    },
+                  },
+                  "plotarea": Object {
+                    "margin": "0 0",
+                  },
+                  "scale-x": Object {
+                    "visible": false,
+                  },
+                  "scale-y": Object {
+                    "visible": false,
+                  },
+                  "series": Array [
+                    Object {
+                      "background-color": "#FFFFFF",
+                      "value-box": Object {
+                        "placement": "top-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc < 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        0,
+                      ],
+                    },
+                    Object {
+                      "background-color": "#D6D6D6",
+                      "value-box": Object {
+                        "placement": "bottom-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc >= 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        100,
+                      ],
+                    },
+                  ],
+                  "type": "hbar",
+                }
+              }
+              height="100%"
+              id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+              width="100%"
+            >
+              <div
+                className="MOCK_ZINGCHART"
+              />
+            </Component>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_Amount"
+          >
+            <span>
+               
+            </span>
+          </div>
+        </div>
+      </Component>
+      <Component
+        amount={
+          <span>
+             
+          </span>
+        }
+        color="#FFFFFF"
+        key="00-2"
+        name={
+          <span>
+             
+          </span>
+        }
+        percentage={0}
+        textColor="#414141"
+      >
+        <div
+          className="DashboardStackedBars_Chart"
+        >
+          <div
+            className="DashboardStackedBars_Chart_Name"
+          >
+            <span>
+               
+            </span>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_ZingChart"
+          >
+            <Component
+              data={
+                Object {
+                  "plot": Object {
+                    "data-perc": 0,
+                    "data-rest": 100,
+                    "stacked": true,
+                    "tooltip": Object {
+                      "visible": false,
+                      "y": "200%",
+                    },
+                    "value-box": Object {
+                      "font-color": "#414141",
+                      "font-family": "Roboto",
+                      "font-size": "13px",
+                    },
+                  },
+                  "plotarea": Object {
+                    "margin": "0 0",
+                  },
+                  "scale-x": Object {
+                    "visible": false,
+                  },
+                  "scale-y": Object {
+                    "visible": false,
+                  },
+                  "series": Array [
+                    Object {
+                      "background-color": "#FFFFFF",
+                      "value-box": Object {
+                        "placement": "top-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc < 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        0,
+                      ],
+                    },
+                    Object {
+                      "background-color": "#D6D6D6",
+                      "value-box": Object {
+                        "placement": "bottom-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc >= 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        100,
+                      ],
+                    },
+                  ],
+                  "type": "hbar",
+                }
+              }
+              height="100%"
+              id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+              width="100%"
+            >
+              <div
+                className="MOCK_ZINGCHART"
+              />
+            </Component>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_Amount"
+          >
+            <span>
+               
+            </span>
+          </div>
+        </div>
+      </Component>
+      <Component
+        amount={
+          <span>
+             
+          </span>
+        }
+        color="#FFFFFF"
+        key="00-3"
+        name={
+          <span>
+             
+          </span>
+        }
+        percentage={0}
+        textColor="#414141"
+      >
+        <div
+          className="DashboardStackedBars_Chart"
+        >
+          <div
+            className="DashboardStackedBars_Chart_Name"
+          >
+            <span>
+               
+            </span>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_ZingChart"
+          >
+            <Component
+              data={
+                Object {
+                  "plot": Object {
+                    "data-perc": 0,
+                    "data-rest": 100,
+                    "stacked": true,
+                    "tooltip": Object {
+                      "visible": false,
+                      "y": "200%",
+                    },
+                    "value-box": Object {
+                      "font-color": "#414141",
+                      "font-family": "Roboto",
+                      "font-size": "13px",
+                    },
+                  },
+                  "plotarea": Object {
+                    "margin": "0 0",
+                  },
+                  "scale-x": Object {
+                    "visible": false,
+                  },
+                  "scale-y": Object {
+                    "visible": false,
+                  },
+                  "series": Array [
+                    Object {
+                      "background-color": "#FFFFFF",
+                      "value-box": Object {
+                        "placement": "top-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc < 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        0,
+                      ],
+                    },
+                    Object {
+                      "background-color": "#D6D6D6",
+                      "value-box": Object {
+                        "placement": "bottom-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc >= 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        100,
+                      ],
+                    },
+                  ],
+                  "type": "hbar",
+                }
+              }
+              height="100%"
+              id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+              width="100%"
+            >
+              <div
+                className="MOCK_ZINGCHART"
+              />
+            </Component>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_Amount"
+          >
+            <span>
+               
+            </span>
+          </div>
+        </div>
+      </Component>
+      <Component
+        amount={
+          <span>
+             
+          </span>
+        }
+        color="#FFFFFF"
+        key="00-4"
+        name={
+          <span>
+             
+          </span>
+        }
+        percentage={0}
+        textColor="#414141"
+      >
+        <div
+          className="DashboardStackedBars_Chart"
+        >
+          <div
+            className="DashboardStackedBars_Chart_Name"
+          >
+            <span>
+               
+            </span>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_ZingChart"
+          >
+            <Component
+              data={
+                Object {
+                  "plot": Object {
+                    "data-perc": 0,
+                    "data-rest": 100,
+                    "stacked": true,
+                    "tooltip": Object {
+                      "visible": false,
+                      "y": "200%",
+                    },
+                    "value-box": Object {
+                      "font-color": "#414141",
+                      "font-family": "Roboto",
+                      "font-size": "13px",
+                    },
+                  },
+                  "plotarea": Object {
+                    "margin": "0 0",
+                  },
+                  "scale-x": Object {
+                    "visible": false,
+                  },
+                  "scale-y": Object {
+                    "visible": false,
+                  },
+                  "series": Array [
+                    Object {
+                      "background-color": "#FFFFFF",
+                      "value-box": Object {
+                        "placement": "top-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc < 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        0,
+                      ],
+                    },
+                    Object {
+                      "background-color": "#D6D6D6",
+                      "value-box": Object {
+                        "placement": "bottom-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc >= 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        100,
+                      ],
+                    },
+                  ],
+                  "type": "hbar",
+                }
+              }
+              height="100%"
+              id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+              width="100%"
+            >
+              <div
+                className="MOCK_ZINGCHART"
+              />
+            </Component>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_Amount"
+          >
+            <span>
+               
+            </span>
+          </div>
+        </div>
+      </Component>
+    </div>
+  </div>
+</DashboardStackedBars>
+`;
+
+exports[`DashboardStackedBars renders expected markup with pending and count 1`] = `
+<DashboardStackedBars
+  chartHasAmount={true}
+  chartHasName={true}
+  count={2}
+  dataset={null}
+  description={null}
+  emptyMessage={null}
+  link={null}
+  pending={true}
+  title={null}
+>
+  <div
+    className="DashboardStackedBars DashboardStackedBarsPending"
+  >
+    <div
+      className="DashboardStackedBars_TitleBar"
+    />
+    <div
+      className="DashboardStackedBars_Main"
+    >
+      <Component
+        amount={
+          <span>
+             
+          </span>
+        }
+        color="#FFFFFF"
+        key="00-0"
+        name={
+          <span>
+             
+          </span>
+        }
+        percentage={0}
+        textColor="#414141"
+      >
+        <div
+          className="DashboardStackedBars_Chart"
+        >
+          <div
+            className="DashboardStackedBars_Chart_Name"
+          >
+            <span>
+               
+            </span>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_ZingChart"
+          >
+            <Component
+              data={
+                Object {
+                  "plot": Object {
+                    "data-perc": 0,
+                    "data-rest": 100,
+                    "stacked": true,
+                    "tooltip": Object {
+                      "visible": false,
+                      "y": "200%",
+                    },
+                    "value-box": Object {
+                      "font-color": "#414141",
+                      "font-family": "Roboto",
+                      "font-size": "13px",
+                    },
+                  },
+                  "plotarea": Object {
+                    "margin": "0 0",
+                  },
+                  "scale-x": Object {
+                    "visible": false,
+                  },
+                  "scale-y": Object {
+                    "visible": false,
+                  },
+                  "series": Array [
+                    Object {
+                      "background-color": "#FFFFFF",
+                      "value-box": Object {
+                        "placement": "top-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc < 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        0,
+                      ],
+                    },
+                    Object {
+                      "background-color": "#D6D6D6",
+                      "value-box": Object {
+                        "placement": "bottom-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc >= 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        100,
+                      ],
+                    },
+                  ],
+                  "type": "hbar",
+                }
+              }
+              height="100%"
+              id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+              width="100%"
+            >
+              <div
+                className="MOCK_ZINGCHART"
+              />
+            </Component>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_Amount"
+          >
+            <span>
+               
+            </span>
+          </div>
+        </div>
+      </Component>
+      <Component
+        amount={
+          <span>
+             
+          </span>
+        }
+        color="#FFFFFF"
+        key="00-1"
+        name={
+          <span>
+             
+          </span>
+        }
+        percentage={0}
+        textColor="#414141"
+      >
+        <div
+          className="DashboardStackedBars_Chart"
+        >
+          <div
+            className="DashboardStackedBars_Chart_Name"
+          >
+            <span>
+               
+            </span>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_ZingChart"
+          >
+            <Component
+              data={
+                Object {
+                  "plot": Object {
+                    "data-perc": 0,
+                    "data-rest": 100,
+                    "stacked": true,
+                    "tooltip": Object {
+                      "visible": false,
+                      "y": "200%",
+                    },
+                    "value-box": Object {
+                      "font-color": "#414141",
+                      "font-family": "Roboto",
+                      "font-size": "13px",
+                    },
+                  },
+                  "plotarea": Object {
+                    "margin": "0 0",
+                  },
+                  "scale-x": Object {
+                    "visible": false,
+                  },
+                  "scale-y": Object {
+                    "visible": false,
+                  },
+                  "series": Array [
+                    Object {
+                      "background-color": "#FFFFFF",
+                      "value-box": Object {
+                        "placement": "top-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc < 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        0,
+                      ],
+                    },
+                    Object {
+                      "background-color": "#D6D6D6",
+                      "value-box": Object {
+                        "placement": "bottom-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc >= 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        100,
+                      ],
+                    },
+                  ],
+                  "type": "hbar",
+                }
+              }
+              height="100%"
+              id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+              width="100%"
+            >
+              <div
+                className="MOCK_ZINGCHART"
+              />
+            </Component>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_Amount"
+          >
+            <span>
+               
+            </span>
+          </div>
+        </div>
+      </Component>
+    </div>
+  </div>
+</DashboardStackedBars>
+`;
+
+exports[`DashboardStackedBars renders expected markup with title, description, link, and data 1`] = `
+<DashboardStackedBars
+  chartHasAmount={true}
+  chartHasName={true}
+  count={5}
+  dataset={
+    Array [
+      Object {
+        "amount": <span>
+          Entry Amount 1
+    </span>,
+        "color": "#CCCCCC",
+        "key": "1",
+        "name": <span>
+          Entry Name 1
+    </span>,
+        "percentage": 50,
+      },
+      Object {
+        "amount": <span>
+          Entry Amount 2
+    </span>,
+        "color": "#CCCCCC",
+        "key": "2",
+        "name": <span>
+          Entry Name 2
+    </span>,
+        "percentage": 75,
+      },
+    ]
+  }
+  description={
+    <span>
+      A set of bar charts about something
+    </span>
+  }
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  link={
+    <span>
+      Link
+    </span>
+  }
+  pending={false}
+  title={
+    <span>
+      Dashboard Stacked Bars
+    </span>
+  }
+>
+  <div
+    className="DashboardStackedBars DashboardStackedBarsReady"
+  >
+    <div
+      className="DashboardStackedBars_TitleBar"
+    >
+      <h2
+        className="DashboardStackedBars_Title"
+      >
+        <span>
+          Dashboard Stacked Bars
+        </span>
+      </h2>
+      <span
+        className="DashboardStackedBars_Link"
+      >
+        <span>
+          Link
+        </span>
+      </span>
+    </div>
+    <p
+      className="DashboardStackedBars_Description"
+    >
+      <span>
+        A set of bar charts about something
+      </span>
+    </p>
+    <div
+      className="DashboardStackedBars_Main"
+    >
+      <Component
+        amount={
+          <span>
+            Entry Amount 1
+          </span>
+        }
+        color="#CCCCCC"
+        key="1"
+        name={
+          <span>
+            Entry Name 1
+          </span>
+        }
+        percentage={50}
+        textColor="#414141"
+      >
+        <div
+          className="DashboardStackedBars_Chart"
+        >
+          <div
+            className="DashboardStackedBars_Chart_Name"
+          >
+            <span>
+              Entry Name 1
+            </span>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_ZingChart"
+          >
+            <Component
+              data={
+                Object {
+                  "plot": Object {
+                    "data-perc": 50,
+                    "data-rest": 50,
+                    "stacked": true,
+                    "tooltip": Object {
+                      "visible": false,
+                      "y": "200%",
+                    },
+                    "value-box": Object {
+                      "font-color": "#414141",
+                      "font-family": "Roboto",
+                      "font-size": "13px",
+                    },
+                  },
+                  "plotarea": Object {
+                    "margin": "0 0",
+                  },
+                  "scale-x": Object {
+                    "visible": false,
+                  },
+                  "scale-y": Object {
+                    "visible": false,
+                  },
+                  "series": Array [
+                    Object {
+                      "background-color": "#CCCCCC",
+                      "value-box": Object {
+                        "placement": "top-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc < 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        50,
+                      ],
+                    },
+                    Object {
+                      "background-color": "#D6D6D6",
+                      "value-box": Object {
+                        "placement": "bottom-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc >= 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        50,
+                      ],
+                    },
+                  ],
+                  "type": "hbar",
+                }
+              }
+              height="100%"
+              id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+              width="100%"
+            >
+              <div
+                className="MOCK_ZINGCHART"
+              />
+            </Component>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_Amount"
+          >
+            <span>
+              Entry Amount 1
+            </span>
+          </div>
+        </div>
+      </Component>
+      <Component
+        amount={
+          <span>
+            Entry Amount 2
+          </span>
+        }
+        color="#CCCCCC"
+        key="2"
+        name={
+          <span>
+            Entry Name 2
+          </span>
+        }
+        percentage={75}
+        textColor="#414141"
+      >
+        <div
+          className="DashboardStackedBars_Chart"
+        >
+          <div
+            className="DashboardStackedBars_Chart_Name"
+          >
+            <span>
+              Entry Name 2
+            </span>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_ZingChart"
+          >
+            <Component
+              data={
+                Object {
+                  "plot": Object {
+                    "data-perc": 75,
+                    "data-rest": 25,
+                    "stacked": true,
+                    "tooltip": Object {
+                      "visible": false,
+                      "y": "200%",
+                    },
+                    "value-box": Object {
+                      "font-color": "#414141",
+                      "font-family": "Roboto",
+                      "font-size": "13px",
+                    },
+                  },
+                  "plotarea": Object {
+                    "margin": "0 0",
+                  },
+                  "scale-x": Object {
+                    "visible": false,
+                  },
+                  "scale-y": Object {
+                    "visible": false,
+                  },
+                  "series": Array [
+                    Object {
+                      "background-color": "#CCCCCC",
+                      "value-box": Object {
+                        "placement": "top-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc < 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        75,
+                      ],
+                    },
+                    Object {
+                      "background-color": "#D6D6D6",
+                      "value-box": Object {
+                        "placement": "bottom-in",
+                        "rules": Array [
+                          Object {
+                            "rule": "%data-perc >= 10",
+                            "visible": false,
+                          },
+                        ],
+                        "text": "%data-perc%",
+                      },
+                      "values": Array [
+                        25,
+                      ],
+                    },
+                  ],
+                  "type": "hbar",
+                }
+              }
+              height="100%"
+              id="zingchart-5536e463-95bb-4bd9-bcff-bb7cb7909b7b"
+              width="100%"
+            >
+              <div
+                className="MOCK_ZINGCHART"
+              />
+            </Component>
+          </div>
+          <div
+            className="DashboardStackedBars_Chart_Amount"
+          >
+            <span>
+              Entry Amount 2
+            </span>
+          </div>
+        </div>
+      </Component>
+    </div>
+  </div>
+</DashboardStackedBars>
+`;
+
+exports[`DashboardStackedBars renders expected markup with title, description, link, and empty data 1`] = `
+<DashboardStackedBars
+  chartHasAmount={true}
+  chartHasName={true}
+  count={5}
+  dataset={Array []}
+  description={
+    <span>
+      A set of bar charts about something
+    </span>
+  }
+  emptyMessage={
+    <span>
+      No Data
+    </span>
+  }
+  link={
+    <span>
+      Link
+    </span>
+  }
+  pending={false}
+  title={
+    <span>
+      Dashboard Stacked Bars
+    </span>
+  }
+>
+  <div
+    className="DashboardStackedBars DashboardStackedBarsReady"
+  >
+    <div
+      className="DashboardStackedBars_TitleBar"
+    >
+      <h2
+        className="DashboardStackedBars_Title"
+      >
+        <span>
+          Dashboard Stacked Bars
+        </span>
+      </h2>
+      <span
+        className="DashboardStackedBars_Link"
+      >
+        <span>
+          Link
+        </span>
+      </span>
+    </div>
+    <div
+      className="DashboardStackedBars_LoneMessage"
+    >
+      <span>
+        No Data
+      </span>
+    </div>
+  </div>
+</DashboardStackedBars>
+`;

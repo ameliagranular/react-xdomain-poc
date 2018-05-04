@@ -1,0 +1,14 @@
+@media print {
+    .hide-children {
+        * {
+            visibility: hidden;
+        }
+    }
+
+    .show-children {
+        * {
+            visibility: visible;
+            overflow: visible;
+        }
+    }
+}

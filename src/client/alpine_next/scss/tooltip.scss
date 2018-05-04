@@ -1,0 +1,47 @@
+
+// START OF BOOTSTRAP3 TOOLTIP CSS OVERRIDES
+// .tooltip {
+  .tooltip-arrow {
+    &:before, &:after {
+      content: '';
+      width: 1rem;
+      height: 1rem;
+      display: inline-block;
+      transform: rotate(45deg);
+      position: absolute;
+      top: -8px;
+      left: 3px;
+      background-color: $cornLight;
+
+      .tooltip.left & {
+        top: -8px;
+        left: -20px;
+      }
+
+      .tooltip.bottom & {
+        top: 4px;
+        left: -8px;
+      }
+
+      .tooltip.top & {
+        top: -20px;
+        left: -8px;
+      }
+    }
+
+    &:before {
+      // box-shadow: -2px 2px 8px -1px transparentize($gray1, 0.2);
+      box-shadow: 0 0 10px 0 transparentize($gray1, 0.2);
+      z-index: -1;
+    }
+  }
+// }
+
+.tooltip-inner {
+  padding: 12px;
+  border: 1px solid $gray7;
+  box-shadow: 0 2px 8px transparentize($gray1, 0.2);
+}
+// END OF BOOTSTRAP3 TOOLTIP CSS OVERRIDES
+
+

@@ -1,0 +1,22 @@
+@import 'styles/vars';
+
+.CropLabel {
+    display: inline-block;
+    min-width: 55px;
+    border-radius: 5px;
+    border: 2px solid $white;
+    font-size: 0.75rem;
+    color: $gray-dark;
+    text-align: center;
+    overflow: hidden;
+
+    .CropLabel_CropType {
+        padding: 2px 4px;
+        font-weight: bold;
+    }
+
+    .CropLabel_CropProduct {
+        padding: 2px 4px;
+        background: #F2F2F2;
+    }
+}

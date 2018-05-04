@@ -1,0 +1,69 @@
+/***
+ * This CSS is used to share style for the pages that have tabs at the top (people, entities, etc)
+ *
+ * @usage Just add the next line into your module SCSS file
+ *  .my-module {
+ *    @import '../../shared/tabbed-header-actions.scss';
+ *  }
+ **/
+@import 'vars';
+@import '_color-palette.scss';
+@import 'mixins';
+@import 'fonts';
+
+.headerbar-actions {
+  // TODO - next - get rid of this
+  .tabs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    li {
+      float: left;
+      background: transparent;
+      margin: 0;
+      @include whitney-semibold;
+      font-size: 14px;
+      border: {
+        top: 1px solid $gray7;
+        bottom: 1px solid $gray7;
+        left: 1px solid $gray7;
+      }
+
+      &:first-child {
+        border: {
+          bottom-left-radius: 4px;
+          top-left-radius: 4px;
+        }
+      }
+
+      &:last-child {
+        border-right: 1px solid $gray7;
+        border: {
+          bottom-right-radius: 4px;
+          top-right-radius: 4px;
+        }
+      }
+
+      &.selected {
+        background: $gray3;
+
+        a {
+          color: $white;
+        }
+      }
+
+      & > a {
+        text: {
+          decoration: none;
+          align: center;
+        }
+        color: $gray1;
+        display: block;
+        width: 150px;
+        padding: 5px 10px;
+      }
+    }
+  }
+}

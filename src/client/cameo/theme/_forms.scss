@@ -1,0 +1,90 @@
+// ==================================================================================================================
+//  SCSS for forms and nested form elements
+//  Notes: there are currently form.scss styles in legacy and alpine-next; consolidate these three into;
+//         also: consolidate fieldset.scss ?
+// ==================================================================================================================
+@import 'csstyle';
+@import 'color-palette';
+@import 'fonts';
+@import 'mixins';
+@import 'spacing';
+
+$defaultRadioButtonSize: 15;
+$defaultLabelTextIndent: 8;
+
+// TODO - is this necessary ?
+@include component(form), form {
+    section {
+        border-bottom: 1px solid $gray7;
+
+        &:last-of-type {
+            border-bottom: 0;
+        }
+
+        &:not(:first-child) {
+            padding-top: getSpacing('m');
+        }
+
+        .info {
+            @include font-size('s');
+            @include whitney-medium();
+
+            color: $gray4;
+            margin-bottom: getSpacing('m');
+        }
+
+        @include component(labeled-checkbox) {
+            .checkbox {
+                margin-right: getSpacing('s');
+            }
+
+            & + .info {
+                margin-left: getRemFromPx(8+16); //checkbox w=16,mr=5
+                margin-top: getSpacing('xs');
+            }
+        }
+
+        header {
+            @include font-size('m');
+            @include whitney-semibold();
+
+            color: $gray1;
+        }
+    }
+
+    @include component(radio-group) {
+
+        @include option(inline-label){
+
+            label {
+                color: $gray1;
+
+                @include font-size('m');
+                @include whitney-semibold();
+
+                input[type=radio] {
+                    margin: getRemFromPx(2) 0 0;
+                }
+
+                span {
+                    max-width: 95%;
+                    display: inline-block;
+                    margin-left: getRemFromPx($defaultLabelTextIndent);
+
+                    // info|subtext left edge flush with label text
+                    &.info {
+                        clear: both;
+                        display: block;
+                        margin-left: getRemFromPx($defaultRadioButtonSize + $defaultLabelTextIndent);
+                        margin-bottom: getSpacing('xs');
+                    }
+                }
+            }
+        }
+    }
+
+    // CTA buttons nested in form
+    @include component(form-controls) {
+        text-align: right;
+    }
+}

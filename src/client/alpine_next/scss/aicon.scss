@@ -1,0 +1,1010 @@
+@import 'cameo/theme/mixins';
+@import 'cameo/theme/vars';
+@import 'cameo/theme/fonts';
+
+.aicon-size-contain {
+    // pff...
+    background-size: contain !important;
+}
+
+/** Icons **/
+.aicon-info {
+    padding-left: 20px;
+    background: url("/ui/images/shared/icons/icon-info-inactive.png") no-repeat scroll 2px 2px / 12px 12px transparent;
+
+    &:hover {
+        background: url("/ui/images/shared/icons/icon-info-active.png") no-repeat scroll 2px 2px / 12px 12px transparent;
+    }
+}
+
+.aicon-download {
+    background: url('/ui/images/shared/svg/misc/icon_download.svg') no-repeat center center;
+
+    &:hover {
+        background: url('/ui/images/shared/svg/misc/icon_download_hover.svg') no-repeat center center;
+    }
+}
+
+.aicon-delete {
+    background: url('/ui/images/shared/svg/misc/icon_delete.svg') no-repeat center center;
+    &.small {
+        width: 16px;
+        height: 16px;
+    }
+
+    &.xs-small {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.aicon-split {
+    background: url('/ui/images/shared/svg/tasks/icon_split_ticket.svg') no-repeat center center;
+    &.small {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.aicon-split-btn {
+    @include icon('misc/split_btn', 16px);
+    width: 16px;
+    height: 16px;
+}
+
+.aicon-add-btn {
+    @include icon('misc/icon_plus', 12px);
+    width: 12px;
+    height: 12px;
+}
+
+.icon-three-dots {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+
+    background-image: url('/ui/images/shared/svg/misc/icon_three_dots.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.icon-loading {
+    -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+    background: {
+        size: 48px 48px;
+        image: url('/ui/images/shared/granular_loading.gif');
+        position: 50% 25%;
+        repeat: no-repeat;
+    }
+    width: 48px;
+    height: 48px;
+}
+
+.icon-loading.ng-hide {
+    opacity: 0;
+}
+
+.aicon-arrow-down {
+    @include icon('misc/icon_pointer_D_filled');
+    display: inline-block;
+    &.small {
+        background-size: 10px 10px;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+%aicon-unicode {
+    width: 16px;
+    height: 16px;
+
+    display: inline-block;
+    text-align: center;
+    line-height: 0px;
+
+    &:after {
+        line-height: 14px;
+
+        display: inline-block;
+
+        vertical-align: middle;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+
+        @include whitney-medium;
+    }
+}
+
+@mixin aicon-unicode($clazz, $code) {
+    .#{$clazz} {
+        @extend %aicon-unicode;
+
+        &:after {
+            content: '#{$code}';
+        }
+    }
+}
+
+// arrows
+@include aicon-unicode('aicon-down-double-angle-bracket', '\00bb');
+@include aicon-unicode('aicon-right-double-angle-bracket', '\00bb');
+.aicon-down-double-angle-bracket {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+
+.aicon-arrow-right {
+    @include icon('misc/icon_pointer_R_filled');
+    display: inline-block;
+    &.small {
+        background-size: 10px 10px;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.aicon-down-chevron {
+    $iconWidth: 16px;
+    $iconHeight: 16px;
+    @include icon('misc/icon_collapse', $iconWidth, 'blue');
+
+    display: inline-block;
+
+    width: $iconWidth;
+    height: $iconHeight;
+}
+
+.aicon-unknown {
+    @include icon('misc/unknown');
+    &.small {
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;
+    }
+}
+
+.aicon-warning {
+    @include icon('misc/work_maybe');
+    &.small {
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;
+    }
+}
+
+.aicon-add {
+    @include icon('misc/icon_plus');
+    width: 14px;
+    height: 14px;
+    background-size: 14px 14px;
+}
+
+/** Fields **/
+
+.aicon-fields {
+    margin-bottom: 4px;
+    width: 24px;
+    height: 16px;
+    border-radius: 0;
+}
+
+.aicon-fields-edit-delete {
+    @include icon('fields/edit_delete');
+    background-size: 24px 16px;
+}
+
+.active {
+    .aicon-fields-edit-delete {
+        @include icon('fields/edit_delete_rev');
+        background-size: 26px 16px;
+    }
+}
+
+.aicon-fields-edit-remove {
+    @include icon('fields/edit_remove');
+    background-size: 20px 16px;
+}
+
+.active {
+    .aicon-fields-edit-remove {
+        @include icon('fields/edit_remove_rev');
+        // increase width so left side isn't cropped?
+        background-size: 22px 16px;
+    }
+}
+
+.aicon-fields-edit-add {
+    @include icon('fields/edit_add');
+    background-size: 20px 16px;
+}
+
+.active {
+    .aicon-fields-edit-add {
+        @include icon('fields/edit_add_rev');
+        background-size: 22px 16px;
+    }
+}
+
+.aicon-fields-arrow {
+    background: url('/ui/images/shared/svg/misc/arrow.svg') no-repeat center center;
+    background-size: 14px;
+}
+
+/** Task specific icons **/
+.aicon-task {
+    //min-height: 55px;
+    //min-width: 55px;
+}
+
+.aicon-task-status {
+    margin-left: 8px;
+    &.aicon-task-status-paused {
+        background: url('/ui/images/shared/svg/misc/status_paused.svg') no-repeat scroll 2px 2px / 10px 12px transparent;
+    }
+    &.aicon-task-status-in-progress {
+        background: url('/ui/images/shared/svg/misc/status_progress.svg') no-repeat scroll 2px 2px / 14px 14px transparent;
+    }
+}
+
+.aicon-task-planting {
+    @include icon('tasks/icon_task_planting');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_planting', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_planting', $type: 'incomplete');
+    }
+}
+
+.aicon-task-planting-rev {
+    @include icon('tasks/icon_task_planting_rev');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_planting', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_planting', $type: 'incomplete');
+    }
+}
+
+.aicon-task-planting-soybean,
+.aicon-task-plant-soybean {
+    @include icon('tasks/icon_task_plant_soybean');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_plant_soybean', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_plant_soybean', $type: 'incomplete');
+    }
+}
+
+.aicon-task-planting-soybean-rev,
+.aicon-task-plant-soybean-rev {
+    @include icon('tasks/icon_task_plant_soybean_rev');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_plant_soybean', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_plant_soybean', $type: 'incomplete');
+    }
+}
+
+.aicon-task-planting-corn,
+.aicon-task-plant-corn {
+    @include icon('tasks/icon_task_plant_corn');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_plant_corn', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_plant_corn', $type: 'incomplete');
+    }
+}
+
+.aicon-task-planting-corn-rev,
+.aicon-task-plant-corn-rev {
+    @include icon('tasks/icon_task_plant_corn_rev');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_plant_corn', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_plant_corn', $type: 'incomplete');
+    }
+}
+
+.aicon-task-planting-soybean
+.aicon-task-planting-corn,
+.aicon-task-plant-soybean,
+.aicon-task-plant-corn {
+    background-size: 16px 16px;
+}
+
+.aicon-task-soil-sampling {
+    @include icon('tasks/icon_task_soilsampling');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_soilsampling', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_soilsampling', $type: 'incomplete');
+    }
+}
+
+.aicon-task-soil-sampling-rev {
+    @include icon('tasks/icon_task_soilsampling_rev');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_soilsampling', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_soilsampling', $type: 'incomplete');
+    }
+}
+
+.aicon-task-soil-sampling-small { /** max 27 x 34 **/
+    background-size: 20px 20px;
+}
+
+.aicon-task-tilling {
+    @include icon('tasks/icon_task_tillage');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_tillage', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_tillage', $type: 'incomplete');
+    }
+}
+
+.aicon-task-tilling-rev {
+    @include icon('tasks/icon_task_tillage_rev');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_tillage', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_tillage', $type: 'incomplete');
+    }
+}
+
+.aicon-task-tilling-small { /** max 27 x 34 **/
+    background-size: 20px 20px;
+}
+
+.aicon-task-scouting {
+    @include icon('tasks/icon_task_scouting');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_scouting', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_scouting', $type: 'incomplete');
+    }
+}
+
+.aicon-task-scouting-rev {
+    @include icon('tasks/icon_task_scouting_rev');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_scouting', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_scouting', $type: 'incomplete');
+    }
+}
+
+.aicon-task-scouting-small { /** max 27 x 34 **/
+    background-size: 20px 20px;
+}
+
+.aicon-task-harvesting {
+    @include icon('tasks/icon_task_harvest');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_harvest', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_harvest', $type: 'incomplete');
+    }
+}
+
+.aicon-task-harvesting-rev {
+    @include icon('tasks/icon_task_harvest_rev');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_harvest', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_harvest', $type: 'incomplete');
+    }
+}
+
+.aicon-task-harvesting-small { /** max 27 x 34 **/
+    background-size: 20px 20px;
+}
+
+.aicon-task-irrigation {
+    @include icon('tasks/icon_task_irrigation');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_irrigation', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_irrigation', $type: 'incomplete');
+    }
+}
+
+.aicon-task-irrigation-rev {
+    @include icon('tasks/icon_task_irrigation_rev');
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_irrigation', $type: 'complete');
+    }
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_irrigation', $type: 'incomplete');
+    }
+}
+
+.aicon-task-irrigation-small { /** max 27 x 34 **/
+    background-size: 20px 20px;
+}
+
+.aicon-task-other {
+    @include icon('tasks/icon_task_other');
+
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_other', $type: 'complete')
+    }
+
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_other', $type: 'incomplete')
+    }
+}
+
+.aicon-task-other-rev {
+    @include icon('tasks/icon_task_other_rev');
+
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_other', $type: 'complete')
+    }
+
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_other', $type: 'incomplete')
+    }
+}
+
+.aicon-task-other-small { /** max 27 x 34 **/
+    background-size: 20px 20px;
+}
+
+.aicon-task-input {
+    @include icon('tasks/icon_task_prodapp');
+}
+
+.aicon-task-input-rev {
+    @include icon('tasks/icon_task_prodapp_rev');
+}
+
+.aicon-task-input-small { /** max 27 x 34 **/
+    background-size: 20px 20px;
+}
+
+.aicon-task-input-aerial {
+    @include icon('tasks/icon_task_aerialspray');
+
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_aerialspray', $type: 'complete')
+    }
+
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_aerialspray', $type: 'incomplete')
+    }
+}
+
+.aicon-task-input-aerial-rev {
+    @include icon('tasks/icon_task_aerialspray_rev');
+
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_aerialspray', $type: 'complete')
+    }
+
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_aerialspray', $type: 'incomplete')
+    }
+}
+
+.aicon-task-input-spray {
+    @include icon('tasks/icon_task_groundspray');
+
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_groundspray', $type: 'complete')
+    }
+
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_groundspray', $type: 'incomplete')
+    }
+}
+
+.aicon-task-input-spray-rev {
+    @include icon('tasks/icon_task_groundspray_rev');
+
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_groundspray', $type: 'complete')
+    }
+
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_groundspray', $type: 'incomplete')
+    }
+}
+
+.aicon-task-input-inject {
+    @include icon('tasks/icon_task_inject');
+
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_inject', $type: 'complete')
+    }
+
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_inject', $type: 'incomplete')
+    }
+}
+
+.aicon-task-input-inject-rev {
+    @include icon('tasks/icon_task_inject_rev');
+
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_inject', $type: 'complete')
+    }
+
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_inject', $type: 'incomplete')
+    }
+}
+
+.aicon-task-input-spread {
+    @include icon('tasks/icon_task_spread');
+
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_spread', $type: 'complete')
+    }
+
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_spread', $type: 'incomplete')
+    }
+}
+
+.aicon-task-input-spread-rev {
+    @include icon('tasks/icon_task_spread_rev');
+
+    &.aicon-task-complete {
+        @include icon('tasks/icon_task_spread', $type: 'complete')
+    }
+
+    &.aicon-task-incomplete {
+        @include icon('tasks/icon_task_spread', $type: 'incomplete')
+    }
+}
+
+/** Work order icosn */
+.aicon-work-order {
+    @include icon('task_icons/workorder_general/work_order_general');
+
+    &.aicon-work-order-priority {
+        @extend .aicon-work-order-priority;
+    }
+}
+
+.aicon-work-order-priority {
+    @include icon('task_icons/workorder_priority/work_order_priority');
+}
+
+.aicon-work-order-today {
+    @include icon('misc/icon_today');
+    width: 12px;
+    height: 16px;
+    background-size: 12px 16px;
+}
+
+/** Work order status icons **/
+.aicon-work-order-in-progress, .aicon-status-in-progress {
+    @include icon('misc/status_progress');
+    &.small {
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;
+    }
+    // Border radius causes rendering problems - CA-14486
+    border-radius: 0;
+}
+
+.aicon-reload-data {
+    @include icon('misc/icon_spinner');
+    &.small {
+        width: 14px;
+        height: 14px;
+        background-size: 100%;
+    }
+}
+
+.icon-green-checkmark {
+    width: 14px;
+    height: 14px;
+    background: {
+        size: 14px 14px;
+        image: url('/ui/images/shared/icons/green-checkmark.png');
+        position: center center;
+        repeat: no-repeat;
+    }
+    padding-left: 20px;
+}
+
+.aicon-work-order-complete, .aicon-status-complete {
+    @include icon('misc/icon_check');
+    &.small {
+        /** On browser zoom there seem to be cut images - added +1px **/
+        width: 15px;
+        height: 14px;
+        background-size: 14px 14px;
+        background-position: center center;
+    }
+    // Border radius causes rendering problems - CA-14486
+    border-radius: 0;
+}
+
+.aicon-work-order-paused, .aicon-status-paused {
+    @include icon('misc/status_paused');
+    &.small {
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;
+    }
+    // Border radius causes rendering problems - CA-14486
+    border-radius: 0;
+}
+
+.aicon-work-unassigned, .aicon-status-unassigned {
+    @include icon('misc/status_unassigned');
+    &.small {
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;
+    }
+}
+
+.aicon-status-warning, .aicon-status-overdue {
+    @include icon('misc/status_warning');
+    &.small {
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;
+    }
+    // Border radius causes rendering problems - CA-14486
+    border-radius: 0;
+}
+
+.aicon-work-order-assigned,
+.aicon-status-assigned,
+.aicon-work-order-not-started,
+.aicon-status-not-started {
+    @include icon('misc/status_not_started');
+
+    &.small {
+        width: 14px;
+        height: 14px;
+        background-size: 14px 14px;
+    }
+    // Border radius causes rendering problems - CA-14486
+    border-radius: 0;
+}
+
+// .aicon-work-order-assigned,
+.aicon-status-incomplete {
+    @include icon('misc/icon_check_gray');
+    // Border radius causes rendering problems - CA-14486
+    border-radius: 0;
+}
+
+/** Workability icons **/
+.aicon-workability {
+    background: {
+        position: center;
+        repeat: no-repeat;
+        size: 16px 16px;
+    }
+    height: 16px;
+    vertical-align: center;
+    width: 16px;
+    &.aicon-workability-go {
+        background-image: url('/ui/images/shared/svg/misc/work_go.svg');
+    }
+    &.aicon-workability-warn {
+        background-image: url('/ui/images/shared/svg/misc/work_maybe.svg');
+    }
+    &.aicon-workability-stop {
+        background-image: url('/ui/images/shared/svg/misc/work_nogo.svg');
+    }
+}
+
+/** Plans icons **/
+.aicon-plan-corn {
+    @include icon('plans/icon_plan_corn', 32px);
+}
+
+.aicon-plan-soybean {
+    @include icon('plans/icon_plan_bean', 32px);
+}
+
+.aicon-small {
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+}
+
+.aicon-svg {
+    width: 25px;
+    height: 25px;
+    stroke: $gray6;
+    fill: $gray6;
+    &.aicon-svg-left {
+        float: left;
+        margin-right: 5px;
+    }
+    &.aicon-svg-corn {
+        fill: $cornColor;
+    }
+    &.aicon-svg-soybean {
+        fill: $soyColor;
+    }
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.aicon-target {
+    @include icon('misc/target')
+}
+
+.base-task-icon {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+
+    vertical-align: middle;
+
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/** End Icons **/
+
+.aicon-hint-one {
+    width: 24px;
+    height: 24px;
+    background: {
+        image: url('/ui/images/shared/svg/misc/coach_step1.svg');
+        position: center center;
+        repeat: no-repeat;
+        size: 24px 24px;
+    }
+    vertical-align: middle;
+}
+
+.aicon-hint-two {
+    width: 24px;
+    height: 24px;
+    background: {
+        image: url('/ui/images/shared/svg/misc/coach_step2.svg');
+        position: center center;
+        repeat: no-repeat;
+        size: 24px 24px;
+    }
+    vertical-align: middle;
+}
+
+/**
+ * Equipment Icons
+ **/
+.aicon-equipment-tractor {
+    @include icon('equipment/tractor/tractor_large', 32px);
+}
+
+.aicon-equipment-sprayer {
+    @include icon('equipment/sprayer/sprayer_large', 32px);
+}
+
+.aicon-equipment-harvester {
+    @include icon('equipment/harvester/harvester_large', 32px);
+}
+
+.aicon-equipment-truck {
+    @include icon('equipment/truck/truck_large', 32px);
+}
+
+.aicon-equipment-other {
+    @include icon('equipment/other/other_large', 32px);
+}
+
+.aicon-storage-bin {
+    @include icon('containers/icon_storage-bin', 32px);
+}
+
+// TODO - remove ?
+.aicon-trigram-menu {
+    width: 16px;
+    height: 16px;
+    color: $gray4;
+
+    &:after {
+        @include iconTrigramMenu(12px, $gray4);
+    }
+
+    &:focus {
+        @include iconTrigramMenuColor($white);
+    }
+}
+
+.generic-menu-gear-icon {
+    background-color: transparent;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.7; /** Makes no sense to add another icon with gray, we can use opacity. **/
+    vertical-align: middle;
+    min-height: 17px;
+    min-width: 26px;
+    border: 0px;
+    background: {
+        attachment: scroll;
+        image: url("/ui/images/shared/svg/plans/menu_actions.svg");
+        size: 24px 16px;
+        position: center center;
+        repeat: no-repeat;
+        color: transparent;
+    }
+}
+
+.aicon-generic-info {
+    /** On browser zoom there seem to be cut images - added +1px **/
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background-size: 16px 16px;
+    background-position: center center;
+    background-image: url('/ui/images/shared/svg/misc/icon_info.svg');
+    background-repeat: no-repeat;
+    margin: 0 0 0 8px;
+}
+
+.aicon-edit {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: 16px 16px;
+    background-image: url('/ui/images/shared/svg/misc/icon_edit.svg');
+    background-repeat: no-repeat;
+    margin: 0 0 0 8px;
+}
+
+.aicon-search {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 0 0 8px;
+    background-image: url('/ui/images/shared/svg/misc/icon_search.svg');
+
+    &.single {
+        margin: 0 0 0 0;
+    }
+
+    &.rev {
+        background-image: url('/ui/images/shared/svg/misc/icon_search_rev.svg');
+    }
+}
+
+.aicon-storage-container {
+    background: {
+        image: url("/ui/images/shared/svg/containers/icon_storage.svg");
+        attachment: scroll;
+        size: 32px 18px;
+        position: center center;
+        repeat: no-repeat;
+    }
+}
+
+.aicon-split-ticket {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    @include icon('tasks/icon_split_ticket', 16px);
+    margin: 0 0 0 8px;
+}
+
+.aicon-warning {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    @include icon('misc/icon_warning', 16px);
+    margin: 0 0 0 8px;
+    &.round {
+        @include icon('misc/icon_warning', 16px, 'round');
+    }
+}
+
+.aicon-close {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    @include icon('misc/icon_close', 16px);
+    margin: 0 0 0 8px;
+}
+
+.aicon-lock {
+    background-attachment: scroll;
+    background-image: url("/ui/images/shared/svg/misc/icon_lock.svg");
+    background-size: 27px 16px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.aicon-search {
+    background: {
+        image: url("/ui/images/shared/svg/misc/icon_search.svg");
+        position: center right 5px;
+        size: 16px 16px;
+        repeat: no-repeat;
+    }
+}
+
+.aicon-alert {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    @include icon('misc/icon_alert', 15px);
+}
+
+.aicon-error {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    @include icon('misc/icon_error', 16px);
+}
+
+.aicon-refresh {
+    @include icon('misc/recalculate', 16px);
+    width: 14px;
+    height: 14px;
+}
+
+.aicon-new-tab {
+    @include icon('misc/icon_new_tab', 16px);
+    width: 16px;
+    height: 16px;
+}
+
+.aicon-note {
+    @include icon('misc/icon_note', 16px);
+    width: 16px;
+    height: 16px;
+}
+
+// TODO: rename in aicon-boundary and potentially add different sizes
+.boundary-icon {
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: $gray6;
+    }
+}
+
+.wi.not-available {
+    &:before {
+        @include whitney-medium;
+    }
+}
+
+span {
+    &[class^="aicon-"],
+    &[class*="aicon-"] {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}

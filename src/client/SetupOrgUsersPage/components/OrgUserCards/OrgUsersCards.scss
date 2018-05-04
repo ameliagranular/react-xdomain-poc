@@ -1,0 +1,90 @@
+@import '../../../cameo/theme/vars';
+@import '../../../cameo/theme/mixins';
+@import '../../../cameo/theme/fonts';
+@import '../../../alpine_next/scss/variables';
+@import '../../../alpine_next/scss/index';
+
+.OrgUserCards_Container {
+    .OrgUserCard {
+        font-size: getFontSize('s');
+        text-align: left;
+        box-shadow: 2px 2px 9px $gray12;
+        padding: .5rem;
+        cursor: default;
+        margin-bottom: 1.6rem;
+        line-height: 1.6rem;
+        border-bottom: 1px solid $gray15;
+        margin-bottom: 1rem;
+        display: flex;
+
+        @for $i from 1 to 5 {
+            $basis: 10 * $i - 5;
+            $perc: '%';
+
+            .flex-column-#{$i} {
+                flex-grow: $i;
+                flex-basis: #{$basis}#{$perc};
+                margin-right: .2rem;
+            }
+        }
+
+        &:hover, &.editMode {
+            background-color: $blue6;
+        }
+
+        &.editMode {
+            background-color: $blue6;
+            display: block;
+            font-size: 0.7rem;
+        }
+
+        .primary-row, &.secondary-row {
+            display: flex;
+        }
+
+        .secondary-row {
+            display: flex;
+            border-top: 1px solid $white;
+            padding-top: 1rem;
+        }
+
+        .label {
+            margin-bottom: getSpacing('xs');
+        }
+
+        > div {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        input.input-sm {
+            margin-right: getSpacing('xs');
+        }
+    }
+
+    label {
+        display: block;
+    }
+
+    .role-desc {
+        font-weight: normal;
+    }
+
+    .OrgUserCard_Name {
+        .profileImg {
+            width: $mediumAvatarSize;
+            height: $mediumAvatarSize;
+            float: left;
+            margin: 0 10px 0 0;
+        }
+    }
+
+    .loader {
+        width: 100%;
+        height: 100rem;
+        background: white;
+        opacity: .7;
+        position: absolute;
+    }
+}

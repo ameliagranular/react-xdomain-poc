@@ -1,0 +1,17 @@
+/*
+* A shim file to place legacy CSS until it gets integrated into the actual codebase
+*/
+@import 'csstyle';
+
+@import 'cameo/theme/color-palette';
+@import 'cameo/theme/fonts';
+@import 'cameo/theme/mixins';
+@import 'cameo/theme/sizes';
+@import 'cameo/theme/spacing';
+
+// migration
+@import "cameo/theme/_index";
+
+// component shims
+@import 'component_shims/_index';
+

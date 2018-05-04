@@ -1,0 +1,79 @@
+@import "sizes";
+
+
+// TODO: update to rem
+$spacingMapUtilities: (
+  "xxs": 2px,
+  "xs": 4px,
+  "s": 8px,
+  "m": 16px,
+  "l": 32px,
+  "xl": 48px,
+  "no": 0
+);
+
+$directions: (
+  "top",
+  "right",
+  "bottom",
+  "left"
+);
+
+$types: (
+  "padding",
+  "margin"
+);
+
+@function space($size) {
+  @return map-get($spacingMap, $size);
+}
+
+////////////////////////////////////////////////////////////////////////////////
+$spacingMap: (
+  "xxs": 0.125, // .125 * 16 = 2
+  "xs": 0.25, // .25 * 16 = 4
+  "s": 0.5, // .5 * 16 = 8
+  "m": 1, // 16
+  "l": 2, // 2 * 16 = 32
+  "xl": 3, // 3 * 16 = 48
+  "xxl": 3, // 48
+  "notes": 3, // 48
+  "jumbo": 3 // 48
+);
+
+@function getSpacing($size) {
+  @return $baseSize * map-get($spacingMap, $size);
+}
+
+// TODO: why do we have 'sizer' ????
+////////////////////////////////////////////////////////////////////////////////
+$sizer: 1rem;   	// 16px is the magic number
+$sizer--minus6:  	$sizer * 0.125;
+$sizer--minus5:   	$sizer * 0.25;
+$sizer--minus4:   	$sizer * 0.5;
+$sizer--minus3:   	$sizer * 0.625;
+$sizer--minus2:   	$sizer * 0.75;
+$sizer--minus1:   	$sizer * 0.875;
+$sizer--plus1:    	$sizer * 1.125;
+$sizer--plus2:    	$sizer * 1.25;
+$sizer--plus3:    	$sizer * 1.5;
+$sizer--plus4:    	$sizer * 2;
+$sizer--plus5:    	$sizer * 3;
+$sizer--plus6:    	$sizer * 4;
+
+
+// ==================================================================================================================
+//  MIGRATED from legacy vars -- TODO: move
+// ==================================================================================================================
+// page dimensions & grid
+$minBodyWidth: 980px !global;
+$minWidth: 960px !global;
+$maxWidth: 1200px !global;
+$gutterWidth: 10px !global;
+$colNr: 12 !global;
+$minColWidth: $minWidth / $colNr - $gutterWidth * 2 !global;
+$maxColWidth: $maxWidth / $colNr - $gutterWidth * 2 !global;
+$navHeight: 40px !global;
+$headerbarHeight: 110px !global;
+$headerbarSlimHeight: $headerbarHeight - 60px !global;
+$headerbarLongHeight: 230px !global;

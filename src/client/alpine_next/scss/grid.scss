@@ -1,0 +1,55 @@
+@import "bootstrap/grid";
+
+// https://julienmelissas.com/no-gutter-column-trick-for-bootstrap/
+// also compatible with bootstrap 4
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    & > [class^="col-"],
+    & > [class*=" col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+// same as no-gutters but keeps the padding between cells except for the 1st and the last
+.row.no-padding {
+    margin-right: 0;
+    margin-left: 0;
+
+    & > [class^="col-"],
+    & > [class*=" col-"] {
+        &:first-of-type {
+            padding-left: 0;
+        }
+        &:last-of-type {
+            padding-right: 0;
+        }
+    }
+}
+
+// spacing between columns
+$rowSpacing: 4px;
+.row.\--spaced {
+    & > [class^="col-"],
+    & > [class*=" col-"] {
+        &:not(:last-child):not(:only-child) {
+            padding-right: $rowSpacing;
+        }
+        &:not(:first-child):not(:only-child) {
+            padding-left: $rowSpacing;
+        }
+    }
+}
+
+// container
+.container {
+    // min width for BS .container & .container-fluid at all breakpoints TODO: remove when responsive designs finalized
+    min-width: $contentMinWidth;
+
+    &.no-gutters {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

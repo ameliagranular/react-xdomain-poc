@@ -1,0 +1,380 @@
+@import "cameo/theme/sizes";
+@import "cameo/theme/fonts";
+@import "cameo/theme/color-palette";
+@import "cameo/theme/spacing";
+// use cameo forms
+// TODO - next - this should be a part of the style not the theme
+@import "cameo/theme/forms";
+
+// START OF BS3 OVERRIDES ///////////////////////////////////////
+input.form-control {
+    &[type="text"],
+    &[type="number"],
+    &[type="password"],
+    &[type="email"],
+    &[type="tel"] {
+        height: 32px;
+        padding: 8px;
+        box-shadow: none;
+        color: $gray1;
+
+        &:disabled {
+            color: $gray5;
+        }
+
+        &.ng-invalid {
+            border: 1px solid $red;
+        }
+
+        &:focus:not(.ng-invalid) {
+            border-color: $gray6;
+        }
+    }
+
+    &[type="number"] {
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        &:focus:not(.ng-invalid) {
+            border-color: $gray6;
+        }
+    }
+}
+
+// CSS-only BS3-compliant custome control styes
+// Radio button
+.radio label, label.radio-inline {
+    input[type="radio"] {
+        -webkit-appearance: none;
+        outline: none;
+
+        &:disabled {
+            cursor: default;
+        }
+
+        &:before {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            border: 1px solid $gray5;
+            background-color: $white;
+            border-radius: 8px;
+            content: '\f111';
+            font-family: 'FontAwesome';
+            font-size: 0.45rem;
+            padding-left: 4px;
+            line-height: 1rem;
+            color: transparent;
+            top: -4px;
+            left: -1px;
+            position: relative;
+            cursor: default;
+        }
+
+        &:checked {
+            &:before {
+                color: $gray1;
+                background-color: $blueLight;
+            }
+            &:disabled {
+                &:before {
+                    color: $gray5;
+                }
+            }
+        }
+
+        &:hover {
+            &:before {
+                background-color: $blueLight;
+                cursor: pointer;
+            }
+            &:disabled {
+                &:before {
+                    background-color: $white;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+
+// Checkbox
+.checkbox label, label.checkbox-inline {
+    input[type="checkbox"] {
+        -webkit-appearance: none;
+        outline: none;
+
+        &:disabled {
+            cursor: default;
+        }
+
+        &:before {
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            border: 1px solid $gray5;
+            border-radius: 0.25rem;
+            background-color: $white;
+            font-family: 'FontAwesome';
+            content: '\f00c';
+            color: $white;
+            font-size: 0.75rem;
+            line-height: 1rem;
+            padding-left: 1px;
+            position: relative;
+            top: -2px;
+            left: -1px;
+            cursor: default;
+        }
+
+        &:checked {
+            &:before {
+                color: $gray1;
+            }
+            &:disabled {
+                &:before {
+                    color: $gray5;
+                }
+            }
+        }
+
+        &:hover {
+            &:before {
+                border-color: $gray0;
+                cursor: pointer;
+            }
+            &:disabled {
+                &:before {
+                    cursor: default;
+                    border-color: $gray5;
+                }
+            }
+        }
+    }
+}
+
+// END OF BS3 OVERRIDES ///////////////////////////////////////
+
+// Inputs settings
+$inputPadding: 8px;
+$inputHeightPrimary: 32px;
+$inputHeightSecondary: 24px;
+$inputBorderRadius: 4px;
+$inputBorderWidth: 1px;
+$inputHeightJumbo: 32px;
+
+$inputsSizeMap: (
+    "xs-input": "xs-width",
+    "s-input": "s-width",
+    "m-input": "m-width",
+    "l-input": "l-width",
+    "xl-input": "xl-width",
+    "xxl-input": "xxl-width",
+);
+
+// Textarea settings
+$textareaSizeMap: (
+    "notes-input": "notes-width"
+);
+
+// Jumbo input width
+$jumboInputMap: (
+    "jumbo-input": "jumbo-width"
+);
+
+// Reset - defaults
+%inputDefaultStyle {
+    border: {
+        width: $inputBorderWidth;
+        style: solid;
+        color: $gray7;
+        radius: $inputBorderRadius;
+    }
+    box-sizing: border-box;
+    padding: $inputPadding;
+    color: $gray1;
+}
+
+%inputFocusStyle {
+    outline: none;
+}
+
+%inputInvalidStyle {
+    border-color: $red;
+}
+
+%inputDarkStyle {
+    background-color: $gray3;
+    color: $white;
+}
+
+// Mixins
+@mixin inputsCls() {
+    @each $cls, $size in $inputsSizeMap {
+        &.#{$cls} {
+            @extend %#{$size};
+            @extend %inputDefaultStyle;
+            &:focus {
+                @extend %inputFocusStyle;
+            }
+            &,
+            &.primary {
+                height: $inputHeightPrimary;
+            }
+            &.secondary {
+                height: $inputHeightSecondary;
+            }
+            &.invalid {
+                @extend %inputInvalidStyle;
+            }
+            &.dark {
+                @extend %inputDarkStyle;
+            }
+        }
+    }
+
+    &.input-xs {
+        height: $inputHeightSmall;
+    }
+}
+
+@mixin textareaCls() {
+    @each $cls, $size in $textareaSizeMap {
+        &.#{$cls} {
+            @extend %#{$size};
+            @extend %inputDefaultStyle;
+            &:focus {
+                @extend %inputFocusStyle;
+            }
+        }
+    }
+}
+
+@mixin jumboInputCls() {
+    @each $cls, $size in $jumboInputMap {
+        &.#{$cls} {
+            @extend %#{$size};
+            @extend %inputDefaultStyle;
+            @include whitney-medium;
+            // @include font-size("xl");
+            font-size: 16pt; // not creating a global var for 16pt and reusing it here b/c all this will become obsolete when we completely switch to CSStyle
+            height: $inputHeightJumbo;
+            &.invalid {
+                @extend %inputInvalidStyle;
+            }
+        }
+    }
+}
+
+// Main inputs
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"] {
+    @include inputsCls();
+    line-height: 1;
+}
+
+// Jumbo inputs
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="number"] {
+    @include jumboInputCls();
+}
+
+textarea {
+    @include textareaCls;
+    line-height: 1;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// @mixin inputBase {
+%inputBase {
+    border-radius: $borderRadius;
+    border: $borderWidth solid $gray7;
+    background-color: $white;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    padding: getSpacing("xs");
+    outline: none;
+
+    &:hover {
+        border-color: $gray3;
+    }
+    &:focus {
+        border-color: $blue;
+        outline: none;
+    }
+    &:disabled {
+        background-color: $gray8;
+        color: $gray3;
+        cursor: not-allowed;
+        // pointer-events: none;
+    }
+}
+
+@include component(input) {
+    @extend %inputBase;
+    // @include inputBase;
+    @each $width, $m in $widthMap {
+        @include option(#{$width}) {
+            width: getWidth(#{$width});
+        }
+    }
+
+    @each $height, $m in $heightMap {
+        @include option(#{$height}) {
+            height: getHeight(#{$height});
+        }
+    }
+
+    @include option(jumbo) {
+        width: getWidth("jumbo");
+        height: getHeight("primary");
+    }
+
+    @include option(primary) {
+        font-size: 0.875rem;
+    }
+
+    @include option(secondary) {
+        font-size: 0.75rem;
+    }
+
+    @include option(right-aligned) {
+        text-align: right;
+    }
+}
+
+@include component(textarea) {
+    @extend %inputBase;
+    // @include inputBase;
+    font-size: 0.875rem;
+    line-height: 1.35714;
+
+    @include option(notes) {
+        width: getWidth("notes");
+    }
+}
+
+@include tweak(input-invalid) {
+    border-color: $red;
+}
+
+@include tweak(input-inverted) {
+    background-color: $gray3;
+    color: $white;
+}
+
+@include tweak(input-hidden) {
+    background-color: transparent;
+    border-color: $blue6;
+    &:focus {
+        background-color: $white;
+    }
+}

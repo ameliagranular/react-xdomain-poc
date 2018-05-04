@@ -1,0 +1,53 @@
+@import "cameo/theme/sizes";
+
+@include component(content) {
+  width: 100%;
+  min-width: $contentMinWidth;
+  max-width: $contentMaxWidth;
+  margin: 0 auto;
+}
+
+@include component(layout-container) {
+  width: 100%;
+
+  @include option(main) {
+    padding-top: $headerHeight;
+  }
+
+  @include option(content-old) {
+    min-width: 960px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @include option(content) {
+    min-width: $contentMinWidth;
+    max-width: $contentMaxWidth;
+    margin: 0 auto;
+  }
+
+  @include option(header) {
+    z-index: 100;
+  }
+
+  @include option(page-header) {
+    background-color: $gray9;
+  }
+
+  @include option(filter-header) {
+    background-color: $blue5;
+  }
+
+  @include option(filter-input) {
+    background-color: $blue6;
+  }
+
+  @include option(position-fixed) {
+    position: fixed;
+  }
+
+  @include option(with-filter-header) {
+    position: relative;
+    top: 180px;
+  }
+}

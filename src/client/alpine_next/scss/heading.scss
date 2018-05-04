@@ -1,0 +1,106 @@
+@import "cameo/theme/color-palette";
+
+%h1 {
+    font-size: 1.5rem;
+}
+
+%h2 {
+    font-size: 1rem;
+}
+
+%h3 {
+    font-size: 0.8rem;
+}
+
+%h4 {
+    font-size: 0.7rem;
+}
+
+%h5 {
+    font-size: 0.6rem;
+}
+
+%h6 {
+    font-size: 0.5rem;
+}
+
+// set default sizes
+h1 {
+    @extend %h1;
+}
+
+h2 {
+    @extend %h2;
+}
+
+h3 {
+    @extend %h3;
+}
+
+h4 {
+    @extend %h4;
+}
+
+h5 {
+    @extend %h5;
+}
+
+h6 {
+    @extend %h6;
+}
+
+@include component(heading) {
+    margin: 0;
+    padding: 0;
+    line-height: 0.96;
+    font-weight: 600;
+    text-transform: none;
+
+    @include option(page-title) {
+        @include vitesse-black;
+
+        @extend %h1;
+
+        color: $gray4;
+        white-space: nowrap;
+    }
+
+    @include option(form-title) {
+        @extend %h2;
+        @include whitney-bold;
+    }
+
+    @include option(section) {
+        @include vitesse-black;
+
+        @extend %h2;
+    }
+
+    @include option(h1) {
+        @extend %h1;
+    }
+
+    @include option(h2) {
+        @extend %h2;
+    }
+
+    @include option(h3) {
+        @extend %h3;
+    }
+
+    @include option(h4) {
+        @extend %h4;
+    }
+
+    @include option(h5) {
+        @extend %h5;
+    }
+
+    @include option(h6) {
+        @extend %h6;
+    }
+}
+
+.bold {
+    font-weight: bold;
+}

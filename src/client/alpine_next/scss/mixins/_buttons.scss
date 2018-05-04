@@ -1,0 +1,98 @@
+// =================
+// Duplicated from Bootstrap3's mixin
+// =================
+@mixin al-button-variant(
+    $color,
+    $background,
+    $border,
+    $activeColor,
+    $activeBackground,
+    $activeBorder,
+    $focusColor,
+    $focusBackground,
+    $focusBorder
+) {
+
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+
+    &:focus,
+    &.focus {
+        color: $focusColor;
+        background-color: $focusBackground;
+        border-color: $focusBorder;
+    }
+    &:hover,
+    &.hover {
+        color: $focusColor;
+        background-color: $focusBackground;
+        border-color: $focusBorder;
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        outline: 0;
+        background-image: none;
+        box-shadow: none;
+        color: $activeColor;
+        background-color: $activeBackground;
+        border-color: $activeBorder;
+
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $focusColor;
+            background-color: $focusBackground;
+            border-color: $focusBorder;
+        }
+    }
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+        // TODO - next - ???
+    fieldset[disabled] & {
+        &:hover,
+        &:focus,
+        &.focus {
+            background-color: $background;
+            border-color: $border;
+        }
+    }
+
+    .badge {
+        color: $background;
+        background-color: $color;
+    }
+}
+
+// =================
+// alpine_next button mixins
+// =================
+@mixin ctaStates() {
+    &:focus {
+        box-shadow: 0px 0px 2px $white inset;
+    }
+
+    &.hover, &:hover {
+        &:not(:disabled):not(.disabled) {
+            border: 1px solid $blueDark;
+            background: $blueMedium;
+            // TODO - next - but why ?
+            & > span {
+                color: $blue;
+            }
+        }
+    }
+
+    &:disabled {
+        background: $blue;
+        color: $white;
+        border: 1px solid $blueMedium;
+        opacity: 0.5;
+    }
+}

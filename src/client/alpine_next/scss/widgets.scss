@@ -1,0 +1,229 @@
+@import "csstyle";
+@import "cameo/theme/color-palette";
+@import "cameo/theme/spacing";
+@import "cameo/theme/fonts";
+
+$alPanelPad: getSpacing("s");
+
+/**
+ * Base Alpine Panel
+ * This class, when applied to an element transforms the element with Alpine look and feel color and padding.
+ */
+@include component(al-panel) {
+
+    /* Color - Primary */
+    @include option(primary) {
+        background-color: $blue6;
+    }
+
+    /* Color - Component header */
+    @include option(header) {
+        background-color: $blue5;
+    }
+
+    /* Default padding */
+    @include option(padding, padded, pad) {
+        padding: $alPanelPad;
+    }
+
+    /* Padding - each direction */
+    @each $direction in (top, right, bottom, left) {
+        @include option(
+                padding-#{$direction},
+                padded-#{$direction},
+                pad-#{$direction}
+        ) {
+            padding-top: $alPanelPad;
+        }
+    }
+
+    /* Horizontal padding */
+    @include option(padding-horizontal, padded-horizontal, pad-horizontal) {
+        padding-left: $alPanelPad;
+        padding-right: $alPanelPad;
+    }
+
+    /* Vertical padding */
+    @include option(padding-vertical, padded-vertical, pad-vertical) {
+        padding-top: $alPanelPad;
+        padding-bottom: $alPanelPad;
+    }
+
+    /* Form header */
+    @include option(form-header) {
+        background-color: $blue5;
+        padding-left: getSpacing('m');
+    }
+
+    /* Form background / content */
+    @include option(form) {
+        background-color: $blue6;
+
+        .form-group {
+            clear: both;
+        }
+    }
+
+    @include option(gray) {
+        background-color: $gray9;
+    }
+
+    @include option(border-top) {
+        border-top: 1px solid $gray14;
+    }
+
+    // not liking that this has to be done. -1 for csstyle
+    @include option(border-top-white) {
+        border-top: 1px solid $gray13;
+    }
+
+    @include option(border-bottom) {
+        border-bottom: 1px solid $gray4;
+    }
+
+    @include option(row-hover) {
+        &:hover {
+            background-color: $blue6;
+        }
+    }
+}
+
+@include component(arrow-indicator) {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px 0 0;
+
+    &.closed {
+        @include arrow('bottom', 5px, $gray5);
+    }
+
+    &.open {
+        @include arrow('right', 5px, $gray5);
+    }
+}
+
+// label
+@include component(label, label-category) {
+    @include whitney-semibold;
+    @include font-size('xs');
+    color: $gray4;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: transparent;
+    text-shadow: none;
+    line-height: 1;
+
+    @include option(trim) {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    @include option(header) {
+        letter-spacing: normal;
+    }
+
+    @include option(section) {
+        @include font-size('m');
+        color: $gray1;
+    }
+}
+
+// control label - add some padding on the right
+.form-horizontal .control-label {
+    &.label,
+    &.label-category {
+        padding-right: getSpacing("m");
+        line-height: 16px;
+    }
+}
+
+.form-horizontal .form-group {
+    &.form-group-no-margin {
+        margin-bottom: 0;
+    }
+
+    & .label.control-label {
+        line-height: 32px;
+
+        & + div, & + span {
+            line-height: 32px;
+        }
+    }
+}
+
+// text
+
+.text-required {
+    @include whitney-medium;
+    font-size: 12px;
+    color: $red;
+}
+
+@include component(header-icon) {
+    display: inline-block;
+    vertical-align: middle;
+    width: 46px;
+    height: 32px;
+    background-size: 46px 32px !important;
+}
+
+.text-overflow-wrap {
+    overflow-wrap: break-word;
+}
+
+.text-gray {
+    color: $gray4;
+}
+
+.text-blue {
+    color: $blue;
+}
+
+// row - miscs
+@include component(row) {
+    // from BS - based on base font size and line height modifier
+    $lh: $line-height-computed;
+
+    // normal inputs
+    & > .display-label {
+        margin-top: ($inputHeight - $lh) / 2;
+
+        // small input
+        &.display-label-small {
+            margin-top: ($inputHeightSmall - $lh) / 2;
+            @include font-size('s');
+        }
+    }
+}
+
+@include component(al-flex) {
+    display: flex;
+
+    @include option(flex-row, flex-direction-row) {
+        flex-direction: row;
+    }
+
+    @include option(flex-column, flex-direction-column) {
+        flex-direction: column;
+    }
+
+    @include part(item) {
+        @include option(flex-grow) {
+            flex-grow: 1;
+        }
+        @include option(flex-shrink) {
+            flex-shrink: 1;
+        }
+        @include option(flex-fixed) {
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+        @include option(flex-fluid) {
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+    }
+}

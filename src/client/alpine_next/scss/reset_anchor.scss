@@ -1,0 +1,39 @@
+@import "cameo/theme/fonts";
+@import "cameo/theme/color-palette";
+
+%baseLinkStyle {
+  @include font-size('s');
+  color: $blue;
+  text-decoration: none;
+}
+
+$linkStates: (
+  "hover" // %hover
+);
+
+%hover {
+  text-decoration: underline;
+}
+
+@mixin linkCls() {
+  @extend %baseLinkStyle;
+  @each $state in $linkStates {
+    &:#{$state} {
+      @extend %#{$state};
+    }
+  }
+}
+
+a {
+  @include linkCls();
+}
+
+////////////////////////////////////////////////////////////////////////////////
+@include component(link) {
+  text-decoration: none;
+  color: $blue;
+
+  &:hover {
+    text-decoration: underline;
+  }
+};

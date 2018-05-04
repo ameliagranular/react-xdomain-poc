@@ -1,0 +1,56 @@
+@import 'vars';
+@import 'color-palette';
+@import 'fonts';
+
+%modal-header-h1 {
+  font-size: 18px;
+  line-height: 20px;
+  @include vitesse-bold;
+  color: $blue3;
+  margin: 0;
+}
+
+%drag {
+  opacity: 0.5;
+}
+
+%over {
+  outline: 1px solid $blue3;
+  color: $blue1;
+  background: $blue6;
+}
+
+/* DO NOT CREATE CONCRETE DEFINITIONS. USE PLACEHOLDER RULES. */
+
+%selection-actions {
+  font-size: 12px;
+  font-weight: normal;
+  vertical-align: middle;
+  display: inline-block;
+  width: 225px;
+  margin-left: 50%;
+  position: fixed;
+  left: -113px;
+  a{
+    color: $blue;
+  }
+}
+
+$cbSelectedBackground: (
+  image: url('/ui/images/shared/svg/misc/check.svg'),
+  size: 11px 10px,
+  position: center center,
+  repeat: no-repeat
+);
+
+@mixin alpine-checkbox-selected {
+  @each $prop, $val in $cbSelectedBackground {
+     background-#{$prop}: #{$val};
+  }
+}
+
+@mixin alpine-checkbox-selected-important {
+  @each $prop, $val in $cbSelectedBackground {
+     background-#{$prop}: #{$val} !important;
+  }
+}

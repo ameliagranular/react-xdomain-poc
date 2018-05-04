@@ -1,0 +1,38 @@
+@import '../styles/global.scss';
+@import '../styles/vars';
+@import '../cameo/theme/color-palette';
+
+.SetupOrgUsersPage {
+    @extend %page;
+
+    .SetupOrgUsersPage_Header {
+        background-color: $gray6;
+        color: $gray-dark;
+        h1 {
+            padding: 1rem;
+            margin: 0;
+        }
+
+        .SetupOrgUsersPage_Subheader {
+            padding: 0 1rem;
+            border-top: 1px solid $gray3;
+            background-color: $gray17;
+            display: flex;
+
+            .SetupOrgUsersPage_ActionContainer {
+                padding-top: 1rem;
+            }
+        }
+    }
+
+    .SetupOrgUsersPage_Body {
+        color: $gray-dark;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+// shared components override
+.SetupOrgUsersPage .SetupOrgUsersPage_Tabs {
+    width: 40%;
+}

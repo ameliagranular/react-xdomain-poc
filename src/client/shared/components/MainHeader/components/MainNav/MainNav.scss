@@ -1,0 +1,16 @@
+@import '../../../../../styles/vars';
+
+.MainNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $navbar_bg_color;
+    height: $navbar_height;
+
+    .MainNav_Title {
+        font-family: 'Vitesse SSm A', 'Vitesse SSm B', sans-serif;
+        font-size: 1rem;
+        font-weight: 800;
+        color: white;
+    }
+}

@@ -1,0 +1,13 @@
+// bootstrap 2.3.2 variables.less
+$zindexDropdown:          1000 !global;
+$zindexPopover:           1030 !global;
+$zindexTooltip:           1030 !global;
+$zindexFixedNavbar:       1030 !global;
+$zindexModalBackdrop:     1040 !global;
+$zindexModal:             1060 !global;
+
+// alpine z-index
+$zindexFixedHeaderbar: $zindexFixedNavbar - 5 !global;
+// Each popup adds 5 to $zindexModal when is opened. 3 popups opened means 1015. Added a 20 popup child limit - should be ok.
+$zindexMessages: $zindexModal + 100 !global;
+$zindexLeafletControl:     199 !global;

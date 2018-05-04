@@ -1,0 +1,125 @@
+@import 'cameo/theme/color-palette';
+
+
+@include tweak(block) {
+    display: block;
+}
+
+@include tweak(bold) {
+    font-weight: bold;
+}
+
+// TODO: color tweaks should go away in favor of utility in _fonts that relies on predefined map of values
+@include tweak(color-red) {
+    color: $red;
+}
+
+@include tweak(full-width) {
+    width: 100%;
+}
+
+@include tweak(full-height) {
+    min-height: 100%;
+    height: 100%;
+}
+
+@include tweak(inline-block) {
+    display: inline-block;
+}
+
+@include tweak(italic) {
+    font-style: italic;
+}
+
+// TODO: margin tweaks should go away in favor of utility in _spacing that relies on predefined map of values
+@include tweak(margin-right) {
+    margin-right: 0.5rem;
+}
+
+@include tweak(margin-left) {
+    margin-left: 0.5rem;
+}
+
+@include tweak(margin-top) {
+    margin-top: 0.5rem;
+}
+
+@include tweak(margin-bottom) {
+    margin-bottom: 0.5rem;
+}
+
+@include tweak(no-border-top) {
+    border-top: 0 none;
+}
+
+@include tweak(no-margin) {
+    margin: 0;
+}
+
+@include tweak(overflow-hidden) {
+    overflow: hidden;
+}
+
+@include tweak(overflow-x-auto) {
+    overflow-x: auto;
+}
+
+@include tweak(overflow-auto) {
+    overflow: auto;
+}
+
+@include tweak(relative) {
+    position: relative;
+}
+
+@include tweak(text-center) {
+    text-align: center;
+}
+
+@include tweak(text-right) {
+    text-align: right;
+}
+
+@include tweak(u-lh-initial) {
+    line-height: initial;
+}
+
+@include tweak(u-vcenter, u-vcenter-right) {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+@include tweak(u-vcenter-right) {
+   right: 0;
+}
+
+@include tweak(underline) {
+    text-decoration: underline;
+}
+
+@include tweak(vertical-align-bottom) {
+    vertical-align: bottom;
+}
+
+@include tweak(vertical-align-middle) {
+    vertical-align: middle;
+}
+
+@include tweak(ws-no-wrap) {
+    white-space: nowrap;
+}
+
+@include tweak(ws-normal) {
+    white-space: normal;
+}
+
+@include tweak(fill-container) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}

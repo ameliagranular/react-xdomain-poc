@@ -1,0 +1,60 @@
+$sizesMap: (
+  "xs": 48px,
+  "s": 64px,
+  "m": 80px,
+  "l": 96px,
+  "xl": 128px,
+  "xxl": 192px,
+  "notes": 304px,
+  "jumbo": 360px
+);
+
+$types: (
+  "width",
+  "height"
+);
+
+@function size($size) {
+  @return map-get($sizesMap, $size);
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+$baseSize: 16px;
+$borderRadius: $baseSize * 0.25;
+$borderWidth: 1px;
+$headerHeight: 40px !global;
+
+$widthMap: (
+  "xxxs": 1.5,
+  "xxs": 3,
+  "xs": 4,
+  "s": 5,
+  "m": 6,
+  "l": 8,
+  "xl": 10,
+  "xxl": 12,
+  "notes": 19,
+  "jumbo": 22.5
+);
+
+$heightMap: (
+  "primary": 2,
+  "secondary": 1.5
+);
+
+@function getWidth($width) {
+  @return $baseSize * map-get($widthMap, $width);
+}
+
+@function getHeight($height) {
+  @return $baseSize * map-get($heightMap, $height);
+}
+
+@each $sizeName, $sizeVal in $sizesMap {
+  @each $type in $types {
+    %#{$sizeName}-#{$type} {
+      #{$type}: $sizeVal;
+    }
+  }
+}
